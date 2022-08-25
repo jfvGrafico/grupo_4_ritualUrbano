@@ -14,11 +14,13 @@
     Siendo uno de los mas importantes en Colombia, nos llamo la atencion la variedad de productos y servicios que ofrece, desde el mejor cafe de la zona, pasando por merchandising , elementos de reposteria y hasta cursos. 
 
 - Starbucks: https://www.starbucks.com/menu
-    Siendo uno de los cafes con mas presencia a nivel mundial 
+    Siendo uno de los cafes con mas presencia a nivel mundial no podiamos dejar de consultar el estilo grafico y oferta de productos.
 
 - Dolce Gusto: https://www.dolce-gusto.com.ar/
+    Sin poder pasar por alto el mundillo del cafe em capsulas, este site nos proporciono informcion respecto al ecosistema de maquinas espresso a capsulas, modelo de negocio, venta de maquina, capsulas y variedades de las mismas.
 
 - Cafe Oma: https://www.cafeoma.com/
+    De este sitio Colombiano nos llevamos una rica paleta de colores y un diseño dinamico que trasmite la sensacion de disfrute de un cafe con algo rico para desgustar.
 
 - Tienda Cabrales: https://tienda.cabrales.com/
 
