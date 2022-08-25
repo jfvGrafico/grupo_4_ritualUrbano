@@ -3,7 +3,8 @@
 # Logo:
 
 
-# Nuestros Productos y Sevicios:
+# Nosotros:
+    Nuestro e-commerce busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios 
 
 # Referentes del mercado que nos inspiran:
 
