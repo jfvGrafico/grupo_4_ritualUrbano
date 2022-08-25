@@ -8,10 +8,13 @@
 # Referentes del mercado que nos inspiran:
 
 -  Bonafide: https://bonafide.com.ar/nosotros/
+    Un referente en Argentina. Este sitio nos inspiro desde su polivalencia combinando la venta de cafe tostado con chocolates de varios tipos para crear una experincia unica.
 
-- El laburatorio decafe:  https://ellaboratoriodecafe.com/
+- El laboratorio decafe:  https://ellaboratoriodecafe.com/
+    Siendo uno de los mas importantes en Colombia, nos llamo la atencion la variedad de productos y servicios que ofrece, desde el mejor cafe de la zona, pasando por merchandising , elementos de reposteria y hasta cursos. 
 
 - Starbucks: https://www.starbucks.com/menu
+    Siendo uno de los cafes con mas presencia a nivel mundial 
 
 - Dolce Gusto: https://www.dolce-gusto.com.ar/
 
