@@ -4,7 +4,7 @@
 
 
 # Nosotros:
-    Nuestro e-commerce busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios 
+    Nuestro comercio busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios a jovenes adultos que busquen la energia que aporta un espresso por la mañana o bien disfrutar de un cafe suave junto a algun bocadillo a fin del dia.
 
 # Referentes del mercado que nos inspiran:
 
