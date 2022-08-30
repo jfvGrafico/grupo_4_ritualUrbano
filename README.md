@@ -33,7 +33,8 @@
 - Martin Della Vecchia: Entusiasta en tecnologia. Estudiante de desarrollo web full stack.  Actualmente me encuentro desarrollando el role de Agile Delivery manager para una compania en el sector financiero. Mi experiencia previa se basa en el liderazgo de equipos agiles y convencionales brindando servicios de infrestructura IT a clientes globales de primer nivel.
 
 - Lenin Samaan:
-- Oscar Perez:
+
+- Oscar Perez: Soy una persona apasionada por los datos, bases de datos y me apasiona las nuevas tecnologias. Actualmete me encuentro estudiando Desarrollo Web Fullstack en Digital House y estamos por iniciar el darrollo de un ecomerce como parte de un proyecto integrador.
 
 # Nuestro tablero:
 En la siguiente herramienta podran encontrar las tareas relacionadas e los sprints en curso asi como tambien la asignacion y el estado de las mismas.
