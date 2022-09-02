@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+.logo-bar{
+    display: flex;
+    padding: 0%;
+    margin: auto;
+}
