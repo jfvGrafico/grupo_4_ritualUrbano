@@ -1,8 +1,20 @@
 *{
     box-sizing: border-box;
 }
-.logo-bar{
+.top-logo-bar{
     display: flex;
-    padding: 0%;
-    margin: auto;
+    background-color: #f2efe9;
+}
+.logo-horizontal{
+    max-width: 200px;
+}
+.main-menu{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.main-menu li{
+    padding: 0 5px;
 }
