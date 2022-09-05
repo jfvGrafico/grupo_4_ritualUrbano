@@ -1,7 +1,7 @@
 # Ritual Urbano Cafe
 
 # Logo: 
-<img src="/design/logotipo/logo-ritual-urbano.png" width="150px>
+<img src="/design/logotipo/logo-ritual-urbano.png" alt="logo" width="150" height="150">
 
 # Nosotros:
 * Nuestro comercio busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios a jovenes adultos que busquen la energia que aporta un espresso por la mañana o bien disfrutar de un cafe suave junto a algun bocadillo a fin del dia.
