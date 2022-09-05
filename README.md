@@ -36,7 +36,11 @@
 
 - Lenin Samaan:
 
+<<<<<<< HEAD
 - Oscar Perez:
+=======
+- Oscar Perez: Soy una persona apasionada por los datos, bases de datos y me apasiona las nuevas tecnologias. Actualmete me encuentro estudiando Desarrollo Web Fullstack en Digital House y estamos por iniciar el darrollo de un ecomerce como parte de un proyecto integrador.
+>>>>>>> 832a0094081651eb00cab38094a61c07cfc8e04a
 
 # Nuestro tablero:
 En la siguiente herramienta podran encontrar las tareas relacionadas e los sprints en curso asi como tambien la asignacion y el estado de las mismas.

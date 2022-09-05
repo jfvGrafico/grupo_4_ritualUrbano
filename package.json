@@ -1,0 +1,28 @@
+{
+  "name": "grupo_4_ritualurbano",
+  "version": "1.0.0",
+  "description": "* Nuestro comercio busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios a jovenes adultos que busquen la energia que aporta un espresso por la mañana o bien disfrutar de un cafe suave junto a algun bocadillo a fin del dia.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.hs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfvGrafico/grupo_4_ritualUrbano.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfvGrafico/grupo_4_ritualUrbano/issues"
+  },
+  "homepage": "https://github.com/jfvGrafico/grupo_4_ritualUrbano#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
