@@ -1,7 +1,7 @@
 # Ritual Urbano Cafe
 
-# Logo:
-
+# Logo: 
+<img src="/design/logotipo/logo-ritual-urbano.png">
 
 # Nosotros:
 * Nuestro comercio busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios a jovenes adultos que busquen la energia que aporta un espresso por la mañana o bien disfrutar de un cafe suave junto a algun bocadillo a fin del dia.
@@ -36,11 +36,7 @@
 
 - Lenin Samaan:
 
-<<<<<<< HEAD
-- Oscar Perez:
-=======
 - Oscar Perez: Soy una persona apasionada por los datos, bases de datos y me apasiona las nuevas tecnologias. Actualmete me encuentro estudiando Desarrollo Web Fullstack en Digital House y estamos por iniciar el darrollo de un ecomerce como parte de un proyecto integrador.
->>>>>>> 832a0094081651eb00cab38094a61c07cfc8e04a
 
 # Nuestro tablero:
 En la siguiente herramienta podran encontrar las tareas relacionadas e los sprints en curso asi como tambien la asignacion y el estado de las mismas.
