@@ -27,7 +27,8 @@
     Otro grande en Argentina el e-commerce de Cabrales nos mostro las inmumerables opciones que existen al momento de poner a la venta cafe molido, en grano o capsulas. 
 
 # Quienes somos?:
-- David Rios:
+- David Rios: Soy Tecnico Electronico, en estos momentos trabajo como Tecnico operador de CATV, me gusta saber y estar al tanto de las nuevas tecnologias y sus avances, soy muy curioso y tengo mucha paciencia, me interesa conocer el funcionamiento de los equipos.
+
 - John Vargas: Diseñador Grafico y actualmente trabajo como webmaster. Evolucionando con la tecnologia quiero mejorar mis habilidades en en ambito full Satck. Actualmente trabajo tiempo completo en una compañia como front-end de un ecommerce.
 
 - Martin Della Vecchia: Entusiasta en tecnologia. Estudiante de desarrollo web full stack.  Actualmente me encuentro desarrollando el role de Agile Delivery manager para una compania en el sector financiero. Mi experiencia previa se basa en el liderazgo de equipos agiles y convencionales brindando servicios de infrestructura IT a clientes globales de primer nivel.
