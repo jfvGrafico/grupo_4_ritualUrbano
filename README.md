@@ -34,7 +34,7 @@
 
 - Martin Della Vecchia: Entusiasta en tecnologia. Estudiante de desarrollo web full stack.  Actualmente me encuentro desarrollando el role de Agile Delivery manager para una compania en el sector financiero. Mi experiencia previa se basa en el liderazgo de equipos agiles y convencionales brindando servicios de infrestructura IT a clientes globales de primer nivel.
 
-- Lenin Samaan:
+- Lenin Samaan: Administrador de sistemas en la Organizacion Mundial de la Salud (OMS) / Organizacion Panamericana de la Salud (OPS) en la sede de Caracas, Venezuela. Mi perfil profesional ha estado orientado al area de infraestructura IT y telecomunicaciones, pero desde hace un par de años he decidido complementarlo con habilidades y destrezas en el area de desarrollo, para ampliar mi espectro de posibilidades de empleo y aplicacion de conocimiento, pero ya como DevOps en un nivel mas senior. Mis expectivas con este bootcam son poder adquirir no solo conocimientos en el area de desarrollo, sino tambien poder incorporar destrezas como el trabajo equipo utilizando metodologias agiles, aprender mas de como ensamblar piezas de sofware basado en la web y como implementar soluciones de manera eficaz y rapida desde el back-end o el front-end  
 
 - Oscar Perez: Soy una persona apasionada por los datos, bases de datos y me apasiona las nuevas tecnologias. Actualmete me encuentro estudiando Desarrollo Web Fullstack en Digital House y estamos por iniciar el darrollo de un ecomerce como parte de un proyecto integrador.
 
