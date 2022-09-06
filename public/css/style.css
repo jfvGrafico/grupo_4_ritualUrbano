@@ -18,5 +18,18 @@
 .burger-menu{
     text-align: center;
     background-color: #f2efe9;
+}
+.login-box{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 300px;
+    margin-left: 80px;
+    margin-top: 50px;
+    box-shadow:  10px 10px 10px #f2efe9;
+}
 
+.form {
+    display: flex;
+    align-items: center;
 }
