@@ -1,0 +1,44 @@
+
+// oswald" tipo link
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+// oswald" tipo @import
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap');
+</style>
+
+
+
+// Open Sans tipo link
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+// Open Sans tipo @import
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap');
+</style>
+
+
+
+////////////////////////////////////
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1F2226;
+}

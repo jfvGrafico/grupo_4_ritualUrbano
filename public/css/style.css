@@ -1,8 +1,22 @@
 *{
     box-sizing: border-box;
 }
-.logo-bar{
+.top-logo-bar{
     display: flex;
-    padding: 0%;
-    margin: auto;
+    justify-content: space-between;
+    background-color: #f2efe9;
+}
+.login-registro{
+    display: flex;
+
+}
+.login-registro p{
+    padding: 0 5px;
+    margin-top: 3px;
+    font-size: 12px;
+}
+.burger-menu{
+    text-align: center;
+    background-color: #f2efe9;
+
 }
