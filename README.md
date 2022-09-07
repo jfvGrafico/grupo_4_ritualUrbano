@@ -3,7 +3,7 @@
 # Logo: 
 <img src="/design/logotipo/logo-ritual-urbano.png" alt="logo" width="150">
 
-# Elemenos de diseño:
+# Diseño
 - Todos los elementos de diseño relacionados al sitio web del establecimiento se pueden encontrar en este repositorio, mas precisamente en la carpeta design. En dicha carpeta hallarán las tipografia, paleta de colores, wireframes, la seleeccion de logos, entre otros.
 
 # Nosotros:
