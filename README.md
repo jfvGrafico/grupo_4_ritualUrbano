@@ -4,7 +4,7 @@
 <img src="/design/logotipo/logo-ritual-urbano.png" alt="logo" width="150">
 
 # Elemenos de diseño:
-- Todos los elementos de diseño relacionados al establecimiento se pueden encontraer en el repositorio, en la carpeta design. En dicha carpeta hallarán las tipografia, paleta de colores, wireframes, la seleeccion de logos, entre otros.
+- Todos los elementos de diseño relacionados al sitio web del establecimiento se pueden encontrar en este repositorio, mas precisamente en la carpeta design. En dicha carpeta hallarán las tipografia, paleta de colores, wireframes, la seleeccion de logos, entre otros.
 
 # Nosotros:
 * Nuestro comercio busca destacarse entre los competidores locales ofreciendo cafe de calidad premium en las mas variadas presentaciones, orientando nuestros productos y servicios a jovenes adultos que busquen la energia que aporta un espresso por la mañana o bien disfrutar de un cafe suave junto a algun bocadillo a fin del dia.
