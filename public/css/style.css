@@ -2,37 +2,57 @@
     box-sizing: border-box;
     font-family: "Oswald", "Open Sans" ;
 }
+
+.logo{
+    width: 100px;
+}
 .top-logo-bar{
-    display: flex;
-    justify-content: space-between;
     background-color: #f2efe9;
 }
-.login-registro{
+
+.searchbar input{
+    width: 70%;
+    padding: 0;
+    
+}
+.searchbar{
     display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.menu-principal ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: center;
+    padding: 0;
 
 }
-.login-registro p{
-    padding: 0 5px;
-    margin-top: 3px;
-    font-size: 12px;
-}
-.burger-menu{
+
+.banner-inicio-session{
     text-align: center;
-    background-color: #f2efe9;
 }
 
-.login-box{
+.form-registro{
     display: flex;
-    justify-content: space-around;
-    width: 200px;
-    height: 300px;
-    box-shadow:  10px 10px 10px #f2efe9;
-    margin:auto;
-    margin-top: 30px;
-}
-.formulario form{
-    display: flex;
-    margin-top: 80px;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content:center;
+      
 }
+
+.form-registro input{
+    width: 75%;
+}
+
+.submit-button{
+    width: 50%;
+    
+}
+.div-boton{
+    text-align: center;
+    margin-top: 50px;
+    
+
+}
+
