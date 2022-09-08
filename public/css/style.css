@@ -26,10 +26,12 @@
     list-style-type: none;
     margin: center;
     padding: 0;
+    
 }
 
 .menu-principal a{
     text-decoration: none;
+    color: #401201
 }
 
 
@@ -105,6 +107,8 @@ article img{
 article p {
     margin: 0;
     padding: 0;
+    font-size: 10px;
+    font-family: serif;
 }
 
 
