@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-.form-registro{
+.form-login{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -45,7 +45,7 @@
       
 }
 
-.form-registro input{
+.form-login input{
     width: 75%;
     border-bottom: solid 2px  #f2efe9;
     border-top: none;
@@ -53,7 +53,6 @@
     border-right: none;
    
 }
-
 .submit-button{
     width: 50%;
     
@@ -61,6 +60,28 @@
 .div-boton{
     text-align: center;
     margin-top: 50px;
+    
+}
+.banner-registro
+{
+    text-align: left;
+}
+.form-registro{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form-registro input{
+    width: 75%;
+    padding: 2px;
+    border-bottom: solid 2px  #f2efe9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.boton-registro{
+    width: 50%;
     
 
 }

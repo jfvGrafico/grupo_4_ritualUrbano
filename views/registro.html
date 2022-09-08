@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/e145d9d2c3.js"
       crossorigin="anonymous"
     ></script>
-    <title>Login Ritual Urbano</title>
+    <title>Registro: Ritual Urbano</title>
   </head>
   <body>
     <header>
@@ -44,18 +44,23 @@
       </nav>
     </header>
     <main>
-      <div class="banner-inicio-session">
-        <h2>Inicio de sesion</h2>
+      <div class="banner-registro">
+        <h2>Registro</h2>
       </div>
-    
-      <form class="form-login" action="" method="">
-        <label for="email">Direccion de mail</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" id="password" />
-      </form>
-      <div class="div-boton">
-        <button class="submit-button" type="submit">Iniciar sesion</button>
+      <div>
+        <form class="form-registro" action="" method="">
+          <label for="nombre">Nombre y Apellido</label>
+          <input type="text" name="nombre" id="nombre">
+          <label for="email">Direccion de email</label>
+          <input type="email" name="email" id="email">
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" id="password">
+          <label for="rpassword">Repetir contraseña</label>
+          <input type="password" name="rpassword" id="rpassword">
+        </form>
+      </div>
+      <div class=div-boton>
+        <button class="boton-registro" type="submit">Registrar</button>
       </div>
     </main>
   </body>
