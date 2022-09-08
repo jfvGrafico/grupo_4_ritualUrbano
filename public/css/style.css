@@ -136,6 +136,20 @@ article p {
     text-align: center;
     margin-top: 30px;
 }
+.detalle-articulos img{
+    width: 30%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.detalle-articulos p{
+    font-family: "Open Sans";
+    font-size: 12px;
+}
+.detalle-articulos{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 
 
