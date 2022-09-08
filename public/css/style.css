@@ -26,8 +26,12 @@
     list-style-type: none;
     margin: center;
     padding: 0;
-
 }
+
+.menu-principal a{
+    text-decoration: none;
+}
+
 
 .banner-inicio-session{
     text-align: center;
@@ -43,6 +47,11 @@
 
 .form-registro input{
     width: 75%;
+    border-bottom: solid 2px  #f2efe9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   
 }
 
 .submit-button{
