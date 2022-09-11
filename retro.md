@@ -34,12 +34,15 @@ RETROSPECTIVA
 
 2. Hacer más.
     * Mas reuniones de seguimiento
-    * 
+    * Encontrar un momento en la agenda de todos para reunirnos.
+    * Mejorar la comunicacion / coordinacion de tareas.
+
 
 3. Continuar haciendo.
     * Practicando metodologias ágiles
     * Trabajo colaborativo
     * Informando al equipo los acnces y cambios en le repositorio
+    * Adelantar tanto como se pueda los entregables del equipo.
 
 4. Hacer menos.
     *   
