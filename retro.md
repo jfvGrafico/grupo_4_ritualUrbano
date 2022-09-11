@@ -1,3 +1,10 @@
+LINK - TABLERO DE TRABAJO
+
+    * https://trello.com/invite/b/ToF7uKRA/cddaa50aedf668cc9f7067c1982d1865/grupo-4-digital-house
+
+
+RETROSPECTIVA
+
 1. Comenzar a hacer.
 
     * Maquetar en html + css las páginas se nuestro site
@@ -39,3 +46,5 @@
 
 5. Dejar de hacer.
     * 
+
+
