@@ -190,6 +190,7 @@ article p {
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .detalle-articulos p{
     font-family: "Open Sans";
     font-size: 12px;
@@ -199,6 +200,9 @@ article p {
     align-items: center;
     margin-bottom: 10px;
 }
-
-
+.detalle-productos button{
+    position:absolute;
+    left: 80px;
+    
+}
 
