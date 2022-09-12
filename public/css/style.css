@@ -60,7 +60,9 @@ body {
 
 /* Banner */
 .banner-inicio-session{
-    text-align: center;
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
 
