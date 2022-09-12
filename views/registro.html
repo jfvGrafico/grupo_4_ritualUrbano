@@ -27,19 +27,19 @@
       <div class="top-logo-bar">
         <img class="logo" src="/img/logo-ritual-urbano.png" alt="logo">
       </div>
-      <form class="searchbar" action="" method="" placeholder="Que desea buscar?">
-        <input type="query" name="busqueda" />
+      <form class="searchbar" action="" method="">
+        <input type="query" name="busqueda"  placeholder="Que desea buscar?">
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       <nav class="menu-principal">
         <ul>
-         <a href="#"> <li>Home</li></a>
+         <a href="/"> <li>Home</li></a>
          <a href="#"> <li>Productos</li></a>
-          <a href="#"><li>Carrito</li></a>
-          <a href="#"><li>Registo</li></a>
-          <a href="#"><li>Iniciar Sesion</li></a>
+          <a href="/carrito"><li>Carrito</li></a>
+          <a href="/registro"><li>Registo</li></a>
+          <a href="login"><li>Iniciar Sesion</li></a>
         </ul>
       </nav>
     </header>
@@ -47,7 +47,7 @@
       <div class="banner-registro">
         <h2>Registro</h2>
       </div>
-      <div>
+      <div class="register-box">
         <form class="form-registro" action="" method="">
           <label for="nombre">Nombre y Apellido</label>
           <input type="text" name="nombre" id="nombre">
@@ -58,10 +58,10 @@
           <label for="rpassword">Repetir contraseña</label>
           <input type="password" name="rpassword" id="rpassword">
         </form>
-      </div>
       <div class=div-boton>
         <button class="boton-registro" type="submit">Registrar</button>
       </div>
+    </div>
     </main>
   </body>
 </html>

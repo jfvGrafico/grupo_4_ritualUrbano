@@ -65,6 +65,12 @@ body {
     padding-bottom: 20px;
 }
 
+.banner-registro{
+    padding: 10px;
+    padding-bottom: 20px;
+    padding: left;
+}
+
 
 /* formularios */
 .form-login{
@@ -95,6 +101,12 @@ form label{
      margin: auto;
      box-shadow: 0 0 10px #f2efe9;
 }
+
+.register-box{
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 0 10px #f2efe9;   
+}
 .submit-button{
     width: 50%;
     
@@ -105,10 +117,7 @@ form label{
     padding-bottom: 50px;
     
 }
-.banner-registro
-{
-    text-align: left;
-}
+
 .form-registro{
     display: flex;
     flex-direction: column;
