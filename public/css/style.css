@@ -49,11 +49,19 @@
 
 .form-login input{
     width: 75%;
+    padding: 10px;
     border-bottom: solid 2px  #f2efe9;
     border-top: none;
     border-left: none;
     border-right: none;
    
+}
+
+.login-box{
+     
+     width: 70%;
+     margin: auto;
+     box-shadow: 0 0 10px #f2efe9;
 }
 .submit-button{
     width: 50%;
