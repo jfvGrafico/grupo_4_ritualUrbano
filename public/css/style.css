@@ -82,7 +82,7 @@ body {
 }
 
 form label{
-    padding: 5px;
+    padding-top: 10px;
 }
 .form-login input{
     width: 75%;
