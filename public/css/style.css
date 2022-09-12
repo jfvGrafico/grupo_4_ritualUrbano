@@ -202,7 +202,8 @@ article p {
 }
 .detalle-productos button{
     position:absolute;
-    left: 80px;
-    
+    left: 85px;
+    margin-top: 52px;
+    font-size: 10px;
 }
 
