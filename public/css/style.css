@@ -3,13 +3,36 @@
     font-family: "Oswald", "Open Sans" ;
 }
 
+/* -- etiquetas principales -- */
+
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #1F2226;
+  }
 .logo{
     width: 100px;
 }
+
+
+
 .top-logo-bar{
     background-color: #f2efe9;
 }
 
+/* Navegacion */
 .searchbar input{
     width: 70%;
     padding: 0;
@@ -35,10 +58,13 @@
 }
 
 
+/* Banner */
 .banner-inicio-session{
     text-align: center;
 }
 
+
+/* formularios */
 .form-login{
     display: flex;
     flex-direction: column;
