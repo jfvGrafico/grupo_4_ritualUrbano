@@ -75,8 +75,12 @@ body {
       
 }
 
+form label{
+    padding: 5px;
+}
 .form-login input{
     width: 75%;
+    height: 30px;
     padding: 10px;
     border-bottom: solid 2px  #f2efe9;
     border-top: none;
