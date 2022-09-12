@@ -165,7 +165,6 @@ article p {
 .item-carrito input{
     height: 30%;
     width: 20%;
-    margin: auto;
 }
 .item-carrito p{
     font-family: "Open Sans";
@@ -178,6 +177,8 @@ article p {
     justify-content: space-around;
     align-items: center;
     margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 .boton-enviar-carrito{
