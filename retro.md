@@ -14,6 +14,7 @@ RETROSPECTIVA
         - logos
         - Banners
         - Copys
+    * 2 reuniones semanales, daily + revision avance (los domingos)
 
     ENTREGABLES:
         - Node.js+Express
@@ -35,7 +36,6 @@ RETROSPECTIVA
 2. Hacer más.
     * Mas reuniones de seguimiento
     * Encontrar un momento en la agenda de todos para reunirnos.
-    * Mejorar la comunicacion / coordinacion de tareas.
 
 
 3. Continuar haciendo.
