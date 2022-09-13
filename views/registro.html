@@ -32,14 +32,16 @@
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+        <input type="query" name="busqueda"  placeholder="Que desea buscar?">
+          <button type="submit" class="boton-barra-busqueda"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <nav class="menu-principal">
         <ul>
           <a href="/"> <li>Home</li></a>
           <a href="/detalle"> <li>Productos</li></a>
           <a href="/carrito"><li>Carrito</li></a>
-          <a href="/registro"><li>Registo</li></a>
-          <a href="login"><li>Iniciar Sesion</li></a>
+          <a href="/registro"><li>Registro</li></a>
+          <a href="/login"><li>Iniciar sesión</li></a>
         </ul>
       </nav>
     </header>
@@ -49,7 +51,7 @@
         <p>Sumate a nuestro ritual</p>
       </div>
       <div class="register-box">
-        <form class="form-registro" action="" method="">
+        <form class="form-registro" action="" method="" id="form-registrar">
           <label for="nombre">Nombre y Apellido</label>
           <input type="text" name="nombre" id="nombre">
           <label for="email">Direccion de email</label>
@@ -60,7 +62,7 @@
           <input type="password" name="rpassword" id="rpassword">
         </form>
       <div class=div-boton>
-        <button class="boton-registro" type="submit">Registrar</button>
+        <button form="form-registrar" class="boton-registro" type="submit">Registrar</button>
       </div>
     </div>
     </main>

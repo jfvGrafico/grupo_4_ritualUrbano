@@ -32,14 +32,17 @@
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+      <form class="searchbar" action="" method="" >
+        <input type="query" name="busqueda" placeholder="Que desea buscar?" />
+        <button type="submit" class="boton-barra-busqueda"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <nav class="menu-principal">
         <ul>
           <a href="/"> <li>Home</li></a>
           <a href="/detalle"><li>Productos</li></a>
           <a href="/carrito"><li>Carrito</li></a>
-          <a href="/registro"><li>Registo</li></a>
-          <a href="/login"><li>Iniciar Sesion</li></a>
+          <a href="/registro"><li>Registro</li></a>
+          <a href="/login"><li>Iniciar sesión</li></a>
         </ul>
       </nav>
     </header>
@@ -48,14 +51,14 @@
         <h2>Inicio de sesion</h2>
       </div>
     <div class="login-box">
-      <form class="form-login" action="" method="">
+      <form class="form-login" action="" method="" id="form-logear">
         <label for="email">Direccion de mail</label>
         <input type="email" name="email" id="email" />
         <label for="password">Contraseña</label>
         <input type="password" name="password" id="password" />
       </form>
       <div class="div-boton">
-        <button class="submit-button" type="submit">Iniciar sesion</button>
+        <button form="form-logear" class="submit-button" type="submit">Acceder</button>
         <p>No eres parte de este ritual, haz click <a href="/registro">aqui</a>.</p>
       </div>
       
