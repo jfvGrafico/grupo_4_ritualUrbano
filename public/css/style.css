@@ -164,6 +164,11 @@ form label{
     color: #401201;
 }
 
+.boton-barra-busqueda{
+    border: 0;
+    background: none;
+}
+
 .form-registro{
     display: flex;
     flex-direction: column;
