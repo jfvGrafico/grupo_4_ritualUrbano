@@ -33,14 +33,25 @@ body {
 /* Navegacion */
 .searchbar input{
     width: 70%;
-    padding: 0;
-    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: #f2efe9 solid 2px;
     
 }
 .searchbar{
     display: flex;
     justify-content: center;
     margin-top: 15px;
+    
+}
+
+.searchbar i{
+    padding-left: 5px;
+    text-decoration: none;
+    color: #401201 ;
 }
 .menu-principal ul{
     display: flex;
@@ -105,7 +116,6 @@ form label{
     border-right: none;
    
 }
-
 .login-box{
      
      width: 70%;
@@ -119,9 +129,10 @@ form label{
     box-shadow: 0 0 10px #f2efe9;   
 }
 .submit-button{
-    width: 35%;
-    border-radius: 10px;
-    outline: none;
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+    padding :10px;
     
 }
 
@@ -167,9 +178,11 @@ form label{
     border-right: none;
 }
 .boton-registro{
-    width: 35%;
+    width: 30%;
     border-radius: 10px;
-    outline: none;
+    padding: 10px;
+    border: none;
+    
 }
 
 
