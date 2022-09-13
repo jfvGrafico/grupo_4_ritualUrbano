@@ -69,6 +69,18 @@ body {
     padding: left;
 }
 
+.banner-registro h2{
+    margin: 0;
+    padding: 0;
+}
+
+.banner-registro p{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 /* formularios */
 .form-login{
@@ -109,11 +121,32 @@ form label{
     width: 50%;
     
 }
+
+.div-boton button:hover{
+    background-color: #3e5902 ;
+    color: #f2efe9;
+
+}
+
+.div-boton button{
+    transition: all 250ms;
+}
+
 .div-boton{
     text-align: center;
+    padding-top: 25px;
     margin-top: 50px;
     padding-bottom: 50px;
     
+}
+
+.div-boton p{
+    font-size: 14px;
+}
+
+.div-boton a{
+    text-decoration: none;
+    color: #401201;
 }
 
 .form-registro{
@@ -200,10 +233,11 @@ article p {
     align-items: center;
     margin-bottom: 10px;
 }
-.detalle-productos button{
-    position:absolute;
-    left: 85px;
-    margin-top: 52px;
-    font-size: 10px;
-}
 
+
+.detalle-articulos button{
+    position:absolute;
+    left: 25%;
+    margin-top: 15%;
+    font-size: 12px;
+}
