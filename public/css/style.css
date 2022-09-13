@@ -119,7 +119,9 @@ form label{
     box-shadow: 0 0 10px #f2efe9;   
 }
 .submit-button{
-    width: 50%;
+    width: 35%;
+    border-radius: 10px;
+    outline: none;
     
 }
 
@@ -165,7 +167,9 @@ form label{
     border-right: none;
 }
 .boton-registro{
-    width: 50%;
+    width: 35%;
+    border-radius: 10px;
+    outline: none;
 }
 
 
