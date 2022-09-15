@@ -28,6 +28,7 @@ body {
 
 .top-logo-bar{
     background-color: #f2efe9;
+    width: 100%;
 }
 
 /* Navegacion */
@@ -125,7 +126,6 @@ form label{
 
 .register-box{
     width: 70%;
-    height: 45vh;
     margin: auto;
     box-shadow: 0 0 10px #f2efe9;   
 }
@@ -268,8 +268,35 @@ article p {
 
 @media(min-width:361px){
 
+    .login-box{
+        width: 300px;
+        height: 320px;
+    }
+.register-box{
+    width: 300px;
+    height: 320px;
+}
+    .banner-inicio-session{
+        text-align: center;
+        padding-top: 10px;
+    }
+    .banner-registro{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .menu-principal ul{
+        width: 60%;
+        margin: auto;
+        padding-top: 20px;
+    }
+    .menu-principal li {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 @media(min-width:769px){
+
 
 }
