@@ -130,7 +130,7 @@ form label{
     box-shadow: 0 0 10px #f2efe9;   
 }
 .submit-button{
-    width: 30%;
+    width: 100px;
     border-radius: 15px;
     border: none;
     padding :10px;
@@ -184,7 +184,7 @@ form label{
     border-right: none;
 }
 .boton-registro{
-    width: 30%;
+    width: 100px;
     border-radius: 10px;
     padding: 10px;
     border: none;
@@ -278,11 +278,11 @@ article p {
 }
     .banner-inicio-session{
         text-align: center;
-        padding-top: 10px;
+        padding-top: 20px;
     }
     .banner-registro{
         text-align: center;
-        padding-top: 10px;
+        padding-top: 20px;
     }
 
     .menu-principal ul{
