@@ -7,6 +7,9 @@ const puerto = 3000; //Webserver Port
 app.listen(3000, () => {
     console.log(`Servidor Web corriendo en el puerto ${puerto}`);
 })
+
+//GET
+
 app.get("/", (req, res) =>{
     res.sendFile(path.resolve(__dirname, "./views/index.html"))
 })
@@ -21,6 +24,10 @@ app.get("/carrito", (req, res) =>{
 })
 app.get("/detalle", (req, res) =>{
     res.sendFile(path.resolve(__dirname, "./views/detalle.html"))
+})
+
+app.get("/template", (req, res) =>{
+    res.sendFile(path.resolve(__dirname, "./views/template.html"))
 })
 
 // POST
