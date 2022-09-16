@@ -266,6 +266,25 @@ article p {
     font-size: 12px;
 }
 
+
+
+.piepagina{
+    display: flex;
+    background-color: #f2efe9;
+    position: absolute;
+    bottom: 0;
+}
+
+footer div img {
+    width: 150px;
+}
+
+.footer-item-i{
+    display: flex;
+    align-items: center;
+}
+
+
 @media(min-width:361px){
 
     .login-box{
