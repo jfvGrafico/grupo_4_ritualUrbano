@@ -199,7 +199,7 @@ form label{
 }
 
 article{
-    width: 40%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
     box-shadow: 0 0 10px #f2efe9;
@@ -313,9 +313,30 @@ footer div img {
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    .producto article {
+        width: 45%;
+    }
 }
 
 @media(min-width:769px){
+    .register-box{
+        margin-top: 30px;
+    }
+    .login-box{
+        margin-top: 30px;
+    }
 
+    .banner-inicio-session{
+        margin-top: 30px;
+    }
+    .banner-registro{
+        margin-top: 30px;
+    }
 
+    .producto article {
+        width: 25%;
+    }
 }
+
+
