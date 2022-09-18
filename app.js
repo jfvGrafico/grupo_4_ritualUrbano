@@ -30,14 +30,18 @@ app.get("/template", (req, res) =>{
     res.sendFile(path.resolve(__dirname, "./views/template.html"))
 })
 
+app.get("/gracias", (req, res) =>{
+    res.sendFile(path.resolve(__dirname, "./views/gracias.html"))
+})
+
 // POST
 
 app.post("/registro", (req, res) =>{
-    res.redirect("/")
+    res.redirect("/gracias")
     console.log(req.body)
 })
 
 app.post("/login", (req, res) =>{
-    res.redirect("/")
+    res.redirect("/gracias")
     console.log(req.body)
 })

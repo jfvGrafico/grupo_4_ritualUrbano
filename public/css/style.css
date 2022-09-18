@@ -284,6 +284,11 @@ footer div img {
     align-items: center;
 }
 
+.gracias{
+    text-align: center;
+    margin-top: 100px;
+}
+
 
 @media(min-width:361px){
 
