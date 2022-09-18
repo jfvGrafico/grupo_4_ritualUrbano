@@ -269,6 +269,55 @@ footer div img {
   align-items: center;
 }
 
+.form-contacto {   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+.form-contacto input{
+    width: 45%;
+    margin: auto;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #f2efe9 ;
+}
+
+.form-contacto textarea{
+    margin: 20px;
+}
+
+.form-contacto button{
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.form-contacto label{
+    text-align: center;
+}
+
+.form-contacto button{
+ width: 100px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+}
+
+.contacto-box{
+    border: solid 1px #f2efe9;
+    box-shadow: 0 0 10px #f2efe9;
+    margin: 5px;
+}
+
+.contacto-header{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+
 @media (min-width: 361px) {
   .login-box {
     width: 300px;
@@ -278,6 +327,14 @@ footer div img {
     width: 300px;
     height: 400px;
   }
+
+  .contacto-box{
+    width: 350px;
+    height: 480px;
+    margin: auto;
+    margin-bottom: 70px;
+  }
+
   .banner-inicio-session {
     text-align: center;
     padding-top: 20px;

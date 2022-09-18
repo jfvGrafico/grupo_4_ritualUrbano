@@ -30,6 +30,10 @@ app.get("/template", (req, res) =>{
     res.sendFile(path.resolve(__dirname, "./views/template.html"))
 })
 
+app.get("/contacto", (req, res) =>{
+    res.sendFile(path.resolve(__dirname,"./views/contacto.html"))
+})
+
 // POST
 
 app.post("/registro", (req, res) =>{
@@ -38,6 +42,11 @@ app.post("/registro", (req, res) =>{
 })
 
 app.post("/login", (req, res) =>{
+    res.redirect("/")
+    console.log(req.body)
+})
+
+app.post("/contacto", (req, res) =>{
     res.redirect("/")
     console.log(req.body)
 })
