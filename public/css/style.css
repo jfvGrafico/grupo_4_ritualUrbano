@@ -113,12 +113,14 @@ form label {
 .login-box {
   width: 70%;
   margin: auto;
+  margin-bottom: 40px;
   box-shadow: 0 0 10px #f2efe9;
 }
 
 .register-box {
   width: 70%;
   margin: auto;
+  margin-bottom: 40px;
   box-shadow: 0 0 10px #f2efe9;
 }
 .submit-button {
