@@ -288,7 +288,14 @@ footer div img {
     text-align: center;
     margin-top: 100px;
 }
+.volver-al-sitio{
+    text-align: center;
+}
 
+.volver-al-sitio a{
+    text-decoration: none;
+    color:#401201 ;
+}
 
 @media(min-width:361px){
 
@@ -322,6 +329,14 @@ footer div img {
     .producto article {
         width: 45%;
     }
+
+    .detalle-articulos button{
+        position:absolute;
+        left: 27%;
+        margin-top: 17%;
+        font-size: 14px;
+    }
+    
 }
 
 @media(min-width:769px){
@@ -341,6 +356,13 @@ footer div img {
 
     .producto article {
         width: 25%;
+    }
+
+    .detalle-articulos button{
+        position:absolute;
+        left: 28%;
+        margin-top: 18%;
+        font-size: 16px;
     }
 }
 
