@@ -294,21 +294,25 @@ footer div img {
     margin: 20px;
 }
 
-.form-contacto button{
-    width: 30%;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
 .form-contacto label{
     text-align: center;
 }
 
 .form-contacto button{
- width: 100px;
+  width: 100px;
   border-radius: 15px;
   border: none;
   padding: 10px;
+  transition: all 450ms;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.form-contacto button:hover{
+  
+    background-color: #3e5902;
+    color: #f2efe9;
+  
 }
 
 .contacto-box{
