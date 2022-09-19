@@ -192,7 +192,13 @@ article {
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px #f2efe9;
+  transition: all 450ms;
 }
+
+article:hover{
+    box-shadow: 10px 10px 10px #f2efe9;
+}
+
 article img {
   width: 100%;
 }
@@ -336,7 +342,17 @@ footer div img {
     padding: 20px;
     border: 1px solid  #f2efe9 ;
     box-shadow: 0 0 10px #f2efe9;
+    transition: all 450ms;
 }
+
+.categoria-cafes:hover,
+.categoria-cafeteras:hover,
+.categoria-chocolates:hover,
+.categorias-merchandising:hover{
+    border: 1px solid  #f2efe9 ;
+    box-shadow: 10px 10px 10px #f2efe9;
+}
+
 
 
 
