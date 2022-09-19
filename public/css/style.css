@@ -317,6 +317,31 @@ footer div img {
     margin-bottom: 10px;
 }
 
+.categorias-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.categorias-box img{
+    width: 100%;
+}
+
+.categoria-cafes,
+.categoria-cafeteras,
+.categoria-chocolates,
+.categorias-merchandising{
+    width: 100%;  
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid  #f2efe9 ;
+    box-shadow: 0 0 10px #f2efe9;
+}
+
+
+
+
+
 
 @media (min-width: 361px) {
   .login-box {
@@ -353,7 +378,24 @@ footer div img {
     padding-left: 5px;
     padding-right: 5px;
   }
+
+  .categoria-cafes,
+.categoria-cafeteras,
+.categoria-chocolates,
+.categorias-merchandising{
+    width: 40%;
+    
+}
+
+
 }
 
 @media (min-width: 769px) {
+    .categoria-cafes,
+.categoria-cafeteras,
+.categoria-chocolates,
+.categorias-merchandising{
+    width: 20%;
+    
+}
 }
