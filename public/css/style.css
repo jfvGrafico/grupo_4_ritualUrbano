@@ -212,10 +212,11 @@ article p {
 .item-carrito img {
   width: 20%;
   margin: auto;
+  margin-left: 0;
 }
 .item-carrito input {
   height: 30%;
-  width: 20%;
+  width: 30px;
   margin: 15px;
 }
 .item-carrito p {
