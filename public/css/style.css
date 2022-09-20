@@ -216,6 +216,7 @@ article p {
 .item-carrito input {
   height: 30%;
   width: 20%;
+  margin: 15px;
 }
 .item-carrito p {
   font-family: "Open Sans";
@@ -235,6 +236,20 @@ article p {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
+
+}
+
+.boton-enviar-carrito button{
+  width: 130px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  transition: all 450ms;
+}
+
+.boton-enviar-carrito button:hover{
+  background-color: #3e5902;
+    color: #f2efe9;
 }
 .detalle-articulos img {
   width: 30%;
@@ -361,7 +376,7 @@ footer div img {
 
 
 
-
+/*Moible*/
 
 @media (min-width: 361px) {
   .login-box {
@@ -409,6 +424,8 @@ footer div img {
 
 
 }
+
+/*Desktop*/
 
 @media (min-width: 769px) {
     .categoria-cafes,
