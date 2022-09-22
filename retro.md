@@ -36,18 +36,25 @@ RETROSPECTIVA
 2. Hacer más.
     * Mas reuniones de seguimiento
     * Encontrar un momento en la agenda de todos para reunirnos.
+    * Colocarnos fechas y plazos para resolver problemas, asi avanzar con cada compromiso asumido.
+    * Contribuir de forma proactiva para que todos podamos avanzar en los compromisos asumidos, permitiendo que todos colaboren en el codigo.
+    * Deliberar como grupo para asignar un lider de equipo que ayude a recordar y revisar los avances, tareas de seguimiento de forma semanal, quincenal o mensual.
+    * Hacer code review entre todos para mejorar.
 
 
 3. Continuar haciendo.
     * Practicando metodologias ágiles
     * Trabajo colaborativo
-    * Informando al equipo los acnces y cambios en le repositorio
+    * Informando al equipo los avances y cambios en le repositorio
     * Adelantar tanto como se pueda los entregables del equipo.
+    * Mantener la comunicacion proactiva por medio del grupo de whatsapp.
+    
 
 4. Hacer menos.
-    *   
+    * Dedicar mas tiempo en trabajar en el proyecto individual.
 
 5. Dejar de hacer.
-    * 
+    * Trabajar sin plazos para avanzar con cada compromiso por cada integrante del equipo.
+    * Posponer el trabajo para evitar acumulacion de tareas.
 
 
