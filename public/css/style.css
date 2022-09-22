@@ -394,21 +394,25 @@ footer div img {
     box-shadow: 10px 10px 10px #f2efe9;
 }
 
-.cafeteras-box{
+.cafeteras-box,
+.cafe-box{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.cafeteras-box img{
+.cafeteras-box img,
+.cafe-box img{
   width: 100%;
 }
-.cafeteras-box p{
+.cafeteras-box p,
+.cafe-box,p{
   margin: 0;
   padding: 0;
 }
 
-.producto-cafetera{
+.producto-cafetera,
+.producto-cafe{
   width: 100%;
   margin: 10px;
   padding: 20px;
@@ -466,7 +470,8 @@ footer div img {
     width: 40%;
     
 }
-.producto-cafetera{
+.producto-cafetera,
+.producto-cafe{
   width: 40%;
 }
 
@@ -483,7 +488,8 @@ footer div img {
     width: 20%;
     
 }
-.producto-cafetera{
+.producto-cafetera,
+.producto-cafe{
   width: 20%;
 }
 

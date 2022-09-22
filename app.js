@@ -42,6 +42,10 @@ app.get("/cafeteras", (req, res) =>{
     res.sendFile(path.resolve(__dirname,"./views/cafeteras.html"))
 })
 
+app.get("/cafes", (req, res) =>{
+    res.sendFile(path.resolve(__dirname,"./views/cafes.html"))
+})
+
 // POST
 
 app.post("/registro", (req, res) =>{
