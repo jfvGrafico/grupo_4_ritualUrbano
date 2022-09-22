@@ -389,39 +389,44 @@ footer div img {
 .categoria-cafes:hover,
 .categoria-cafeteras:hover,
 .categoria-chocolates:hover,
-.categorias-merchandising:hover{
+.categoria-merchandising:hover{
     border: 1px solid  #f2efe9 ;
     box-shadow: 10px 10px 10px #f2efe9;
 }
 
 .cafeteras-box,
-.cafe-box{
+.cafe-box,
+.otrosProductos-box,
+.merchandising-box{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .cafeteras-box img,
-.cafe-box img{
+.cafe-box img,
+.otrosProductos-box img,
+.merchandising-box img{
   width: 100%;
 }
 .cafeteras-box p,
-.cafe-box,p{
+.cafe-box p,
+.otrosProductos-box p,
+.merchandising-box p{
   margin: 0;
   padding: 0;
 }
 
 .producto-cafetera,
-.producto-cafe{
+.producto-cafe,
+.producto-otros,
+.producto-merchandising{
   width: 100%;
   margin: 10px;
   padding: 20px;
   border: 1px solid  #f2efe9 ;
   box-shadow: 0 0 10px #f2efe9;
-  transition: all 450ms;
 }
-
-
 
 
 
@@ -471,7 +476,8 @@ footer div img {
     
 }
 .producto-cafetera,
-.producto-cafe{
+.producto-cafe,
+.producto-otros{
   width: 40%;
 }
 
@@ -489,7 +495,9 @@ footer div img {
     
 }
 .producto-cafetera,
-.producto-cafe{
+.producto-cafe,
+.producto-otros,
+.producto-merchandising{
   width: 20%;
 }
 

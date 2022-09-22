@@ -45,6 +45,13 @@ app.get("/cafeteras", (req, res) =>{
 app.get("/cafes", (req, res) =>{
     res.sendFile(path.resolve(__dirname,"./views/cafes.html"))
 })
+app.get("/otrosProductos", (req, res) =>{
+    res.sendFile(path.resolve(__dirname,"./views/otrosProductos.html"))
+})
+
+app.get("/merchandising", (req, res) =>{
+    res.sendFile(path.resolve(__dirname,"./views/merchandising.html"))
+})
 
 // POST
 
