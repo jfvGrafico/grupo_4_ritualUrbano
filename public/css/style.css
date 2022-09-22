@@ -400,11 +400,23 @@ footer div img {
   justify-content: space-around;
 }
 
-.cafeteras-box{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.cafeteras-box img{
+  width: 100%;
 }
+.cafeteras-box p{
+  margin: 0;
+  padding: 0;
+}
+
+.producto-cafetera{
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+  transition: all 450ms;
+}
+
 
 
 
@@ -454,6 +466,9 @@ footer div img {
     width: 40%;
     
 }
+.producto-cafetera{
+  width: 40%;
+}
 
 
 }
@@ -468,4 +483,8 @@ footer div img {
     width: 20%;
     
 }
+.producto-cafetera{
+  width: 20%;
+}
+
 }
