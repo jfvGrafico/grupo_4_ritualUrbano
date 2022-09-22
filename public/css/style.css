@@ -81,12 +81,14 @@ h6 {
 .banner-registro h2 {
   margin: 0;
   padding: 0;
+  text-align: center; 
 }
 
 .banner-registro p {
   font-size: 12px;
   padding: 0;
   margin: 0;
+  text-align: center; 
 }
 
 /* formularios */
@@ -122,7 +124,23 @@ form label {
   margin: auto;
   margin-bottom: 40px;
   box-shadow: 0 0 10px #f2efe9;
+  border-radius: 3%;
 }
+
+.register-box:hover{
+  background-color: #f2efe9;
+  box-shadow: 0 0 30px #f2efe9;
+  border-radius: 3%;
+}
+
+.politica-privacidad{
+  margin-top: 10px;
+  font-size: 13px;
+  padding: 10px 10px 0 10px;
+  margin: 10px;
+  text-align: center;  
+}
+
 .submit-button {
   width: 100px;
   border-radius: 15px;
@@ -132,7 +150,7 @@ form label {
 
 .div-boton button:hover {
   background-color: #3e5902;
-  color: #f2efe9;
+  color: white;
 }
 
 .div-boton button {
@@ -179,6 +197,9 @@ form label {
   border-radius: 10px;
   padding: 10px;
   border: none;
+  color: white;
+  background-color: #1a160f93;
+  
 }
 
 .producto {
@@ -386,7 +407,7 @@ footer div img {
   }
   .register-box {
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
   }
 
   .contacto-box{
