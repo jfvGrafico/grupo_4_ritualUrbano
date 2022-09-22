@@ -38,6 +38,10 @@ app.get("/categoria", (req, res) =>{
     res.sendFile(path.resolve(__dirname,"./views/categoria.html"))
 })
 
+app.get("/cafeteras", (req, res) =>{
+    res.sendFile(path.resolve(__dirname,"./views/cafeteras.html"))
+})
+
 // POST
 
 app.post("/registro", (req, res) =>{

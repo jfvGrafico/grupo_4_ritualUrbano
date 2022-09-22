@@ -394,6 +394,17 @@ footer div img {
     box-shadow: 10px 10px 10px #f2efe9;
 }
 
+.cafeteras-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cafeteras-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
 
