@@ -31,64 +31,90 @@
     <script src="https://kit.fontawesome.com/e145d9d2c3.js"crossorigin="anonymous"></script>
   </head>
   <body>
-   <!-- header INICIO -->
-   <header class="main-menu home-menu mb-3  menu-fixed">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
+    <!-- header INICIO -->
+    <header class="main-menu home-menu mb-3  menu-fixed">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
 
-                <nav class="navbar navbar-expand-lg navbar-light">
+                    <nav class="navbar navbar-expand-lg navbar-light">
 
-                    <a class="navbar-brand" href="/"> 
-                      <img src="/img/logo-horizontal.png" alt="Logo Ritual Urbano"> 
-                    </a>
+                        <a class="navbar-brand" href="/">
+                            <img src="/img/logo-horizontal.png" alt="Logo Ritual Urbano">
+                        </a>
 
-                    <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                      <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/detalle" id="navbarDropdown_1"
-                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Productos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                <a class="dropdown-item" href="/categoria"> Categoría</a>
-                                <a class="dropdown-item" href="/detalle">Detalles Pdcto</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="/detalle" role="button">Regalables</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contacto">Contacto</a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="header_icon d-flex">
-                        <a id="search_1" href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="/registro"><i class="fas fa-user-circle"></i></a>
-                        <div class="dropdown cart">
-                            <a class="dropdown-toggle" href="/carrito" id="navbarDropdown3" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-cart-plus"></i>
-                            </a>
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/detalle" id="navbarDropdown_1"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Productos
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                        <a class="dropdown-item" href="/categoria"> Categoría</a>
+                                        <a class="dropdown-item" href="/detalle">Detalles Pdcto</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="/detalle" role="button">Regalables</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contacto">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="menu_icon"><i class="fas fa-bars"></i></span>
-                    </button>
+                        <div class="header_icon d-flex nav-item dropdown">
+                            <a id="search_1" href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <!-- <a id="navbarDropdown_2" href="/registro"><i class="fas fa-user-circle"></i></a> -->
+                            <a id="navbarDropdown_2" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                    <a class="dropdown-item" href="/login"> Login </a>
+                                    <a class="dropdown-item" href="/registro"> Registro</a>
+                                </div>
 
-                </nav>
+                            <!-- </div> -->
+                            <a href="/carrito"><i class="fas fa-cart-plus"></i></a>
+                            <!-- <div class="dropdown cart">
+                                <a class="dropdown-toggle" href="/carrito" id="navbarDropdown3" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-cart-plus"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <div class="single_product">
+  
+                                  </div>
+                              </div>
+
+                            </div> -->
+                        </div>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                        </button>
+
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-  </header>
+        <!-- <div class="search_input mb-3" id="search_input_box">
+          <div class="container ">
+              <form class="d-flex justify-content-between search-inner">
+                  <input type="text" class="form-control" id="search_input" placeholder="Buscar aqui">
+                  <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <span class="ti-close" id="close_search" title="Close Search">
+                  </span>
+              </form>
+          </div>
+      </div> -->
+    </header>
     <main>
         <div class="cafe-box">
             
