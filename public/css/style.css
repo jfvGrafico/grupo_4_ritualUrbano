@@ -268,7 +268,7 @@ article p {
   height: auto;
   border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-  border-top: 10px solid brown;
+  border-top: 10px solid #8c0303;
 }
 
 .item-carrito img {
@@ -544,7 +544,7 @@ footer div img {
 .item-carrito {
   display: flex;
   border-top: none;
-  border-left: 10px solid brown;
+  border-left: 10px solid #8c0303;
   flex-flow: wrap;
   justify-content: space-around;
   align-items: center;
