@@ -454,8 +454,10 @@ footer div img {
 }
 
 .contenedor-slider{
-  width: 50%;
+  width: 500px;
   margin: auto;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
 }
 
 
