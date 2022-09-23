@@ -166,6 +166,7 @@ form label {
 
 .div-boton p {
   font-size: 14px;
+  margin-bottom: 1px;
 }
 
 .div-boton a {
@@ -452,6 +453,12 @@ footer div img {
   box-shadow: 0 0 10px #f2efe9;
 }
 
+.contenedor-slider{
+  width: 500px;
+  margin: auto;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+}
 
 
 /*Moible*/
