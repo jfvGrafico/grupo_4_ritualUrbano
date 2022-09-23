@@ -453,6 +453,10 @@ footer div img {
   box-shadow: 0 0 10px #f2efe9;
 }
 
+.contenedor-slider{
+  width: 50%;
+  margin: auto;
+}
 
 
 /*Moible*/
