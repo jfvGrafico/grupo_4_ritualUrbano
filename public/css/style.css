@@ -230,7 +230,8 @@ article p {
   font-size: 10px;
   font-family: "Open Sans";
 }
-.item-carrito img {
+
+/* .item-carrito img {
   width: 20%;
   margin: auto;
   margin-left: 0;
@@ -253,7 +254,30 @@ article p {
   margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
+} */
+
+.item-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  min-height: 100px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  border-top: 10px solid brown;
 }
+
+.item-carrito img {
+  width: 30%;
+  margin-left: 0;
+  
+}
+
+
 .boton-enviar-carrito {
   text-align: center;
   margin-top: 30px;
@@ -481,16 +505,47 @@ footer div img {
 /*Desktop*/
 
 @media (min-width: 769px) {
-    .categoria-cafes,
+.categoria-cafes,
 .categoria-cafeteras,
 .categoria-chocolates,
 .categorias-merchandising{
-    width: 20%;
-    
+  width: 20%; 
 }
+
 .producto-cafetera,
 .producto-cafe{
   width: 20%;
 }
+
+.item-carrito img {
+  width: 20%;
+  margin: auto;
+  margin-left: 0;
+}
+.item-carrito input {
+  height: 30%;
+  width: 30px;
+  margin: 15px;
+}
+.item-carrito p {
+  font-family: "Open Sans";
+  font-size: 12px;
+  margin: auto;
+  margin-left: 5px;
+}
+.item-carrito {
+  display: flex;
+  border-top: none;
+  border-left: 10px solid brown;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 90%;
+}
+
+
 
 }
