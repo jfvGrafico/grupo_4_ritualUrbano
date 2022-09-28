@@ -1,5 +1,6 @@
 const express = require("express"); 
-const path = require("path");              
+const path = require("path");    
+const mainRoute = require("./routes/mainRoute")          
 const app = express();                   
 app.use(express.static(path.resolve(__dirname, "./public")));  //sirviendo contenido estatico
 app.use(express.urlencoded({ extended: false })); //
@@ -10,9 +11,8 @@ app.listen(3000, () => {
 
 //GET
 
-app.get("/", (req, res) =>{
-    res.sendFile(path.resolve(__dirname, "./views/index.html"))
-})
+app.use("/", mainRoute)
+
 app.get("/login", (req, res) =>{
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
 })
