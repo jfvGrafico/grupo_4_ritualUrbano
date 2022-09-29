@@ -17,6 +17,9 @@ const productoController = {
     },
     merchandising: (req, res) =>{
         res.sendFile(path.resolve(__dirname,"../views/merchandising.html"))
+    },
+    carrito: (req, res)=>{
+        res.sendFile(path.resolve(__dirname, "../views/carrito.html"))
     }
     
     

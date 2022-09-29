@@ -16,13 +16,3 @@ app.listen(3000, () => {
 app.use("/", mainRoute)
 app.use("/user", userRoute)
 app.use("/producto", productoRoute)
-
-
-app.get("/carrito", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/carrito.html"))
-})
-
-
-app.get("/template", (req, res) =>{
-    res.sendFile(path.resolve(__dirname, "./views/template.html"))
-})

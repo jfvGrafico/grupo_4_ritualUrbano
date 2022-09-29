@@ -8,5 +8,6 @@ router.get ("/categoria/cafes", productoController.cafes )
 router.get ("/categoria/cafeteras", productoController.cafeteras )
 router.get ("/categoria/otrosProductos", productoController.otrosProductos )
 router.get ("/categoria/merchandising", productoController.merchandising )
+router.get ("/carrito", productoController.carrito)
 
 module.exports = router;

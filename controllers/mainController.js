@@ -11,9 +11,10 @@ const mainController = {
     contactoPost : (req, res) =>{
         res.redirect("/")
         console.log(req.body)
-    }
+    },
 
-    
+    template: (req, res) =>{
+        res.sendFile(path.resolve(__dirname, "./views/template.html"))}
 }
 
 module.exports = mainController;
