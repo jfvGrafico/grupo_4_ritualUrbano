@@ -14,7 +14,8 @@ const mainController = {
     },
 
     template: (req, res) =>{
-        res.sendFile(path.resolve(__dirname, "./views/template.html"))}
+        res.render("template")
+    }
 }
 
 module.exports = mainController;
