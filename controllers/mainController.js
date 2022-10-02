@@ -5,7 +5,7 @@ const mainController = {
         res.sendFile(path.resolve(__dirname, "../views/index.html"))
     },
     contacto:  (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/contacto.html"))
+        res.render("contacto")
     },
 
     contactoPost : (req, res) =>{
