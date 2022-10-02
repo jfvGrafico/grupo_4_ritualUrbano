@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/img/favicon-ru.ico">
-    <title>Contactenos</title>
+    <title>Nuestras Cafeteras</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -35,22 +35,28 @@
      <%- include("./partials/header")  %> 
 
     <main>
-        <div class="contacto-header">
-            <h1>Contactenos</h1>
+        <div class="cafeteras-box">
+            
+                <div class="producto-cafetera">
+                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
+                    <p>cafetera: super duper</p>
+                </div>
+                <div class="producto-cafetera">
+                    <img src="/img/coffee_item9-300x300.jpg" alt="cafetera">
+                    <p>cafetera: super duper</p>
+                </div>
+                <div class="producto-cafetera">
+                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
+                    <p>cafetera: super duper</p>
+                </div>
+                <div class="producto-cafetera">
+                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
+                    <p>cafetera: super duper</p>
+                </div>
         </div>
-        <div class="contacto-box" >
-            <form class="form-contacto" action="/contacto" method="POST">
-            <label for="nombre">Ingrese su nombre</label>
-            <input type="text" name="nombre" id="nombre">
-            <label for="apellido">Ingrese su pellido</label>
-            <input type="text" name="apellido" id="apellido">
-            <label for="email" >Ingrese su email</label>
-            <input type="email" name="email" id="email" required>
-            <textarea name="consulta" cols="30" rows="10" placeholder="Ingrese aqui sus comentarios" required></textarea>
-            <button type="submit">Enviar</button>
-            </form>
+                   
 
-        </div>
+
 
 
     </main>

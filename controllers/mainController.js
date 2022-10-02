@@ -2,7 +2,7 @@ const path = require("path")
 
 const mainController = {
     index :  (req, res) => {
-        res.sendFile(path.resolve(__dirname, "../views/index.html"))
+        res.render("index")
     },
     contacto:  (req, res) =>{
         res.render("contacto")
@@ -15,6 +15,9 @@ const mainController = {
 
     template: (req, res) =>{
         res.render("template")
+    },
+    gracias : (req, res) => {
+        res.render("gracias")
     }
 }
 

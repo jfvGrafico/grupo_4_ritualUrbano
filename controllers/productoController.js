@@ -1,25 +1,25 @@
 const path = require ("path")
 const productoController = {
     detalle :  (req, res) =>{
-        res.sendFile(path.resolve(__dirname, "../views/detalle.html"))
+        res.render("detalle")
     },
     categoria: (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/categoria.html"))
+        res.render("categoria")
     },
     cafes : (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/cafes.html"))
+        res.render("cafes")
     },
     cafeteras: (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/cafeteras.html"))
+        res.render("cafeteras")
     },
     otrosProductos: (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/otrosProductos.html"))
+        res.render("otrosProductos")
     },
     merchandising: (req, res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/merchandising.html"))
+        res.render("merchandising")
     },
     carrito: (req, res)=>{
-        res.sendFile(path.resolve(__dirname, "../views/carrito.html"))
+        res.render("carrito")
     }
     
     
