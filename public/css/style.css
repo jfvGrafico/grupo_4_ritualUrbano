@@ -210,7 +210,7 @@ form label {
 }
 
 article {
-  width: 40%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px #f2efe9;
@@ -298,26 +298,43 @@ article p {
   background-color: #3e5902;
     color: #f2efe9;
 }
-.detalle-articulos img {
-  width: 30%;
-  margin-left: 5px;
-  margin-right: 5px;
+
+
+.detalle-productos{
+  margin: 0 20px;
 }
 
-.detalle-articulos p {
-  font-family: "Open Sans";
-  font-size: 12px;
-}
-.detalle-articulos {
+.detalle-articulos{
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  box-shadow: 0 0 10px #f2efe9;
+  margin: 10px;
+  transition: all 450ms;
 }
 
-.detalle-articulos button {
-  position: absolute;
-  left: 25%;
-  margin-top: 15%;
+.detalle-articulos:hover{
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 10px 10px 10px #f2efe9;
+}
+
+.detalle-articulos img{
+  width: 100%;
+}
+.detalleimg{
+display: flex;
+flex: 2;
+align-items: center;
+}
+
+.detallebtn{
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.detalletxt{
+  display: flex;
+  flex: 8;
+  align-items: center;
+  margin-right: 10px;
   font-size: 12px;
 }
 
@@ -504,6 +521,10 @@ footer div img {
 /*Moible*/
 
 @media (min-width: 361px) {
+  
+  article{
+    width: 45%;
+  }
   .login-box {
     width: 300px;
     height: 320px;
@@ -558,6 +579,11 @@ footer div img {
 /*Desktop*/
 
 @media (min-width: 769px) {
+
+  article{
+    width: 25%;
+  }
+
 .categoria-cafes,
 .categoria-cafeteras,
 .categoria-chocolates,
