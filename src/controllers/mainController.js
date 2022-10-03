@@ -18,6 +18,9 @@ const mainController = {
     },
     gracias : (req, res) => {
         res.render("gracias")
+    },
+    admin: (req, res) => {
+        res.render("admin")
     }
 }
 

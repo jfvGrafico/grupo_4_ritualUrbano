@@ -460,6 +460,46 @@ footer div img {
   box-shadow: 0 0 10px #f2efe9;
 }
 
+.contenedor-admin{
+  display: flex;
+  justify-content: center;
+  
+}
+.box-admin{
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+}
+
+.box-admin input{
+  margin: 10px;
+  font-size: 14px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #f2efe9 ;
+}
+  
+
+.box-admin h1{
+    text-align: center;
+    margin: 0 10px;
+}
+
+.admin-button {
+  width: 100px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  transition: all 450ms;
+  margin: 10px;
+}
+
+.admin-button:hover {
+  background-color: #3e5902;
+  color: white;
+}
 
 /*Moible*/
 
