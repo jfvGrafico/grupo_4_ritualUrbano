@@ -57,4 +57,50 @@ RETROSPECTIVA
     * Trabajar sin plazos para avanzar con cada compromiso por cada integrante del equipo.
     * Posponer el trabajo para evitar acumulacion de tareas.
 
+////////////////////
 
+
+
+LINK - TABLERO DE TRABAJO
+
+    * https://trello.com/invite/b/ToF7uKRA/cddaa50aedf668cc9f7067c1982d1865/grupo-4-digital-house
+
+
+RETROSPECTIVA spring #3
+
+1. Comenzar a hacer.
+
+    * Parial de las secciones fijas dentro del site
+    * Implementar EJS
+    IMplementar Controladores
+    Creacion de rutas
+
+
+
+    * 2 reuniones semanales, daily + revisión avance 
+        Aqui estamos fallando, nos e estan cumpliendo a cabalidad las reuniones
+      (Martes 15 minutas antes de clase)
+      (Domingos 8 noche )
+
+    
+    
+2. Hacer más.
+    * Mas reuniones de seguimiento - Se defini reuniones weekly los martes a las 20:30hrs
+    * Encontrar un momento en la agenda de todos para reunirnos.
+    * Colocarnos fechas y plazos para resolver problemas, asi avanzar con cada compromiso asumido.
+    * Contribuir de forma proactiva para que todos podamos avanzar en los compromisos asumidos, permitiendo que todos colaboren en el codigo.
+    * Deliberar como grupo para asignar un lider de equipo que ayude a recordar y revisar los avances, tareas de seguimiento de forma semanal, quincenal o mensual.
+    * Hacer code review entre todos para mejorar.
+
+3. Continuar haciendo.
+    * Practicando metodologias ágiles
+    * Trabajo colaborativo
+    * Informando al equipo los avances y cambios en le repositorio
+    * Adelantar tanto como se pueda los entregables del equipo.
+    * Mantener la comunicacion proactiva por medio del grupo de whatsapp.
+    
+4. Hacer menos.
+    * 
+
+5. Dejar de hacer.
+    * no olvidar repartir las tareas en trello dentro del equipo de trabajo (Oscar sera el encargado de mantener trello actualizado)
