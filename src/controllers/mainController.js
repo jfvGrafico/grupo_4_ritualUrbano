@@ -2,10 +2,10 @@ const path = require("path")
 
 const mainController = {
     index :  (req, res) => {
-        res.render("index")
+        res.render("index", {title: "Home"});
     },
     contacto:  (req, res) =>{
-        res.render("contacto")
+        res.render("contacto", {title: "Contacto"});
     },
 
     contactoPost : (req, res) =>{
@@ -14,13 +14,13 @@ const mainController = {
     },
 
     template: (req, res) =>{
-        res.render("template")
+        res.render("template", {title: "Template"});
     },
     gracias : (req, res) => {
-        res.render("gracias")
+        res.render("gracias", {title: "Gracias"});
     },
     admin: (req, res) => {
-        res.render("admin")
+        res.render("admin", {title: "Administrador"})
     },
     adminPost: (req, res) => {
         res.redirect("/")

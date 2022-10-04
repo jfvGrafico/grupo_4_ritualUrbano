@@ -1,25 +1,25 @@
 const path = require ("path")
 const productoController = {
     detalle :  (req, res) =>{
-        res.render("detalle")
+        res.render("detalle", {title: "Detalle"})
     },
     categoria: (req, res) =>{
-        res.render("categoria")
+        res.render("categoria", {title: "Categoria"})
     },
     cafes : (req, res) =>{
-        res.render("cafes")
+        res.render("cafes", {title: "Cafes"})
     },
     cafeteras: (req, res) =>{
-        res.render("cafeteras")
+        res.render("cafeteras", {title: "Cafeteras"})
     },
     otrosProductos: (req, res) =>{
-        res.render("otrosProductos")
+        res.render("otrosProductos", {title: "Otros Productos"})
     },
     merchandising: (req, res) =>{
-        res.render("merchandising")
+        res.render("merchandising", {title: "Merchandising"})
     },
     carrito: (req, res)=>{
-        res.render("carrito")
+        res.render("carrito", {title: "Carrito"})
     }
     
     

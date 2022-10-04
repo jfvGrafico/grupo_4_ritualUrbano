@@ -1,7 +1,7 @@
 const path = require ("path")
 const userController = {
     login: (req, res) =>{
-        res.render("login")
+        res.render("login", {title: "Login"})
     },
     loginPost : (req, res) =>{
         res.redirect("/")
@@ -9,7 +9,7 @@ const userController = {
     },
 
     registro: (req, res) =>{
-        res.render("registro")
+        res.render("registro", {title: "Registro"})
     },
 
     registroPost: (req, res) =>{

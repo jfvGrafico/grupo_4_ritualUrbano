@@ -34,7 +34,7 @@ RETROSPECTIVA
         
 
 2. Hacer más.
-    * Mas reuniones de seguimiento
+    * Mas reuniones de seguimiento - Se defini reuniones weekly los martes a las 20:30hrs
     * Encontrar un momento en la agenda de todos para reunirnos.
     * Colocarnos fechas y plazos para resolver problemas, asi avanzar con cada compromiso asumido.
     * Contribuir de forma proactiva para que todos podamos avanzar en los compromisos asumidos, permitiendo que todos colaboren en el codigo.
