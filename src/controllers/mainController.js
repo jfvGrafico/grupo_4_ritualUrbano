@@ -1,4 +1,9 @@
 const path = require("path")
+const nodemailer = require("nodemailer");
+const { getMaxListeners } = require("process");
+const { request } = require("http");
+
+
 
 const mainController = {
     index :  (req, res) => {
@@ -11,6 +16,28 @@ const mainController = {
     contactoPost : (req, res) =>{
         res.redirect("/")
         console.log(req.body)
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "dellavec@gmail.com",
+                pass: "xikuzvuerycqfwbx"
+            }
+
+        })
+
+        const mailOptions = {
+            from: req.body.sendMail,
+            to: "dellavec@gmail.com",
+            subject: "Contacto desde Cafe Urbano",
+            text: req.body.consulta
+        }
+
+        transporter.sendMail(mailOptions, (error, info) =>{
+            if(error){
+                console.log(error)
+            } else{
+                console.log("Email enviado: " + info.response)            }
+        })
     },
 
     template: (req, res) =>{
