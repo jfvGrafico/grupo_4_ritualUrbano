@@ -498,6 +498,10 @@ footer div img {
   border-right: 0;
   border-bottom: 2px solid #f2efe9 ;
 }
+
+.box-admin textarea{
+  width: 40%;
+}
   
 
 .box-admin h1{
