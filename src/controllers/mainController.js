@@ -16,18 +16,19 @@ const mainController = {
     contactoPost : (req, res) =>{
         res.redirect("/")
         console.log(req.body)
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
+      
+          const transporter = nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
             auth: {
-                user: "dellavec@gmail.com",
-                pass: "xikuzvuerycqfwbx"
+                user: 'sarah27@ethereal.email',
+                pass: 'HTkdTdtBSzxRctNckN'
             }
-
-        })
+        });
 
         const mailOptions = {
-            from: req.body.sendMail,
-            to: "dellavec@gmail.com",
+            from: `"${req.body.nombre}" ${req.body.apellido} <${req.body.email}>`,
+            to: "cafeUrbano@ethereal.email",
             subject: "Contacto desde Cafe Urbano",
             text: req.body.consulta
         }
