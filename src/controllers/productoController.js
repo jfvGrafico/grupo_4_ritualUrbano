@@ -23,7 +23,10 @@ const productoController = {
     },
 
     productoDetalle : (req, res) => {
-        res.render("products/productoDetalle", { title : "Detalle de Producto"})
+        let prodID = req.params.prodID
+        res.render("products/productoDetalle", { title : "Detalle de Producto", prodID})
+
+        
     }
     
 }
