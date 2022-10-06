@@ -525,8 +525,6 @@ footer div img {
 
 
 .container-detalle-producto{
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid  #f2efe9 ;
@@ -541,6 +539,7 @@ footer div img {
 
 .img-detalle-producto img{
   width: 250px;
+  padding: 10px;
 }
 
 .texto-detalle-producto{
@@ -606,6 +605,10 @@ footer div img {
   width: 40%;
 }
 
+.container-detalle-producto{
+  display: flex;
+  justify-content: space-around;
+}
 
 
 }
