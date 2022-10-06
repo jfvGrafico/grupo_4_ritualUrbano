@@ -523,6 +523,30 @@ footer div img {
   color: white;
 }
 
+
+.container-detalle-producto{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+}
+
+.img-detalle-producto{
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+
+}
+
+.texto-detalle-producto{
+  padding: 10px;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+
+
+}
+
 /*Moible*/
 
 @media (min-width: 361px) {
@@ -577,6 +601,7 @@ footer div img {
 .producto-otros{
   width: 40%;
 }
+
 
 
 }

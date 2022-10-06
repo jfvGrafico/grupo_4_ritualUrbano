@@ -20,10 +20,11 @@ const productoController = {
     },
     carrito: (req, res)=>{
         res.render("products/carrito", { title: "Carrito" });
-    }
-    
-    
+    },
 
+    productoDetalle : (req, res) => {
+        res.render("products/productoDetalle", { title : "Detalle de Producto"})
+    }
     
 }
 
