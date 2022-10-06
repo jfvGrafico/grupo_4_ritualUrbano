@@ -14,7 +14,7 @@ const mainController = {
     },
 
     contactoPost : (req, res) =>{
-        res.redirect("/")
+        
         console.log(req.body)
       
           const transporter = nodemailer.createTransport({
@@ -28,7 +28,7 @@ const mainController = {
 
         const mailOptions = {
             from: `"${req.body.nombre}" ${req.body.apellido} <${req.body.email}>`,
-            to: "cafeUrbano@ethereal.email",
+            to: "CafeUrbano@ethereal.email",
             subject: "Contacto desde Cafe Urbano",
             text: req.body.consulta
         }
@@ -39,6 +39,8 @@ const mainController = {
             } else{
                 console.log("Email enviado: " + info.response)            }
         })
+
+        res.redirect("/")
     },
 
     template: (req, res) =>{
