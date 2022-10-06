@@ -484,7 +484,7 @@ footer div img {
 }
 .box-admin{
   margin-bottom: 10px;
-  width: 40%;
+  width: 80%;
   text-align: center;
   border: 1px solid  #f2efe9 ;
   box-shadow: 0 0 10px #f2efe9;
@@ -537,6 +537,10 @@ footer div img {
   border: 1px solid  #f2efe9 ;
   box-shadow: 0 0 10px #f2efe9;
 
+}
+
+.img-detalle-producto img{
+  width: 250px;
 }
 
 .texto-detalle-producto{
