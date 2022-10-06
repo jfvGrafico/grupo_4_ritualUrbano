@@ -119,6 +119,12 @@ form label {
   box-shadow: 0 0 10px #f2efe9;
 }
 
+.login-box:hover{
+  background-color: #f2efe9;
+  box-shadow: 0 0 10px #f2efe9;
+  border-radius: 3%;
+}
+
 .register-box {
   width: 70%;
   margin: auto;
@@ -129,7 +135,7 @@ form label {
 
 .register-box:hover{
   background-color: #f2efe9;
-  box-shadow: 0 0 30px #f2efe9;
+  box-shadow: 0 0 10px #f2efe9;
   border-radius: 3%;
 }
 
@@ -142,14 +148,16 @@ form label {
 }
 
 .submit-button {
-  width: 100px;
-  border-radius: 15px;
+  width: 60%;
+  border-radius: 5px;
   border: none;
   padding: 10px;
+  color: white;
+  background-color: #1a160f93;
 }
 
 .div-boton button:hover {
-  background-color: #3e5902;
+  background-color: #3B1910;
   color: white;
 }
 
@@ -194,8 +202,8 @@ form label {
   border-right: none;
 }
 .boton-registro {
-  width: 100px;
-  border-radius: 10px;
+  width: 60%;
+  border-radius: 5px;
   padding: 10px;
   border: none;
   color: white;
@@ -562,7 +570,7 @@ footer div img {
     height: 320px;
   }
   .register-box {
-    width: 300px;
+    width: 40%;
     /* height: 400px; */
   }
 
