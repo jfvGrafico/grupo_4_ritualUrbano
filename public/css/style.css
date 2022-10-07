@@ -615,7 +615,29 @@ footer div img {
 
 .container-detalle-producto{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.img-detalle-producto{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+
+}
+
+.texto-detalle-producto{
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:50vw;
+  padding: 10px;
+  border: 1px solid  #f2efe9 ;
+  box-shadow: 0 0 10px #f2efe9;
+
+
 }
 
 

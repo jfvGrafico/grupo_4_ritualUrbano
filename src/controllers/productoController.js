@@ -1,4 +1,27 @@
 const path = require ("path")
+let producto = [
+    {
+        id : 0,
+        nombre : "Cafe Tostado",
+        descripcion: " Cafe tostado proveniente de Colombia.",
+        imagen: "/img/cafe.png",
+        precio: 1.123
+    },
+    {
+        id : 1,
+        nombre : "Cafe Tostado",
+        descripcion: " Cafe tostado proveniente de Colombia.",
+        imagen: "/img/cafe2.png",
+        precio: 1.123
+    }
+]
+
+
+
+
+
+
+
 const productoController = {
     detalle :  (req, res) =>{
         res.render("products/detalle", { title: "Detalle" });
@@ -24,7 +47,8 @@ const productoController = {
 
     productoDetalle : (req, res) => {
         let prodID = req.params.prodID
-        res.render("products/productoDetalle", { title : "Detalle de Producto", prodID})
+        let prodObj = producto[prodID]
+        res.render("products/productoDetalle", { title : "Detalle de Producto", prodID, prodObj})
 
         
     }
