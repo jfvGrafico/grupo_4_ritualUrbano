@@ -15,29 +15,11 @@
         
         <div class="box-admin">
           <h1>Bienvenido adminstrador</h1>
-          <form action="/admin" method="POST">
-          <label for="send">Cargar Producto</label>
-          <input type="radio" name="productoSendEdit" id="send" value="carga" required>
-          <label for="editar">Editar Producto</label>
-          <input type="radio" name="productoSendEdit" id="editar" value="editar" required>
           <br>
-          <input type="number" name="productoID" placeholder="Id de Producto" required>
+          <label for="">Crear Producto</label> <a href="/producto/crear"><button>Crear</button></a>
           <br>
-          <input type="text" name="productoNombre" placeholder="Nombre">
-          <br>
-          <input type="text" name="productoCategoria" placeholder="Categoria">
-          <br>
-          <input type="number" name="productoPrecio" placeholder="$">
-          <br>
-          <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingresa aqui la descripcion del producto"></textarea>
-          <br>
-          <label for="imagen">Imagen del producto</label>
-          <br>
-          <input type="file" name="productoImagen" id="imagen">
-          <br>
-          <button class="admin-button" type="submit">Enviar</button>
-          <button class="admin-button" type="reset">Limpiar form</button>
-          </form>
+          <label for="">Crear Producto</label> <a href="/producto/editar"><button>Editar</button></a>
+         
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 const path = require ("path")
-let producto = [
+let productos = [
     {
         id : 0,
         nombre : "Cafe Tostado",
@@ -23,8 +23,9 @@ let producto = [
 
 
 const productoController = {
-    detalle :  (req, res) =>{
-        res.render("products/detalle", { title: "Detalle" });
+    lista :  (req, res) =>{
+
+        res.render("products/lista", { title: "Listado de Productos" , productos});
     },
     categoria: (req, res) =>{
         res.render("products/categoria", { title: "Categoria" });
@@ -47,11 +48,19 @@ const productoController = {
 
     productoDetalle : (req, res) => {
         let prodID = req.params.prodID
-        let prodObj = producto[prodID]
+        let prodObj = productos[prodID]
         res.render("products/productoDetalle", { title : "Detalle de Producto", prodID, prodObj})
 
         
-    }
+    },
+
+    crear: (req, res) =>{
+        res.render("products/productoCrear" , {title : "Crear Producto"})
+    },
+    
+    editar: (req, res) =>{
+        res.render("products/productoEditar" , {title : "Editar Producto"})
+    },
     
 }
 
