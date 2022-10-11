@@ -1,10 +1,6 @@
 const path = require ("path")
-const productos = require("../data/products")
-
-
-
-
-
+const fs = require("fs")
+const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
 
 const productoController = {
     lista :  (req, res) =>{
@@ -31,9 +27,6 @@ const productoController = {
     },
 
    productoDetalle : (req, res) => {
-        console.log("******+PARAMETRO*********")
-        console.log(req.params.prodID)
-        console.log("******+PARAMETRO*********")
         let prodObj = productos[req.params.prodID]
         res.render("products/productoDetalle", { title : "Detalle de Producto", prodObj})
         
