@@ -1,92 +1,101 @@
 [
-    {
-        "id" : 0,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 1,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe2.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 2,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe3.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 3,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe4.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 4,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe5.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 5,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe5.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 6,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Cafe tostado proveniente de Colombia.",
-        "categoria" : "cafe",
-        "peso" : "1kg",
-        "imagen": "/img/cafe5.png",
-        "precio" : 1.123
-    },
-    {
-        "id" : 7,
-        "nombre" : "Cafe Virgen",
-        "descripcion": "Café para tostar.",
-        "categoria" : "cafe",
-        "peso" : "3kg",
-        "imagen": "/img/01_coffee.jpg",
-        "precio" : 3000
-    },
-    {
-        "id" : 8,
-        "nombre" : "Cafe Tostado",
-        "descripcion": "Café tostado en nuestros hornos.",
-        "categoria" : "cafe",
-        "peso" : "A granel",
-        "imagen": "/img/02_coffee.jpg",
-        "precio" : 500
-    },
-    {
-        "id" : 9,
-        "nombre" : "Taza Café Urbano",
-        "descripcion": "Una taza para disfrutar del mejor cafe",
-        "categoria" : "merchandising",
-        "peso" : "N/A",
-        "imagen": "/img/coffee_item1-300x300.jpg",
-        "precio" : 500
-    }
+ {
+  "id": 0,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe.png",
+  "precio": 1.123
+ },
+ {
+  "id": 1,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe2.png",
+  "precio": 1.123
+ },
+ {
+  "id": 2,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe3.png",
+  "precio": 1.123
+ },
+ {
+  "id": 3,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe4.png",
+  "precio": 1.123
+ },
+ {
+  "id": 4,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe5.png",
+  "precio": 1.123
+ },
+ {
+  "id": 5,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe5.png",
+  "precio": 1.123
+ },
+ {
+  "id": 6,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "1kg",
+  "imagen": "/img/cafe5.png",
+  "precio": 1.123
+ },
+ {
+  "id": 7,
+  "nombre": "Cafe Virgen",
+  "descripcion": "Café para tostar.",
+  "categoria": "cafe",
+  "peso": "3kg",
+  "imagen": "/img/01_coffee.jpg",
+  "precio": 3000
+ },
+ {
+  "id": 8,
+  "nombre": "Cafe Tostado",
+  "descripcion": "Café tostado en nuestros hornos.",
+  "categoria": "cafe",
+  "peso": "A granel",
+  "imagen": "/img/02_coffee.jpg",
+  "precio": 500
+ },
+ {
+  "id": 9,
+  "nombre": "Taza Café Urbano",
+  "descripcion": "Una taza para disfrutar del mejor cafe",
+  "categoria": "merchandising",
+  "peso": "N/A",
+  "imagen": "/img/coffee_item1-300x300.jpg",
+  "precio": 500
+ },
+ {
+  "id": "10",
+  "nombre": "Gorra",
+  "descripcion": "Llevanos con vos, siempre",
+  "categoria": "merchandising",
+  "peso": "05",
+  "imagen": "/img/coffee_item7-300x300.jpg",
+  "precio": "1500"
+ }
 ]

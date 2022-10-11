@@ -38,7 +38,25 @@ const productoController = {
     
     editar: (req, res) =>{
         res.render("products/productoEditar" , {title : "Editar Producto"})
-    }
+    },
+
+    nuevoProd : (req, res) => {
+        let nuevoProd = {
+            id: req.body.idProd,
+            nombre: req.body.nombreProducto,
+            descripcion: req.body.descipcionProducto,
+            categoria : req.body.categoriaProducto,
+            peso : req.body.pesoProducto,
+            imagen: req.body.imagenProducto,
+            precio: req.body.precioProducto
+
+        }
+       productos.push(nuevoProd)
+       let pathToFile = path.join(__dirname, "../data/products.json")
+       nuevoArray = JSON.stringify(productos, null, " ") 
+       fs.writeFileSync(pathToFile, nuevoArray)
+       res.redirect("/producto")
+    }   
     
 }
 
