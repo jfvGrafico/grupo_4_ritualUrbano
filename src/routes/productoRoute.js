@@ -11,10 +11,9 @@ router.get ("/categoria/merchandising", productoController.merchandising )
 router.get ("/carrito", productoController.carrito)
 router.get("/crear" , productoController.crear )
 router.get("/editar" , productoController.editar)
-
-
-
-
-
 router.get ('/:prodID', productoController.productoDetalle)
+
+
+
+
 module.exports = router;

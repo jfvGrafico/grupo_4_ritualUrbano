@@ -55,12 +55,13 @@
 
         <div class="container producto">
           <% productos.forEach(item => { %>
+            <% if(item.categoria == "cafe") { %>
           <article>
                 <a href="/producto/<%=item.id%>"><img src=<%=item.imagen%> alt="Producto1"></a>
                 <p><%=item.nombre%></p>
                 <p><%=item.descripcion%></p>
                 <p><%=item.precio%></p>
-
+             <% } %> 
             </article>   
             <% })%>    
         </div>

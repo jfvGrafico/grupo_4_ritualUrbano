@@ -3,6 +3,7 @@ let productos = [
         id : 0,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe.png",
         precio: 1.123
@@ -11,6 +12,7 @@ let productos = [
         id : 1,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe2.png",
         precio: 1.123
@@ -19,6 +21,7 @@ let productos = [
         id : 2,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe3.png",
         precio: 1.123
@@ -27,6 +30,7 @@ let productos = [
         id : 3,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe4.png",
         precio: 1.123
@@ -35,6 +39,7 @@ let productos = [
         id : 4,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe5.png",
         precio: 1.123
@@ -43,6 +48,7 @@ let productos = [
         id : 5,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe5.png",
         precio: 1.123
@@ -51,6 +57,7 @@ let productos = [
         id : 6,
         nombre : "Cafe Tostado",
         descripcion: " Cafe tostado proveniente de Colombia.",
+        categoria : "cafe",
         peso : "1kg",
         imagen: "/img/cafe5.png",
         precio: 1.123

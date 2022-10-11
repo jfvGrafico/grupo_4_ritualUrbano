@@ -31,8 +31,12 @@ const productoController = {
     },
 
    productoDetalle : (req, res) => {
+        console.log("******+PARAMETRO*********")
+        console.log(req.params.prodID)
+        console.log("******+PARAMETRO*********")
         let prodObj = productos[req.params.prodID]
         res.render("products/productoDetalle", { title : "Detalle de Producto", prodObj})
+        
     },
 
     crear: (req, res) =>{
