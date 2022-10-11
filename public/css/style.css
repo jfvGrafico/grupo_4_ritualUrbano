@@ -569,7 +569,7 @@ footer div img {
 
 .formCrearProducto input{
   margin: 10px;
-  width: 30%;
+  width: 70%;
 }
 
 /*Moible*/
@@ -654,6 +654,12 @@ footer div img {
 
 }
 
+.formCrearProducto input{
+  margin: 10px;
+  width: 40%;
+}
+
+
 
 }
 
@@ -736,6 +742,11 @@ footer div img {
 .eliminar-carrito {
     right: 0;
     top: 3px;
+}
+
+.formCrearProducto input{
+  margin: 10px;
+  width: 30%;
 }
 
 }
