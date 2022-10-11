@@ -331,6 +331,7 @@ article p {
 display: flex;
 flex: 2;
 align-items: center;
+width: 100%;
 }
 
 .detallebtn{

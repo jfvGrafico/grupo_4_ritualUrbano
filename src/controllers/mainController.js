@@ -52,10 +52,6 @@ const mainController = {
     admin: (req, res) => {
         res.render("admin", {title: "Administrador"})
     },
-    adminPost: (req, res) => {
-        res.redirect("/")
-        console.log(req.body)
-    }
 }
 
 module.exports = mainController;

@@ -2,7 +2,7 @@ const express = require ("express");
 const productoController = require("../controllers/productoController");
 const router = express.Router();
 
-router.get ("/lista", productoController.lista )
+router.get ("/", productoController.lista )
 router.get ("/productoDetalle/:prodID?", productoController.productoDetalle)
 router.get ("/categoria", productoController.categoria )
 router.get ("/categoria/cafes", productoController.cafes )

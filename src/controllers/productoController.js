@@ -60,7 +60,7 @@ const productoController = {
     
     editar: (req, res) =>{
         res.render("products/productoEditar" , {title : "Editar Producto"})
-    },
+    }
     
 }
 
