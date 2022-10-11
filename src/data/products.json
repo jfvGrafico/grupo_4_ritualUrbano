@@ -70,5 +70,23 @@
         "peso" : "3kg",
         "imagen": "/img/01_coffee.jpg",
         "precio" : 3000
+    },
+    {
+        "id" : 8,
+        "nombre" : "Cafe Tostado",
+        "descripcion": "Café tostado en nuestros hornos.",
+        "categoria" : "cafe",
+        "peso" : "A granel",
+        "imagen": "/img/02_coffee.jpg",
+        "precio" : 500
+    },
+    {
+        "id" : 9,
+        "nombre" : "Taza Café Urbano",
+        "descripcion": "Una taza para disfrutar del mejor cafe",
+        "categoria" : "merchandising",
+        "peso" : "N/A",
+        "imagen": "/img/coffee_item1-300x300.jpg",
+        "precio" : 500
     }
 ]
