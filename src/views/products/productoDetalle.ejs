@@ -12,16 +12,19 @@
     <main>
       <div class="container-detalle-producto">
         <div class="img-detalle-producto">
-          <img src=<%=prodObj.imagen %>  alt="Aca va una imagen del producto">
+          <img src=<%=prodObj.imagen%>  alt="Aca va una imagen del producto">
           <br>
-          <p> <%= prodID %> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, vitae!</p>
+          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, vitae!</p>
         </div>
         <div class="texto-detalle-producto">
           <b>Nombre: </b> <p><%= prodObj.nombre %></p>
           <b>Descripcion: </b>
           <p><%= prodObj.descripcion %></p>
+          <b>Peso: </b><p><%= prodObj.peso %></p>
           <b>Precio: </b> <p><%= prodObj.precio %></p>
+  
         </div>
+        
       </div>
 
 

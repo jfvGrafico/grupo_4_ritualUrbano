@@ -2,12 +2,14 @@ const path = require("path")
 const nodemailer = require("nodemailer");
 const { getMaxListeners } = require("process");
 const { request } = require("http");
+const productos = require("../data/products")
+
 
 
 
 const mainController = {
     index :  (req, res) => {
-        res.render("index", {title: "Home"});
+        res.render("index", {title: "Home" , productos});
     },
     contacto:  (req, res) =>{
         res.render("contacto", {title: "Contacto"});

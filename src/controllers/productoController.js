@@ -1,21 +1,5 @@
 const path = require ("path")
-let productos = [
-    {
-        id : 0,
-        nombre : "Cafe Tostado",
-        descripcion: " Cafe tostado proveniente de Colombia.",
-        imagen: "/img/cafe.png",
-        precio: 1.123
-    },
-    {
-        id : 1,
-        nombre : "Cafe Tostado",
-        descripcion: " Cafe tostado proveniente de Colombia.",
-        imagen: "/img/cafe2.png",
-        precio: 1.123
-    }
-]
-
+const productos = require("../data/products")
 
 
 
@@ -46,12 +30,9 @@ const productoController = {
         res.render("products/carrito", { title: "Carrito" });
     },
 
-    productoDetalle : (req, res) => {
-        let prodID = req.params.prodID
-        let prodObj = productos[prodID]
-        res.render("products/productoDetalle", { title : "Detalle de Producto", prodID, prodObj})
-
-        
+   productoDetalle : (req, res) => {
+        let prodObj = productos[req.params.prodID]
+        res.render("products/productoDetalle", { title : "Detalle de Producto", prodObj})
     },
 
     crear: (req, res) =>{

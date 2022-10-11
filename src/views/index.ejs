@@ -54,32 +54,16 @@
         </section>
 
         <div class="container producto">
-            <article>
-                <img src="/img/cafe.png" alt="Producto1">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <img src="/img/cafe.png" alt="Producto1">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <img src="/img/cafe.png" alt="Producto1">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <img src="/img/cafe.png" alt="Producto1">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-        </div>
+          <% productos.forEach(item => { %>
+          <article>
+                <a href="/producto/<%=item.id%>"><img src=<%=item.imagen%> alt="Producto1"></a>
+                <p><%=item.nombre%></p>
+                <p><%=item.descripcion%></p>
+                <p><%=item.precio%></p>
 
+            </article>   
+            <% })%>    
+        </div>
     </main>
     <!--footer start-->
     <%- include("./partials/footer")  %> 

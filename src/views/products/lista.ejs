@@ -14,12 +14,13 @@
       <h2>Detalle de productos</h2>
         <section class="detalle-productos">
           <% productos.forEach (item => { %>
-          <div class="detalle-articulos">
-           <div class="detalleimg"> <img src=<%=item.imagen %> alt="cafe"></div>
+           <div class="detalle-articulos">
+           <div class="detalleimg"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
             <div class="detallebtn"><button>+</button></div>
             <div class="detalletxt"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
             </div>
+          
           <% })  %> 
 
 
@@ -40,5 +41,3 @@
 </body>
 </html>
 
-  </body>
-</html>
