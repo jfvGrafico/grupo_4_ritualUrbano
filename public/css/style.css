@@ -556,7 +556,20 @@ footer div img {
   border: 1px solid  #f2efe9 ;
   box-shadow: 0 0 10px #f2efe9;
 
+}
 
+.formCrearProducto{
+    margin: auto;
+    text-align: center;   
+    border: 1px solid  #f2efe9 ;
+    box-shadow: 0 0 10px #f2efe9;
+    margin-bottom: 10px;
+
+}
+
+.formCrearProducto input{
+  margin: 10px;
+  width: 30%;
 }
 
 /*Moible*/
