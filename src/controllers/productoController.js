@@ -70,8 +70,16 @@ const productoController = {
        nuevoArray = JSON.stringify(productos, null, " ") 
        fs.writeFileSync(pathToFile, nuevoArray)
        res.redirect("/producto")
-    }   
+    },
     
+    eliminar : (req, res) =>{
+        let newArray = productos.filter(producto => producto.id != req.params.prodID)
+        let arrayAGuardar = JSON.stringify(newArray, null, " ")
+        let pathToFile = path.join(__dirname, "../data/products.json")
+        fs.writeFileSync(pathToFile, arrayAGuardar)
+        res.redirect("/producto")
+    
+}
 }
 
 module.exports = productoController;
