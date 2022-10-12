@@ -14,7 +14,7 @@
         <div class="img-detalle-producto">
           <img src=<%=prodObj.imagen%>  alt="Aca va una imagen del producto">
           <br>
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, vitae!</p>
+          <p> <b>Categoria:</b> <%=prodObj.categoria%></p>
         </div>
         <div class="texto-detalle-producto">
           <b>Nombre: </b> <p><%= prodObj.nombre %></p>
@@ -24,7 +24,6 @@
           <b>Precio: </b> <p><%= prodObj.precio %></p>
           <div>
           <a href="/producto/<%=prodObj.id%>/editar"><button type="submit">Editar</button></a>   
-          
           <form action="/producto/<%=prodObj.id%>?_method=DELETE" method="POST">
           <button type="submit">Eliminar</button>
           </form>

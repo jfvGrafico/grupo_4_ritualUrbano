@@ -82,7 +82,7 @@ const productoController = {
 },
     resultado : (req, res) => {
         let key = req.query.busqueda
-        let encontrados = productos.filter(producto => producto.nombre.includes(key))
+        let encontrados = productos.filter(producto => producto.nombre.includes(key) || producto.descripcion.includes(key) )
         res.render("products/resultados", {title: "Resultados de la busqueda" , encontrados})
         console.log(encontrados)
     }
