@@ -31,6 +31,7 @@ router.get("/crear" , productoController.crear )
 router.post("/" , upload.any(), productoController.nuevoProd)
 router.get("/:prodID/editar" , productoController.editar)
 router.delete("/:prodID", productoController.eliminar)
+router.get("/resultado",  productoController.resultado)
 router.get ('/:prodID', productoController.productoDetalle) // Esta linea debe ser la ultima ruta.
 
 

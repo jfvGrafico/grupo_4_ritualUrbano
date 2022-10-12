@@ -79,7 +79,13 @@ const productoController = {
         fs.writeFileSync(pathToFile, arrayAGuardar)
         res.redirect("/producto")
     
-}
+},
+    resultado : (req, res) => {
+        let key = req.query.busqueda
+        let encontrados = productos.filter(producto => producto.nombre.includes(key))
+        res.render("products/resultados", {title: "Resultados de la busqueda" , encontrados})
+        console.log(encontrados)
+    }
 }
 
 module.exports = productoController;
