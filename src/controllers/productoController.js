@@ -41,13 +41,22 @@ const productoController = {
     },
 
     nuevoProd : (req, res) => {
+        
+        let imagenCargada
+        if(req.files[0] != undefined){
+            imagenCargada = "/img/"+req.files[0].originalname
+        } else {
+            imagenCargada = "/img/cafe.png"
+        }
+
+
         let nuevoProd = {
             id: req.body.idProd,
             nombre: req.body.nombreProducto,
             descripcion: req.body.descipcionProducto,
             categoria : req.body.categoriaProducto,
             peso : req.body.pesoProducto,
-            imagen: req.body.imagenProducto,
+            imagen: imagenCargada,
             precio: req.body.precioProducto
 
         }
