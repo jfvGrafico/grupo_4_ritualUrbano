@@ -10,13 +10,69 @@
     <!-- header FIN -->
 
     <main>
-    
-      <h1>Edicion de producto</h1>
-          <h2>editando el articulo <%= prodObj.id %></h2>
+      <h1>Edicion de producto <%=prodObj.nombre%></h1>
+      <div>
+        <div>
+          <form class="formCrearProducto" action="/producto/?_method=PUT" method="POST" enctype="multipart/form-data">
+            <input
+              type="number"
+              name="idProd"
+              id=""
+              placeholder="ID de producto"
+              value="<%=prodObj.id%>"
+              
+            />
+            <br />
+            <input
+              type="text"
+              name="nombreProducto"
+              id=""
+              placeholder="Nombre del producto"
+              value="<%=prodObj.nombre%>"
+            />
+            <br />
+            <input
+              type="text"
+              name="descipcionProducto"
+              id=""
+              placeholder="Descripcion del producto"
+              value="<%=prodObj.descripcion%>"
+            />
+            <br />
+            <input
+              type="text"
+              name="categoriaProducto"
+              id=""
+              placeholder="Categoria del producto"
+              value="<%=prodObj.categoria%>"
+            />
+            <br />
+            <input
+              type="number"
+              name="pesoProducto"
+              id=""
+              placeholder="Peso del producto"
+              value="<%= prodObj.peso %>"
+            />
+            <br />
+            <input
+              type="number"
+              name="precioProducto"
+              id=""
+              placeholder="Precio del producto"
+              value="<%=prodObj.precio%>"
+            />
+            <br />
+            <input type="file" name="imagenProducto" id="" />
+            <br />
+            <button type="submit">Enviar</button>
+            <br />
+          </form>
+        </div>
+      </div>
     </main>
-
-  <!--footer start-->
+    <!--footer start-->
     <%- include("../partials/footer.ejs") %>
     <!-- main-footer end -->
-</body>
+  </body>
 </html>

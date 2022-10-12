@@ -21,8 +21,8 @@ const mainController = {
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: 'sarah27@ethereal.email',
-                pass: 'HTkdTdtBSzxRctNckN'
+                user: 'reagan.leffler27@ethereal.email',
+                pass: 'UpbmXS1TtEjuteAgQs'
             }
         });
 

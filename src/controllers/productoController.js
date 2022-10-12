@@ -85,7 +85,43 @@ const productoController = {
         let encontrados = productos.filter(producto => producto.nombre.includes(key) || producto.descripcion.includes(key) )
         res.render("products/resultados", {title: "Resultados de la busqueda" , encontrados})
         console.log(encontrados)
+    },
+    
+    actualizar : (req, res) => {
+
+      
+      
+      let imagenCargada 
+      let newObj = {}
+      let obj = productos.find(producto => producto.id == req.body.idProd)
+      if(req.files[0] != undefined){
+        imagenCargada = `/img/${req.files[0].originalname}`
+      } else {
+        imagenCargada = obj.imagen
+      }
+      
+      newObj = {
+
+        id: req.body.idProd,
+        nombre: req.body.nombreProducto,
+        descripcion: req.body.descipcionProducto,
+        categoria : req.body.categoriaProducto,
+        peso : req.body.pesoProducto,
+        imagen: imagenCargada,
+        precio: req.body.precioProducto
+
+      }
+
+      let newArray = productos.filter(producto => producto.id != newObj.id)
+      newArray.push(newObj)
+      let arrayAGuardar = JSON.stringify(newArray, null, " ")
+      let pathToFile = path.join(__dirname, "../data/products.json")
+      fs.writeFileSync(pathToFile, arrayAGuardar)
+
+      res.redirect("/")
+
     }
 }
+
 
 module.exports = productoController;
