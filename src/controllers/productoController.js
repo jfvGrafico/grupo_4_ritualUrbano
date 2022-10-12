@@ -37,7 +37,12 @@ const productoController = {
     },
     
     editar: (req, res) =>{
-        res.render("products/productoEditar" , {title : "Editar Producto"})
+        let prodObj = productos.find(producto => producto.id == req.params.prodID)
+        
+
+        res.render("products/productoEditar" , {title : "Editar Producto", prodObj})
+        
+
     },
 
     nuevoProd : (req, res) => {
