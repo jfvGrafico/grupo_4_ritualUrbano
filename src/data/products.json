@@ -52,23 +52,5 @@
   "peso": "1kg",
   "imagen": "/img/cafe5.png",
   "precio": 1.123
- },
- {
-  "id": "7",
-  "nombre": "Gorra Cafe Urbano",
-  "descripcion": "Un simbolo de buen cafe.",
-  "categoria": "merchandising",
-  "peso": "500",
-  "imagen": "/img/coffee_item7-300x300.jpg",
-  "precio": "1500"
- },
- {
-  "id": "8",
-  "nombre": "Taza Cafe Urbano",
-  "descripcion": "Disfruta tus cafes junto a nosotros",
-  "categoria": "merchandising",
-  "peso": "100",
-  "imagen": "/img/coffee_item1-300x300.jpg",
-  "precio": "750"
  }
 ]
