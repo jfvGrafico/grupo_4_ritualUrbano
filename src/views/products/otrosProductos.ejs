@@ -9,24 +9,21 @@
     <%- include("../partials/header")  %> 
 
     <main>
-        <div class="merchandising-box">
+        <div class="cafe-box">
             
-                <div class="producto-merchandising">
-                    <img src="/img/coffee_item6-300x300.jpg" alt="Chocolates">
-                    <p>Deliciosos chocolates</p>
+            
+            <% productos.forEach(producto => { %>
+               
+                     
+                     <% if(producto.categoria == "otrosProductos") {%> 
+                    <div class="producto-otros">
+                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt="Cafe"> </a> 
+                     <p><%=producto.nombre %></p>
+                     
                 </div>
-                <div class="producto-merchandising">
-                    <img src="/img/coffee_item6-300x300.jpg" alt="Chocolates">
-                    <p>Deliciosos chocolates</p>
-                </div>
-                <div class="producto-merchandising">
-                    <img src="/img/coffee_item6-300x300.jpg" alt="Chocolates">
-                    <p>Deliciosos chocolates</p>
-                </div>
-                <div class="producto-merchandising">
-                    <img src="/img/coffee_item6-300x300.jpg" alt="Chocolates">
-                    <p>Deliciosos chocolates</p>
-                </div>
+                <% } %> 
+           <% }) %> 
+                
         </div>
                    
 

@@ -11,22 +11,19 @@
     <main>
         <div class="cafe-box">
             
-                <div class="producto-cafe">
-                    <img src="/img/Products-4-450x450.jpg" alt="Cafe">
-                    <p>cafe: supremo</p>
+            
+            <% productos.forEach(producto => { %>
+               
+                     
+                     <% if(producto.categoria == "cafe") {%> 
+                    <div class="producto-cafe">
+                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt="Cafe"> </a> 
+                     <p><%=producto.nombre %></p>
+                     
                 </div>
-                <div class="producto-cafe">
-                    <img src="/img/Products-4-450x450.jpg" alt="Cafe">
-                    <p>cafe: supremo</p>
-                </div>
-                <div class="producto-cafe">
-                    <img src="/img/Products-4-450x450.jpg" alt="Cafe">
-                    <p>cafe: supremo</p>
-                </div>
-                <div class="producto-cafe">
-                    <img src="/img/Products-4-450x450.jpg" alt="Cafe">
-                    <p>cafe: supremo</p>
-                </div>
+                <% } %> 
+           <% }) %> 
+                
         </div>
                    
 

@@ -11,16 +11,16 @@ const productoController = {
         res.render("products/categoria", { title: "Categoria" });
     },
     cafes : (req, res) =>{
-        res.render("products/cafes", { title: "Cafes" });
+        res.render("products/cafes", { title: "Cafes" , productos});
     },
     cafeteras: (req, res) =>{
-        res.render("products/cafeteras", { title: "Cafeteras" });
+        res.render("products/cafeteras", { title: "Cafeteras" , productos });
     },
     otrosProductos: (req, res) =>{
-        res.render("products/otrosProductos", { title: "Otros Productos" });
+        res.render("products/otrosProductos", { title: "Otros Productos" , productos });
     },
     merchandising: (req, res) =>{
-        res.render("products/merchandising", { title: "Merchandising" });
+        res.render("products/merchandising", { title: "Merchandising" , productos});
     },
     carrito: (req, res)=>{
         res.render("products/carrito", { title: "Carrito" });

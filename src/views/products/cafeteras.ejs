@@ -8,25 +8,22 @@
      <!-- header INICIO -->
      <%- include("../partials/header")  %> 
 
-    <main>
-        <div class="cafeteras-box">
+     <main>
+        <div class="cafe-box">
             
-                <div class="producto-cafetera">
-                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
-                    <p>cafetera: super duper</p>
+            
+            <% productos.forEach(producto => { %>
+               
+                     
+                     <% if(producto.categoria == "cafetera") {%> 
+                    <div class="producto-cafetera">
+                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt="Cafe"> </a> 
+                     <p><%=producto.nombre %></p>
+                     
                 </div>
-                <div class="producto-cafetera">
-                    <img src="/img/coffee_item9-300x300.jpg" alt="cafetera">
-                    <p>cafetera: super duper</p>
-                </div>
-                <div class="producto-cafetera">
-                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
-                    <p>cafetera: super duper</p>
-                </div>
-                <div class="producto-cafetera">
-                    <img src="/img/Products-12-450x450.jpg" alt="cafetera">
-                    <p>cafetera: super duper</p>
-                </div>
+                <% } %> 
+           <% }) %> 
+                
         </div>
                    
 
