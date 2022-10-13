@@ -27,8 +27,10 @@ const productoController = {
     },
 
    productoDetalle : (req, res) => {
-        let prodObj = productos[req.params.prodID]
+
+        let prodObj = productos.find(producto => producto.id == req.params.prodID)
         res.render("products/productoDetalle", { title : "Detalle de Producto", prodObj})
+        console.log(prodObj)
         
     },
 

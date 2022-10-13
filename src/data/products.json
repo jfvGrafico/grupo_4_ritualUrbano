@@ -1,21 +1,12 @@
 [
  {
-  "id": 0,
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "1kg",
-  "imagen": "/img/cafe.png",
-  "precio": 1.123
- },
- {
   "id": 1,
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
   "peso": "1kg",
   "imagen": "/img/cafe2.png",
-  "precio": 1.123
+  "precio": "1.123"
  },
  {
   "id": 2,
@@ -24,7 +15,7 @@
   "categoria": "cafe",
   "peso": "1kg",
   "imagen": "/img/cafe3.png",
-  "precio": 1.123
+  "precio": "1.123"
  },
  {
   "id": 3,
@@ -33,51 +24,60 @@
   "categoria": "cafe",
   "peso": "1kg",
   "imagen": "/img/cafe4.png",
-  "precio": 1.123
+  "precio": "1.123"
  },
  {
-  "id": 4,
+  "id": "5",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
-  "peso": "1kg",
+  "peso": "1",
   "imagen": "/img/cafe5.png",
-  "precio": 1.123
+  "precio": "1.123"
  },
  {
-  "id": 5,
+  "id": "0",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
-  "peso": "1kg",
-  "imagen": "/img/cafe5.png",
-  "precio": 1.123
+  "peso": "2",
+  "imagen": "/img/cafe.png",
+  "precio": "5.123"
  },
  {
-  "id": 6,
+  "id": "6",
+  "nombre": "Cafe tostado de Ecuador",
+  "descripcion": "El mejor cafe ecuatoriano",
+  "categoria": "cafe",
+  "peso": "3",
+  "imagen": "/img/coffee_item3-300x300.jpg",
+  "precio": "1560"
+ },
+ {
+  "id": "4",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
-  "peso": "1kg",
-  "imagen": "/img/cafe5.png",
-  "precio": 1.123
+  "peso": "3",
+  "imagen": "/img/coffee_item2-300x300.jpg",
+  "precio": "2467.123"
  },
  {
   "id": "7",
-  "nombre": "Gorra Cafe Urbano",
-  "descripcion": "Un simbolo de buen cafe.",
+  "nombre": "Gorra",
+  "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
   "categoria": "merchandising",
-  "peso": "500",
+  "peso": "1",
   "imagen": "/img/coffee_item7-300x300.jpg",
-  "precio": "1500"
+  "precio": "1350"
  },
  {
   "id": "8",
-  "nombre": "Taza Cafe Urbano",
-  "descripcion": "Disfruta tus cafes junto a nosotros",
-  "categoria": "merchandising",
-  "peso": "100",
-  "imagen": "/img/coffee_item1-300x300.jpg",
-  "precio": "750"
+  "nombre": "Latte Macchiatto",
+  "descripcion": "Te acompañamos en tu desayuno",
+  "categoria": "elaborados",
+  "peso": "1",
+  "imagen": "/img/coffee_item4-300x300.jpg",
+  "precio": "470"
  }
 ]
