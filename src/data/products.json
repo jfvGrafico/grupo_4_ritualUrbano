@@ -79,5 +79,14 @@
   "peso": "300",
   "imagen": "/img/coffee_item4-300x300.jpg",
   "precio": "470"
+ },
+ {
+  "id": "9",
+  "nombre": "Molinillo Reliquia",
+  "descripcion": "Una forma unica de moler los mejores granos.",
+  "categoria": "cafetera",
+  "peso": "1500",
+  "imagen": "/img/coffee_item9-300x300.jpg",
+  "precio": "4000"
  }
 ]

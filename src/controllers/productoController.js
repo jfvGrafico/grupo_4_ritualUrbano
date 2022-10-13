@@ -53,7 +53,7 @@ const productoController = {
         if(req.files[0] != undefined){
             imagenCargada = "/img/"+req.files[0].originalname
         } else {
-            imagenCargada = "/img/cafe.png"
+            imagenCargada = "/img/tg-4.png"
         }
 
 
