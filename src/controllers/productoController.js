@@ -9,8 +9,12 @@ const productoController = {
         res.render("products/lista", { title: "Listado de Productos" , productos});
     },
     categoria: (req, res) =>{
-        if(req.params.catID == undefined) {
-            res.render("products/categoria", { title: "Categoria" , productos});
+    console.log(req.params.catID)
+     
+     
+     
+    if(req.params.catID == undefined) {
+            res.render  ("products/categoria", { title: "Categoria" , productos});
         } else {
             if (req.params.catID == "cafes") {
                 res.render("products/cafes", { title: "Cafes" , productos});
@@ -19,17 +23,19 @@ const productoController = {
                     res.render("products/cafeteras", { title: "Cafeteras" , productos });
                 }else {
                     if (req.params.catID == "otrosProductos"){
-                        res.render("products/cafeteras", { title: "Cafeteras" , productos });
+                        res.render("products/otrosProductos", { title: "Cafeteras" , productos });
                     } else {
                         res.render("products/merchandising", { title: "Merchandising" , productos}); 
                     }
                 }
             }
         }
-    
-    },
+    }, 
+
     carrito: (req, res)=>{
-        res.render("products/carrito", { title: "Carrito" });
+      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+        res.render("products/carrito", { title: "Carrito" , carrito });
+        console.log(carrito)
     },
 
   productoDetalle: (req, res) => {
@@ -141,19 +147,18 @@ const productoController = {
   },
 
   guardarCarrito: (req, res) => {
-    let producId = req.params.id;
-    let producSelect = productos.find((producto) => producId == producto.id);
-    /* if(arrayProduct !== null){
-        arrayProduct.push(producSelect);
-    } else { */
-        let arrayProduct = [];
-    arrayProduct.push(producSelect);
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+    let productSelect = productos.find((producto) => req.params.id == producto.id);
+    carrito.push(productSelect)
+    let arrayAGuardar = JSON.stringify(carrito, null, " ");
+    let pathToFile = path.join(__dirname, "../data/carrito.json");
+    fs.writeFileSync(pathToFile, arrayAGuardar);
+    console.log(carrito)
+    res.redirect("/")
     
     
-    
-    console.log(arrayProduct)
   }
-};
+}
 
 
 module.exports = productoController;
