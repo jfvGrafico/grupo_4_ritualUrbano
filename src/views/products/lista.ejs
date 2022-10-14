@@ -19,7 +19,9 @@
             <div class="detallebtn"><button>+</button></div>
             <div class="detalletxt"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
-            <a href="/producto/carrito"><button class="btn">Comprar</button></a>
+            <form action="/producto/carrito/<%= item.id %> " method = "POST">
+              <button class="btn"><p>agregar carrito</p></button>
+              </form>
             </div>
           
           <% })  %> 
