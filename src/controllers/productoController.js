@@ -1,32 +1,36 @@
 const path = require ("path")
 const fs = require("fs")
+const e = require("express")
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
 
 const productoController = {
-  lista: (req, res) => {
-    res.render("products/lista", { title: "Listado de Productos", productos });
-  },
-  categoria: (req, res) => {
-    res.render("products/categoria", { title: "Categoria" });
-  },
-  cafes: (req, res) => {
-    res.render("products/cafes", { title: "Cafes", productos });
-  },
-  cafeteras: (req, res) => {
-    res.render("products/cafeteras", { title: "Cafeteras", productos });
-  },
-  otrosProductos: (req, res) => {
-    res.render("products/otrosProductos", {
-      title: "Otros Productos",
-      productos,
-    });
-  },
-  merchandising: (req, res) => {
-    res.render("products/merchandising", { title: "Merchandising", productos });
-  },
-  carrito: (req, res) => {
-    res.render("products/carrito", { title: "Carrito" });
-  },
+    lista :  (req, res) =>{
+        const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+        res.render("products/lista", { title: "Listado de Productos" , productos});
+    },
+    categoria: (req, res) =>{
+        if(req.params.catID == undefined) {
+            res.render("products/categoria", { title: "Categoria" , productos});
+        } else {
+            if (req.params.catID == "cafes") {
+                res.render("products/cafes", { title: "Cafes" , productos});
+            } else {
+                if (req.params.catID == "cafeteras"){
+                    res.render("products/cafeteras", { title: "Cafeteras" , productos });
+                }else {
+                    if (req.params.catID == "otrosProductos"){
+                        res.render("products/cafeteras", { title: "Cafeteras" , productos });
+                    } else {
+                        res.render("products/merchandising", { title: "Merchandising" , productos}); 
+                    }
+                }
+            }
+        }
+    
+    },
+    carrito: (req, res)=>{
+        res.render("products/carrito", { title: "Carrito" });
+    },
 
   productoDetalle: (req, res) => {
     let prodObj = productos.find(
