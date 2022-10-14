@@ -18,7 +18,9 @@ app.listen(puerto, () => {
     console.log(`Servidor Web corriendo en el puerto ${puerto}`);
 })
 
-
+/* app.use("*", (req, res, next) => {
+  res.status(404).render("not-found");
+}); */
 
 app.use("/", mainRoute)
 app.use("/user", userRoute)
