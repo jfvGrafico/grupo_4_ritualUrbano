@@ -25,6 +25,7 @@ const storage = multer.diskStorage({
 router.get ("/", productoController.lista )
 router.get ("/categoria/:catID?", productoController.categoria )
 router.get ("/carrito", productoController.carrito)
+router.delete ("/carrito/:carritoID", productoController.carritoDelete)
 router.get("/crear" , productoController.crear )
 router.post("/" , upload.any(), productoController.nuevoProd)
 router.get("/:prodID/editar" , productoController.editar)

@@ -30,7 +30,9 @@
           <div class="precio-carrito">
             <p><%=item.precio %> </p>
         </div>
+         <form action="/producto/carrito/<%=item.id%>?_method=DELETE" method="POST">
           <div class="eliminar-carrito"><button><i class="fas fa-trash-alt"></i></button></div>
+        </form>
         </div>
 
         <% }) %>

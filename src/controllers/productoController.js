@@ -35,7 +35,6 @@ const productoController = {
     carrito: (req, res)=>{
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
         res.render("products/carrito", { title: "Carrito" , carrito });
-        console.log(carrito)
     },
 
   productoDetalle: (req, res) => {
@@ -153,10 +152,16 @@ const productoController = {
     let arrayAGuardar = JSON.stringify(carrito, null, " ");
     let pathToFile = path.join(__dirname, "../data/carrito.json");
     fs.writeFileSync(pathToFile, arrayAGuardar);
-    console.log(carrito)
     res.redirect("/")
-    
-    
+  },
+  carritoDelete : (req, res) => {
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+    let aBorrar = carrito.filter(item => item.id != req.params.carritoID)
+    let aGuardar = JSON.stringify(aBorrar, null, " ");
+
+    let pathToFile = path.join(__dirname, "../data/carrito.json");
+    fs.writeFileSync(pathToFile, aGuardar);
+    res.redirect("/")
   }
 }
 
