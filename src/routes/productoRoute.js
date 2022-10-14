@@ -19,6 +19,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 
+//rutas de producto
 
 router.get ("/", productoController.lista )
 router.get ("/categoria", productoController.categoria )
@@ -33,7 +34,8 @@ router.get("/:prodID/editar" , productoController.editar)
 router.put("/", upload.any(), productoController.actualizar)
 router.get("/resultado",  productoController.resultado)
 router.delete("/:prodID", productoController.eliminar)
-router.get ('/:prodID', productoController.productoDetalle) // Esta linea debe ser la ultima ruta.
+router.get("/editar/lista", productoController.listaEditar)
+router.get ('/:prodID', productoController.productoDetalle) // Esta linea debe ser la ultima ruta por que se rompe
 
 
 

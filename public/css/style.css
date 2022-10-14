@@ -278,6 +278,7 @@ article p {
   border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
   border-top: 10px solid #8c0303;
+  text-align: center;
 }
 
 .item-carrito img {
@@ -711,7 +712,7 @@ footer div img {
   margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
-  display: flex;
+  
 }
 
 

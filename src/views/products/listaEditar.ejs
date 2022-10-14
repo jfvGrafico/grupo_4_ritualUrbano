@@ -19,7 +19,15 @@
             <div class="detallebtn"><button>+</button></div>
             <div class="detalletxt"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
-            <a href="/producto/carrito"><button class="btn">Comprar</button></a>
+
+            
+            <form action="/producto/<%=item.id%>?_method=DELETE" method="POST">
+              <button type="submit">Eliminar</button>
+              </form>
+
+
+              <a href="/producto/<%=item.id%>/editar"><button type="submit">Editar</button></a> 
+              
             </div>
           
           <% })  %> 

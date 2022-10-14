@@ -21,14 +21,7 @@
           <b>Descripcion: </b>
           <p><%= prodObj.descripcion %></p>
           <b>Peso: </b><p><%= prodObj.peso %>gr</p>
-          <b>Precio: </b> <p><%= prodObj.precio %></p>
-          <div>
-          <a href="/producto/<%=prodObj.id%>/editar"><button type="submit">Editar</button></a>   
-          <form action="/producto/<%=prodObj.id%>?_method=DELETE" method="POST">
-          <button type="submit">Eliminar</button>
-          </form>
-          </div> 
-          </form>
+          <b>Precio: </b> <p><%= prodObj.precio %></p> 
         </div>
         
       </div>

@@ -19,7 +19,7 @@ app.listen(puerto, () => {
 })
 
 
-
+//Punto de entrada a las rutas.
 app.use("/", mainRoute)
 app.use("/user", userRoute)
 app.use("/producto", productoRoute)
