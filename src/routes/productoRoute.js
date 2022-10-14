@@ -22,11 +22,7 @@ const storage = multer.diskStorage({
 //rutas de producto
 
 router.get ("/", productoController.lista )
-router.get ("/categoria", productoController.categoria )
-router.get ("/categoria/cafes", productoController.cafes )
-router.get ("/categoria/cafeteras", productoController.cafeteras )
-router.get ("/categoria/otrosProductos", productoController.otrosProductos )
-router.get ("/categoria/merchandising", productoController.merchandising )
+router.get ("/categoria/:catID?", productoController.categoria )
 router.get ("/carrito", productoController.carrito)
 router.get("/crear" , productoController.crear )
 router.post("/" , upload.any(), productoController.nuevoProd)
@@ -36,6 +32,7 @@ router.get("/resultado",  productoController.resultado)
 router.delete("/:prodID", productoController.eliminar)
 router.get("/editar/lista", productoController.listaEditar)
 router.get ('/:prodID', productoController.productoDetalle) // Esta linea debe ser la ultima ruta por que se rompe
+
 
 
 
