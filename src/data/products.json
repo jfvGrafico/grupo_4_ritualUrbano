@@ -1,32 +1,5 @@
 [
  {
-  "id": "6",
-  "nombre": "Cafe Ecuatoriano",
-  "descripcion": "el mejor cafe tostado proveniente de ecuador.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe.png",
-  "precio": "2500"
- },
- {
-  "id": "5",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe5.png",
-  "precio": "1.123"
- },
- {
-  "id": "1",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe2.png",
-  "precio": "1.123"
- },
- {
   "id": "2",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
@@ -63,15 +36,6 @@
   "precio": "1350"
  },
  {
-  "id": "3",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe molido",
-  "peso": "900",
-  "imagen": "/img/cafe4.png",
-  "precio": "1.123"
- },
- {
   "id": "8",
   "nombre": "Latte Macchiatto",
   "descripcion": "Te acompañamos en tu desayuno",
@@ -81,12 +45,30 @@
   "precio": "470"
  },
  {
-  "id": "9",
-  "nombre": "Molinillo Reliquia",
-  "descripcion": "Una forma unica de moler los mejores granos.",
-  "categoria": "cafetera",
-  "peso": "1500",
-  "imagen": "/img/coffee_item9-300x300.jpg",
-  "precio": "4000"
+  "id": "6",
+  "nombre": "Cafe Ecuatoriano!!!!",
+  "descripcion": "el mejor cafe tostado proveniente de ecuador.",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe.png",
+  "precio": "2500"
+ },
+ {
+  "id": "5",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe5.png",
+  "precio": "1.123"
+ },
+ {
+  "id": "1",
+  "nombre": "Cafe Tostadooooooooooooo",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe2.png",
+  "precio": "1.123"
  }
 ]
