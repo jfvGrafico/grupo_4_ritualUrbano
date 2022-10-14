@@ -145,15 +145,73 @@
 
 {
     "id": "16",
-    "nombre": "Cafetera Automatica",
+    "nombre": "Cafetera Automatica Longhi",
     "descripcion": "Una forma unica de moler los mejores granos.",
     "categoria": "cafetera",
     "peso": "1500",
-    "imagen": "/img/Products-12-450x450.jpg",
+    "imagen": "/img/cafetera_automatica_longhi.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "17",
+    "nombre": "Cafetera Breville Mini",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_breville_mini.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "18",
+    "nombre": "Cafetera de Capsulas - Philips",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_capsulas_philips.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "19",
+    "nombre": "Cafetera Italiana de Aluminio",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_italiana_aluminio.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "20",
+    "nombre": "Cafetera Italiana Bialetti",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_italiana_bialetti.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "21",
+    "nombre": "Cafetera Kubo Expresso",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_kubo_expresso.jpg",
+    "precio": "4000"
+},
+
+{
+    "id": "22",
+    "nombre": "Cafetera Automatica Philips",
+    "descripcion": "Una forma unica de moler los mejores granos.",
+    "categoria": "cafetera",
+    "peso": "1500",
+    "imagen": "/img/cafetera_phillis.jpg",
     "precio": "4000"
 }
-
-
 
 
  
