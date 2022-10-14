@@ -18,8 +18,10 @@ app.listen(puerto, () => {
     console.log(`Servidor Web corriendo en el puerto ${puerto}`);
 })
 
+/* app.use("*", (req, res, next) => {
+  res.status(404).render("not-found");
+}); */
 
-//Punto de entrada a las rutas.
 app.use("/", mainRoute)
 app.use("/user", userRoute)
 app.use("/producto", productoRoute)

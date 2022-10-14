@@ -1,7 +1,8 @@
 const express = require ("express");
 const productoController = require("../controllers/productoController");
 const router = express.Router();
-const multer = require("multer")
+const multer = require("multer");
+const { Router } = require("express");
 
 
 //config multer //
@@ -31,6 +32,7 @@ router.put("/", upload.any(), productoController.actualizar)
 router.get("/resultado",  productoController.resultado)
 router.delete("/:prodID", productoController.eliminar)
 router.get("/editar/lista", productoController.listaEditar)
+router.post("/carrito/:id", productoController.guardarCarrito)
 router.get ('/:prodID', productoController.productoDetalle) // Esta linea debe ser la ultima ruta por que se rompe
 
 
