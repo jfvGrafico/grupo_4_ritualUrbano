@@ -120,8 +120,13 @@ const productoController = {
       let pathToFile = path.join(__dirname, "../data/products.json")
       fs.writeFileSync(pathToFile, arrayAGuardar)
 
-      res.redirect("/")
+      res.redirect("/producto/editar/lista")
 
+    },
+
+    listaEditar : (req, res) => {
+        res.render("products/listaEditar" , {title : "Lista de edicion" , productos})
+        
     }
 }
 
