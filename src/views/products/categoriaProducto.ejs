@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!-- head INICIO -->
-   <%- include("../partials/head.ejs") %>
-   <!-- head FIN -->
+ <!-- head INICIO -->
+ <%- include("../partials/head.ejs") %>
+ <!-- head FIN -->
 
   <body>
     <!-- header INICIO -->
     <%- include("../partials/header")  %> 
 
     <main>
-        <div class="cafe-box">
-            
-            
-            <% productos.forEach(producto => { %>
-               
-                     
-                     <% if(producto.categoria == "otrosProductos") {%> 
-                    <div class="producto-otros">
+        <div class="cafe-box">       
+            <% productos.forEach(producto => { %>             
+                     <% if(producto.categoria == cat){%> 
+                    <div class="producto-cafe">
                      <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt="Cafe"> </a> 
                      <p><%=producto.nombre %></p>
                      
@@ -25,15 +21,12 @@
            <% }) %> 
                 
         </div>
-                   
-
-
-
-
+                  
     </main>
   <!--footer start-->
   <%- include("../partials/footer")  %> 
 
     <!-- main-footer end -->
+
 </body>
 </html>

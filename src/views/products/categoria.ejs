@@ -44,11 +44,45 @@
         </section>
     </div>
     <div class="categorias-box">
+     
+      <%catUnique.forEach(elemento => { %>
       <div class="categoria-cafes">
-        <a href="/producto/categoria/cafes"><img src="/img/cafe.png" alt="Cafes"></a>
-        <p>Nuestros cafes</p>
-      </div>
-      <div class="categoria-cafeteras">
+      
+     <% if(elemento == "cafe") { %>
+      <a href="/producto/categoria/<%=elemento%>"><img src="/img/02_coffee.jpg" alt="Cafes"></a>
+      <h3><%=elemento%></h3>
+          <%} else if(elemento == "cafetera"){%>
+            <a href="/producto/categoria/<%=elemento%>"><img src="/img/cafetera_capsulas_philips.jpg" alt="Cafes"></a>
+          <h3><%=elemento%></h3>
+          
+          <%} else if ((elemento == "otrosProductos")) { %>
+          <a href="/producto/categoria/<%=elemento%>"><img src="/img/coffee_item6-300x300.jpg" alt="Cafes"></a>
+          <h3><%=elemento%></h3>
+          <% } else if (elemento == "merchandising") { %>
+            <a href="/producto/categoria/<%=elemento%>"><img src="/img/coffee_item7-300x300.jpg" alt="Cafes"></a>
+            <h3><%=elemento%></h3>
+
+         <% } else {%>
+          <a href="/producto/categoria/<%=elemento%>"><img src="/img/02_coffee.jpg" alt="Cafes"></a>
+          <h3><%=elemento%></h3>
+          <% } %>
+
+    </div>
+    <% } ) %>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <!-- <div class="categoria-cafeteras">
         <a href="/producto/categoria/cafeteras"><img src="/img/Products-17.jpg" alt="Cafeteras"></a>
         <p>Las mejores cafeteras para preparar tu cafe</p>
       </div>
@@ -62,7 +96,7 @@
       </div>
     </div>
 
-
+  -->
 
     </main>
   <!--footer start-->
