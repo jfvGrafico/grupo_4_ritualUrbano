@@ -13,7 +13,7 @@
             <% productos.forEach(producto => { %>             
                      <% if(producto.categoria == cat){%> 
                     <div class="producto-cafe">
-                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt="Cafe"> </a> 
+                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt=<%=producto.categoria%>"> </a> 
                      <p><%=producto.nombre %></p>
                      
                 </div>
