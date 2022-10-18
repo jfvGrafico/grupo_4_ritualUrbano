@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
  <!-- head INICIO -->
- <%- include("./partials/head.ejs") %>
+ <%- include("../partials/head.ejs") %>
  <!-- head FIN -->
 <body>
   <!-- header INICIO -->
-  <%- include("./partials/header")  %>
+  <%- include("../partials/header")  %>
     <!-- Main Section-->
   <main>
     <section class="mt-5 container ">
@@ -110,7 +110,7 @@
                   </div>
                   <!-- / Coupon Code-->
                   <!-- Checkout Button-->
-                  <a href="/categoria" class="btn btn-white w-100 text-center mt-3"
+                  <a href="/producto" class="btn btn-white w-100 text-center mt-3"
                       role="button">Seguir comprando</a>
                   <a href="/checkout" class="btn btn-orange w-100 text-center mt-3"
                       role="button">Procesar la compra</a>
@@ -132,7 +132,7 @@
 </main>
   <!-- / Main Section-->
     <!--footer start-->
-    <%- include("./partials/footer" , {carrito})  %>
+    <%- include("../partials/footer" , {carrito})  %>
 </body>
 </html>
 
