@@ -11,24 +11,266 @@
 
 
     <main>
-      <h2>Detalle de productos</h2>
-        <section class="detalle-productos">
-          <% productos.forEach (item => { %>
-           <div class="detalle-articulos">
-           <div class="detalleimg"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
-            <div class="detallebtn"><button>+</button></div>
-            <div class="detalletxt"><p><%= item.descripcion %> </p> <br>   </div>
-            <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
-            <form action="/producto/carrito/<%= item.id %> " method = "POST">
-              <button class="btn"><p>agregar carrito</p></button>
-              </form>
-            </div>
-          
-          <% })  %> 
+    
+    <!-- Main Section-->
+    <section class="mt-0 ">
+        <div class="container">
 
-        </div>
-        </section>
+          <div class="row">
+
+              <!-- Category Aside/Sidebar -->
+              <div class="d-none d-lg-flex col-lg-3 mt-4">
+                  <div class="pe-4">
+                      <!-- Category Aside -->
+                      <aside>
+                      
+                              <!-- Filter Category -->
+                              <div class="mb-4">
+                                  <h2 class="mb-4 fs-6 mt-2 fw-bolder">Categorias Urbanas</h2>
+                                  <nav>
+                                    <ul class="list-unstyled list-default-text">
+                                      <li class="mb-2"><a
+                                          class="text-decoration-none text-body text-secondary-hover transition-all d-flex justify-content-between align-items-center"
+                                          href="#"><span><i class="ri-arrow-right-s-line align-bottom ms-n1"></i> Cafés </span> <span class="text-muted ms-4">(21)</span></a>
+                                      </li>              <li class="mb-2"><a
+                                          class="text-decoration-none text-body text-secondary-hover transition-all d-flex justify-content-between align-items-center"
+                                          href="#"><span><i class="ri-arrow-right-s-line align-bottom ms-n1"></i> Cafeteras </span> <span class="text-muted ms-4">(13)</span></a>
+                                      </li>              <li class="mb-2"><a
+                                          class="text-decoration-none text-body text-secondary-hover transition-all d-flex justify-content-between align-items-center"
+                                          href="#"><span><i class="ri-arrow-right-s-line align-bottom ms-n1"></i> Merchandising </span> <span class="text-muted ms-4">(18)</span></a>
+                                      </li>              <li class="mb-2"><a
+                                          class="text-decoration-none text-body text-secondary-hover transition-all d-flex justify-content-between align-items-center"
+                                          href="#"><span><i class="ri-arrow-right-s-line align-bottom ms-n1"></i> Complementos </span> <span class="text-muted ms-4">(25)</span></a>
+                                      </li>          
+                                    </ul>
+                                  </nav>
+                              </div>
+                              <!-- / Filter Category-->
+                      
+                          <!-- Price Filter -->
+                          <div class="py-4 widget-filter widget-filter-price border-top">
+                              <a class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+                                  data-bs-toggle="collapse" href="#filter-price" role="button" aria-expanded="true"
+                                  aria-controls="filter-price">
+                                  Precio
+                              </a>
+                              <div id="filter-price" class="collapse show">
+                                  <div class="filter-price mt-6"></div>
+                                  <div class="d-flex justify-content-between align-items-center mt-7">
+                                      <div class="input-group mb-0 me-2 border">
+                                          <span class="input-group-text bg-transparent fs-7 p-2 text-muted border-0">$</span>
+                                          <input type="number" min="00" max="1000" step="1" class="filter-min form-control-sm border flex-grow-1 text-muted border-0">
+                                      </div>   
+                                      <div class="input-group mb-0 ms-2 border">
+                                          <span class="input-group-text bg-transparent fs-7 p-2 text-muted border-0">$</span>
+                                          <input type="number" min="00" max="1000" step="1" class="filter-max form-control-sm flex-grow-1 text-muted border-0">
+                                      </div>                
+                                  </div>        </div>
+                          </div>
+                          <!-- / Price Filter -->    
+                      
+                              <!-- Type Filter -->
+                              <div class="py-4 widget-filter border-top">
+                                <a class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+                                  data-bs-toggle="collapse" href="#filter-modal-type" role="button" aria-expanded="false"
+                                  aria-controls="filter-modal-type">
+                                  Tipo
+                                </a>
+                                <div id="filter-modal-type" class="collapse">
+                                  <div class="input-group my-3 py-1">
+                                    <input type="text" class="form-control py-2 filter-search rounded" placeholder="Search"
+                                      aria-label="Search">
+                                    <span class="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20"><i
+                                        class="ri-search-2-line text-muted"></i></span>
+                                  </div>
+                                  <div class="filter-options">
+                                    <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-0">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-0"> Orgánico</label>
+                                    </div>              <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-1">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-1"> Granulado </label>
+                                    </div>              <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-2">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-2"> Instantáneo</label>
+                                    </div>              <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-3">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-3"> Argentino </label>
+                                    </div>              <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-4">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-4">Colombiano </label>
+                                    </div>              <div class="form-group form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-type-modal-5">
+                                        <label class="form-check-label fw-normal text-body flex-grow-1 d-flex justify-content-between"
+                                            for="filter-type-modal-5"> Brasilero </label>
+                                    </div>            </div>
+                                </div>
+                              </div>
+                              <!-- / Type Filter -->
+                          
+                              <!-- Sizes Filter -->
+                              <div class="py-4 widget-filter border-top">
+                                <a class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+                                  data-bs-toggle="collapse" href="#filter-modal-sizes" role="button" aria-expanded="false"
+                                  aria-controls="filter-modal-sizes">
+                                  Tamaños
+                                </a>
+                                <div id="filter-modal-sizes" class="collapse">
+                                  <div class="filter-options mt-3">
+                                    <div class="form-group d-inline-block mr-2 mb-2 form-check-bg form-check-custom">
+                                        <input type="checkbox" class="form-check-bg-input" id="filter-sizes-modal-0">
+                                        <label class="form-check-label fw-normal" for="filter-sizes-modal-0">0.5 kl</label>
+                                    </div>              <div class="form-group d-inline-block mr-2 mb-2 form-check-bg form-check-custom">
+                                        <input type="checkbox" class="form-check-bg-input" id="filter-sizes-modal-1">
+                                        <label class="form-check-label fw-normal" for="filter-sizes-modal-1">1 kl </label>
+                                    </div>              <div class="form-group d-inline-block mr-2 mb-2 form-check-bg form-check-custom">
+                                        <input type="checkbox" class="form-check-bg-input" id="filter-sizes-modal-2">
+                                        <label class="form-check-label fw-normal" for="filter-sizes-modal-2">2 kl </label>
+                                    </div>              <div class="form-group d-inline-block mr-2 mb-2 form-check-bg form-check-custom">
+                                        <input type="checkbox" class="form-check-bg-input" id="filter-sizes-modal-3">
+                                        <label class="form-check-label fw-normal" for="filter-sizes-modal-3"> 5 kl </label>
+                                    </div>          
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- / Sizes Filter -->
+
+                      </aside>
+                      <!-- / Category Aside-->                    
+                    </div>
+              </div>
+              <!-- / Category Aside/Sidebar -->
+
+              <!-- Category Products-->
+              <div class="col-12 col-lg-9">
+
+                  <!-- Top Toolbar-->
+                  <div class="mb-4 d-md-flex justify-content-between align-items-center">
+                      <div class="d-flex justify-content-start align-items-center flex-grow-1 mb-4 mb-md-0">
+                          <small class="d-inline-block fw-bolder">Filtrar por:</small>
+                          <ul class="list-unstyled d-inline-block mb-0 ms-2">
+                              <li class="bg-light py-1 fw-bolder px-2 cursor-pointer d-inline-block me-1 small">Tipo: Orgánico <i
+                                      class="ri-close-circle-line align-bottom ms-1"></i></li>
+                          </ul>
+                          <span class="fw-bolder text-muted-hover text-decoration-underline ms-2 cursor-pointer small">
+                            Limpiar
+                          </span>
+                      </div>
+                      <div class="d-flex align-items-center flex-column flex-md-row">
+                          <!-- Filter Trigger-->
+                          <button class="btn bg-light p-3 d-flex d-lg-none align-items-center fs-xs fw-bold text-uppercase w-100 mb-2 mb-md-0 w-md-auto"
+                              type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
+                              aria-controls="offcanvasFilters">
+                              <i class="ri-equalizer-line me-2"></i> Filtros
+                          </button>
+                          <!-- / Filter Trigger-->
+                          <div class="dropdown ms-md-2 lh-1 p-3 bg-light w-100 mb-2 mb-md-0 w-md-auto">
+                              <p class="fs-xs fw-bold text-uppercase text-muted-hover p-0 m-0" role="button"
+                                  data-bs-toggle="dropdown" aria-expanded="false">Oordenar por: 
+                                  <i class="ri-arrow-drop-down-line ri-lg align-bottom"></i></p>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item fs-xs fw-bold text-uppercase text-muted-hover mb-2"
+                                          href="#">Precio: Mayor a Menor</a></li>
+                                  <li><a class="dropdown-item fs-xs fw-bold text-uppercase text-muted-hover mb-2"
+                                          href="#">Precio: Menor a Mayor</a></li>
+                                  <li><a class="dropdown-item fs-xs fw-bold text-uppercase text-muted-hover mb-2"
+                                          href="#">A - Z</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>                    
+                  <!-- / Top Toolbar-->
+
+                  <!-- Products-->
+                  <div class="row g-4 mb-5">
+                      <% productos.forEach (item => { %>
+                              <div class="col-12 col-sm-6 col-md-4">
+                                  <!-- Card Product-->
+                                  <div class="card position-relative h-100 card-listing hover-trigger">
+                                      <div class="card-header">
+                                          <picture class="position-relative overflow-hidden d-block bg-light">
+                                              <img class="w-100 img-fluid position-relative z-index-10" title="" src=<%=item.imagen %>  alt="">
+                                          </picture>
+                                              <picture class="position-absolute z-index-20 start-0 top-0 hover-show bg-light">
+                                                  <img class="w-100 img-fluid" title="" src=<%=item.imagen %> alt="Titulo Imagen">
+                                              </picture>
+                                          <div class="card-actions">
+                                              <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">
+                                                <form action="/producto/carrito/<%= item.id %> " method = "POST">
+                                                  <button class="btn"><p><i class="ri-shopping-basket-2-fill"> </i>  Agregar al Carrito </p></button>
+                                                </form>
+                                              </span>
+                                              <!-- <div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
+                                                  <button class="btn btn-outline-dark btn-sm mx-2">1 kl </button>
+                                                  <button class="btn btn-outline-dark btn-sm mx-2">2 kl </button>
+                                                  <button class="btn btn-outline-dark btn-sm mx-2">5 kl </button>
+                                              </div> -->
+                                          </div>
+                                      </div>
+                                      <div class="card-body px-0 text-center">
+                                          <div class="d-flex justify-content-center align-items-center mx-auto mb-1">
+                                              <!-- Review Stars Small-->
+                                  <div class="rating position-relative d-table">
+                                      <div class="position-absolute stars" style="width: 90%">
+                                          <i class="ri-star-fill text-dark mr-1"></i>
+                                          <i class="ri-star-fill text-dark mr-1"></i>
+                                          <i class="ri-star-fill text-dark mr-1"></i>
+                                          <i class="ri-star-fill text-dark mr-1"></i>
+                                          <i class="ri-star-fill text-dark mr-1"></i>
+                                      </div>
+                                      <div class="stars">
+                                          <i class="ri-star-fill mr-1 text-muted opacity-25"></i>
+                                          <i class="ri-star-fill mr-1 text-muted opacity-25"></i>
+                                          <i class="ri-star-fill mr-1 text-muted opacity-25"></i>
+                                          <i class="ri-star-fill mr-1 text-muted opacity-25"></i>
+                                          <i class="ri-star-fill mr-1 text-muted opacity-25"></i>
+                                      </div>
+                                  </div> <span class="small fw-bolder ms-2 text-muted"> 4.7 (456)</span>
+                                          </div>
+                                          <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center"
+                                              href="/producto/<%=item.id%>"> <%= item.descripcion %> </a>
+                                              <p class="fw-bolder m-0 mt-2">$<%= item.precio %></p>
+                                      </div>
+                                  </div>
+                                  <!--/ Card Product-->
+                              </div>
+                      <% })  %>         
+                  </div>
+                  <!-- / Products-->
+
+                  <!-- Pagination-->
+                  <nav class="border-top mt-5 pt-5 d-flex justify-content-between align-items-center" aria-label="Category Pagination">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#"><i class="ri-arrow-left-line align-bottom"></i> Prev</a></li>
+                    </ul>
+                    <ul class="pagination">
+                      <li class="page-item active mx-1"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item mx-1"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item mx-1"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Next <i class="ri-arrow-right-line align-bottom"></i></a></li>
+                    </ul>
+                  </nav>                    
+                  <!-- / Pagination-->
+
+              </div>
+              <!-- / Category Products-->
+
+          </div>
+      </div>
+
+  </section>
+  <!-- / Main Section-->
+
     </main>
+
+
     <!--footer start-->
 
     <%- include("../partials/footer")  %> 

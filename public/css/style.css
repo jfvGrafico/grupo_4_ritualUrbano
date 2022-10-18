@@ -1,11 +1,11 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: "Oswald", "Open Sans";
-}
+} */
 
 /* -- etiquetas principales -- */
 
-body {
+/* body {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -29,10 +29,10 @@ h6 {
 .top-logo-bar {
   background-color: #f2efe9;
   width: 100%;
-}
+} */
 
 /* --- Navegacion --- */
-.searchbar input {
+/* .searchbar input {
   width: 70%;
   padding-left: 5px;
   font-size: 14px;
@@ -63,10 +63,10 @@ h6 {
 .menu-principal a {
   text-decoration: none;
   color: #401201;
-}
+} */
 
 /* Banner */
-.banner-inicio-session {
+/* .banner-inicio-session {
   text-align: left;
   padding: 10px;
   padding-bottom: 20px;
@@ -89,127 +89,10 @@ h6 {
   padding: 0;
   margin: 0;
   text-align: center; 
-}
+} */
 
 /* formularios */
-
-.form-login {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-form label {
-  padding-top: 10px;
-}
-.form-login input {
-  width: 75%;
-  height: 30px;
-  padding: 10px;
-  border-bottom: solid 2px #f2efe9;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.login-box {
-  width: 70%;
-  margin: auto;
-  margin-bottom: 40px;
-  box-shadow: 0 0 10px #f2efe9;
-}
-
-.login-box:hover{
-  background-color: #f2efe9;
-  box-shadow: 0 0 10px #f2efe9;
-  border-radius: 3%;
-}
-
-.register-box {
-  width: 70%;
-  margin: auto;
-  margin-bottom: 40px;
-  box-shadow: 0 0 10px #f2efe9;
-  border-radius: 3%;
-}
-
-.register-box:hover{
-  background-color: #f2efe9;
-  box-shadow: 0 0 10px #f2efe9;
-  border-radius: 3%;
-}
-
-.politica-privacidad{
-  margin-top: 10px;
-  font-size: 13px;
-  padding: 10px 10px 0 10px;
-  margin: 10px;
-  text-align: center;  
-}
-
-.submit-button {
-  width: 60%;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  color: white;
-  background-color: #1a160f93;
-}
-
-.div-boton button:hover {
-  background-color: #3B1910;
-  color: white;
-}
-
-.div-boton button {
-  transition: all 250ms;
-}
-
-.div-boton {
-  text-align: center;
-  padding-top: 15px;
-  margin-top: 30px;
-  padding-bottom: 50px;
-}
-
-.div-boton p {
-  font-size: 14px;
-  margin-bottom: 1px;
-}
-
-.div-boton a {
-  text-decoration: none;
-  color: #401201;
-}
-
-.boton-barra-busqueda {
-  border: 0;
-  background: none;
-}
-
-.form-registro {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.form-registro input {
-  width: 75%;
-  padding: 2px;
-  border-bottom: solid 2px #f2efe9;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.boton-registro {
-  width: 60%;
-  border-radius: 5px;
-  padding: 10px;
-  border: none;
-  color: white;
-  background-color: #1a160f93;
-  
-}
+]
 
 .producto {
   display: flex;

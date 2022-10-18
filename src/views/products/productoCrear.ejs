@@ -10,10 +10,15 @@
     <!-- header FIN -->
 
     <main>
-      <h1>Creacion de producto</h1>
-      <div>
-        <div>
-          <form class="formCrearProducto" action="/producto" method="POST" enctype="multipart/form-data">
+
+      <section class="mt-5 container ">
+
+        <h1 class="mb-4 display-5 fw-bold text-center">Creacion de producto</h1>
+          <p class="text-center mx-auto">Ingresa todos los campos</p>
+            <div class="border-bottom pb-3"></div>
+
+        <div class="p-2"> 
+          <form class="formCrearProducto m-4" action="/producto" method="POST" enctype="multipart/form-data">
             <input
               type="number"
               name="idProd"
@@ -58,11 +63,13 @@
             <br />
             <input type="file" name="imagenProducto" id="" />
             <br />
-            <button type="submit">Enviar</button>
+            <button type="submit" class="btn btn-dark mt-4 mb-2">Enviar</button>
             <br />
           </form>
         </div>
-      </div>
+
+      </section>
+
     </main>
     <!--footer start-->
     <%- include("../partials/footer.ejs") %>

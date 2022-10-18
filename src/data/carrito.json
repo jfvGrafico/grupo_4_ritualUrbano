@@ -1,1 +1,29 @@
-[]
+[
+ {
+  "id": "10",
+  "nombre": "Cafe en grano",
+  "descripcion": "Cafe virgen en grano para tostar",
+  "categoria": "cafe",
+  "peso": "500",
+  "imagen": "/img/tg-2-1.jpeg",
+  "precio": "3000"
+ },
+ {
+  "id": "10",
+  "nombre": "Cafe en grano",
+  "descripcion": "Cafe virgen en grano para tostar",
+  "categoria": "cafe",
+  "peso": "500",
+  "imagen": "/img/tg-2-1.jpeg",
+  "precio": "3000"
+ },
+ {
+  "id": "2",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe3.png",
+  "precio": "1.123"
+ }
+]

@@ -11,18 +11,27 @@
     <!-- header FIN -->
 
     <main>
-      <div class="contenedor-admin">
-        
-        <div class="box-admin">
-          <h1>Bienvenido adminstrador</h1>
-          <br>
-          <label for="">Crear Producto</label> <a href="/producto/crear"><button>Crear</button></a>
-          <br>
-          <label for="">Editar Producto</label> <a href="/producto/editar/lista"><button>Editar</button></a>
-         
-        </div>
 
-      </div>
+      <section class="mt-5 container ">
+
+        <h1 class="mb-4 display-5 fw-bold text-center">Bienvenido adminstrador</h1>
+          <p class="text-center mx-auto">Seleccione que deseas realizar</p>
+            <div class="border-bottom pb-3"></div>
+
+            <div data-aos="fade-in" data-aos-delay="2000" class="aos-init aos-animate">
+              <div class="d-md-flex justify-content-center mt-4 mb-3 my-md-5">
+                  <a href="/producto/crear" class="btn btn-skew-left btn-orange btn-orange-chunky 
+                  text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+                  <span> Crear Producto <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+                  <a href="/producto/editar/lista"" class="btn btn-skew-left btn-orange btn-orange-chunky 
+                  text-white mx-1 w-100 w-md-auto mb-2 mb-md-0">
+                  <span>Editar Producto <i class="ri-arrow-right-line align-middle fw-bold"></i></span></a>
+              </div>
+              <i class="ri-mouse-line d-block text-center animation-float ri-2x transition-all opacity-50-hover text-white aos-init aos-animate" data-pixr-scrollto="" data-target=".brand-section" data-aos="fade-up" data-aos-delay="700"></i>
+          </div>
+
+      </section>
+
     </main>
   <!--footer start-->
     <%- include("partials/footer.ejs") %>

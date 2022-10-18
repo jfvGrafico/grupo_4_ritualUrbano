@@ -9,24 +9,51 @@
       <%- include("../partials/header.ejs") %>
 
     <main>
-        <div class="container">
-      <div class="banner-inicio-session">
-        <h2>Inicio de sesion</h2>
-      </div>
-    <div class="login-box">
-      <form class="form-login" action="/user/login" method="POST" id="form-logear">
-        <label for="email">Direccion de mail</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" id="password" />
-      </form>
-      <div class="div-boton">
-        <button form="form-logear" class="submit-button mb-3" type="submit">Acceder</button>
-        <p>No eres parte de este ritual, haz click <a href="/user/registro">aqui</a>.</p>
-        <p>Si olvidaste tu contraseña haz click <a href="#">aqui</a></p>
-      </div>
-    </div>
-</div>
+
+      <section class="mt-5 container ">
+
+        <h1 class="mb-4 display-5 fw-bold text-center">Inicio de Sesión</h1>
+          <p class="text-center mx-auto">Complete los detalles a continuación. ¿Ya estás registrado?</p>
+          <p class="text-center mx-auto">
+            <span> Sí aún no eres parte de este ritual, haz click <a href="/user/registro">aquí.</a> </span>
+          </p>
+            <div class="border-bottom pb-3"></div>
+
+            <!-- Formulario de login-->
+            <div class="row d-flex mt-4">
+              <div class="p-4 sticky-md-top top-5">
+                  
+                    <div class="card flex-grow-1 mb-md-0">
+                      <div class="card__content">
+                        <form class="form-login" action="/user/login" method="POST" id="form-logear">
+                          <div class="mb-3">
+                            <label class="form-label" for="email">Dirección de Email</label>
+                            <input type="email"  name="email" id="email" class="form-control" placeholder="Ingrese su correo electrónico" />
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="password">Contraseña</label>
+                            <input type="password" name="password" class="form-control" placeholder="Contraseña" />
+                          </div>
+                          <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" />
+                            <label class="form-check-label mb-0">Recuérdame</label>
+                          </div>
+                          <button type="submit" form="form-logear" class="btn btn-dark">Acceder</button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <!-- Accept Terms Checkbox-->
+                    <div class="form-group form-check my-4">
+                        <input type="checkbox" class="form-check-input" id="accept-terms" checked>
+                        <label class="form-check-label fw-bolder" for="accept-terms">Acepto los <a href="#">térmimos & condiciones</a></label>
+                    </div>   
+              </div>                
+            </div>
+          <!-- /form -->
+
+      </section>
+
     </main>
      <!--footer start-->
      
