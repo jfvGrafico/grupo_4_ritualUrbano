@@ -287,6 +287,9 @@ article p {
   
 }
 
+.eliminar-carrito button{
+  border-style: none;
+}
 
 .boton-enviar-carrito {
   text-align: center;
@@ -744,6 +747,8 @@ footer div img {
     right: 0;
     top: 3px;
 }
+
+
 
 .formCrearProducto input{
   margin: 10px;

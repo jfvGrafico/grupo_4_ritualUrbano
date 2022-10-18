@@ -187,5 +187,23 @@
   "peso": "1500",
   "imagen": "/img/cafetera_phillis.jpg",
   "precio": "4000"
+ },
+ {
+   "id": "23",
+   "nombre": "Tasa Ritual Urbano",
+   "descripcion": "Tasa de la marca.",
+   "categoria": "merchandising",
+   "peso": "1500",
+   "imagen": "/img/coffee_item1-300x300.jpg",
+   "precio": "2000"
+ },
+ {
+   "id": "24",
+   "nombre": "Vaso termico",
+   "descripcion": "Vaso para cafe.",
+   "categoria": "merchandising",
+   "peso": "1500",
+   "imagen": "/img/Grid-home-item-show-img.jpg",
+   "precio": "1500"
  }
 ]
