@@ -9,28 +9,17 @@ const productoController = {
         res.render("products/lista", { title: "Listado de Productos" , productos});
     },
     categoria: (req, res) =>{
-    console.log(req.params.catID)
-     
-     
-     
-    if(req.params.catID == undefined) {
-            res.render  ("products/categoria", { title: "Categoria" , productos});
-        } else {
-            if (req.params.catID == "cafes") {
-                res.render("products/cafes", { title: "Cafes" , productos});
-            } else {
-                if (req.params.catID == "cafeteras"){
-                    res.render("products/cafeteras", { title: "Cafeteras" , productos });
-                }else {
-                    if (req.params.catID == "otrosProductos"){
-                        res.render("products/otrosProductos", { title: "Cafeteras" , productos });
-                    } else {
-                        res.render("products/merchandising", { title: "Merchandising" , productos}); 
-                    }
-                }
+      let catUnique = []
+      let arrayCat = []
+      productos.forEach(producto => arrayCat.push(producto.categoria))
+      catUnique = [... new Set (arrayCat)]  //hace un unique de arrayCat 
+      if(req.params.catID == undefined) {
+        res.render  ("products/categoria", { title: "Categoria" , productos, catUnique});
+    } else {  
+            let cat = req.params.catID      
+            res.render  ("products/categoriaProducto", { title: "Prueba" , productos, cat});
             }
-        }
-    }, 
+   },
 
     carrito: (req, res)=>{
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
@@ -152,7 +141,7 @@ const productoController = {
     let arrayAGuardar = JSON.stringify(carrito, null, " ");
     let pathToFile = path.join(__dirname, "../data/carrito.json");
     fs.writeFileSync(pathToFile, arrayAGuardar);
-    res.redirect("/")
+    res.redirect("/producto/carrito")
   },
   carritoDelete : (req, res) => {
     const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
