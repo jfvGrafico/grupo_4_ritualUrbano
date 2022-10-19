@@ -46,7 +46,7 @@
  },
  {
   "id": "6",
-  "nombre": "Cafe Ecuatoriano!!!!",
+  "nombre": "Cafe Ecuatoriano",
   "descripcion": "el mejor cafe tostado proveniente de ecuador.",
   "categoria": "cafe",
   "peso": "900",
@@ -56,7 +56,7 @@
  {
   "id": "5",
   "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
   "peso": "900",
   "imagen": "/img/cafe5.png",
@@ -64,7 +64,7 @@
  },
  {
   "id": "1",
-  "nombre": "Cafe Tostadooooooooooooo",
+  "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
   "peso": "900",
