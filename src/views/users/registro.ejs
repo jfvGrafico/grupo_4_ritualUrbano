@@ -20,8 +20,18 @@
             <div class="row d-flex mt-4">
               <div class="p-4 sticky-md-top top-5">
                   
+                            <!-- Muestra mensajes de validacion -->
+
                     <div class="card flex-grow-1 mb-md-0">
                       <div class="card__content">
+                        <% if (locals && locals.mensajeDeError) { %>
+                          <% for(let error in mensajeDeError) { %>
+                            <p style="color: tomato;"> <%= mensajeDeError[error].msg %> </p> 
+                         <% } %>
+                        <% } %>
+                           
+                        <!-- fin de mensajes de valdiacion  -->
+
 
                         <form class="form-registro" action="/user/registro" method="POST" id="form-registrar">
                           <label for="nombre" class="form-label">Nombre y Apellido</label>

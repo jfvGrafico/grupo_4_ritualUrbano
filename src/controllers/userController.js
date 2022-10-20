@@ -1,5 +1,7 @@
 const path = require ("path")
 const fs = require("fs")
+const {validationResult} = require ("express-validator")
+const { traceDeprecation } = require("process")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
 
 const userController = {
@@ -15,7 +17,14 @@ const userController = {
     },
 
     registroPost: (req, res) =>{
-        res.send(req.body)
+        let errors = validationResult(req)
+        if(errors.isEmpty()){
+            res.send(req.body)
+        } else {
+            res.render("users/registro",  {title : "registro", mensajeDeError : errors.mapped()})
+        }
+        
+
     }
 
 }
