@@ -26,7 +26,7 @@
                       <div class="card__content">
                         <% if (locals && locals.mensajeDeError) { %>
                           <% for(let error in mensajeDeError) { %>
-                            <p style="color: tomato;"> <%= mensajeDeError[error].msg %> </p> 
+                            <p style="color: tomato; font-size: 12px;"> <%= mensajeDeError[error].msg %> </p> 
                          <% } %>
                         <% } %>
                            
@@ -35,13 +35,13 @@
 
                         <form class="form-registro" action="/user/registro" method="POST" id="form-registrar">
                           <label for="nombre" class="form-label">Nombre y Apellido</label>
-                          <input type="text" class="form-control" name="nombre" id="nombre" minlength="8">
+                          <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="8">
                           <label for="email" class="form-label">Direccion de email</label>
-                          <input type="email" class="form-control" name="email" id="email">
+                          <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
                           <label for="password" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" name="password" id="password">
+                          <input type="password" class="form-control" name="password" id="password" value="<%= (locals.old && old.password) ? old.password : "" %>">
                           <label for="rpassword" class="form-label">Repetir contraseña</label>
-                          <input type="password" class="form-control" name="rpassword" id="rpassword">
+                          <input type="password" class="form-control" name="rpassword" id="rpassword" value="<%= (locals.old && old.rpassword) ? old.rpassword : "" %>">
 
                           <!-- Accept Terms Checkbox-->
                           <div class="form-group form-check my-4">

@@ -21,7 +21,7 @@ const userController = {
         if(errors.isEmpty()){
             res.send(req.body)
         } else {
-            res.render("users/registro",  {title : "registro", mensajeDeError : errors.mapped()})
+            res.render("users/registro",  {title : "registro", mensajeDeError : errors.mapped(), old : req.body})
         }
         
 
