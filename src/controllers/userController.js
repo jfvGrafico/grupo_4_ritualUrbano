@@ -7,8 +7,7 @@ const userController = {
         res.render("users/login", {title: "Login"})
     },
     loginPost : (req, res) =>{
-        res.redirect("/")
-        console.log(req.body)
+        res.send(req.body)
     },
 
     registro: (req, res) =>{
@@ -16,8 +15,7 @@ const userController = {
     },
 
     registroPost: (req, res) =>{
-        res.redirect("/")
-        console.log(req.body)
+        res.send(req.body)
     }
 
 }
