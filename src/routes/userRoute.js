@@ -6,6 +6,7 @@ const router = express.Router();
 //validacion de registro de usuario
 validateRegistro = [
     body("nombre").notEmpty().withMessage("El nombre es un campo obligatorio"),
+    body("apellido").notEmpty().withMessage("El apellido es un campo obligatorio"),
     body("email").isEmail().withMessage("Por favor ingrese un email valido"),
     body("password").notEmpty().withMessage("Recuerde introducir la contraseña"),
     body("rpassword").notEmpty().withMessage("Recuerde repetir la contraseña")

@@ -19,7 +19,30 @@ const userController = {
     registroPost: (req, res) =>{
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            res.send(req.body)
+            users.forEach(usuario => {
+                if(usuario.email == req.body.email){
+                    res.send("El usuario ya existe")
+                    res.redirect("/")
+                }
+                
+            });
+
+            let usuarioAGuardar = {
+                id : (users.length) +1,
+                first_name: req.body.nombre,
+                last_name: req.body.apellido,
+                password: req.body.password,
+                email: req.body.email,
+                category: "user",
+                image: "http://dummyimage.com/159x100.png/dddddd/000000"
+            }
+
+            users.push(usuarioAGuardar)
+
+            fs.writeFileSync(path.resolve(__dirname, "../data/users.json") , JSON.stringify(users, null, " "))
+            res.redirect("/")
+
+            
         } else {
             res.render("users/registro",  {title : "registro", mensajeDeError : errors.mapped(), old : req.body})
         }
