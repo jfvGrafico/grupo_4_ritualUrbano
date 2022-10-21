@@ -44,7 +44,7 @@ const userController = {
 
             
         } else {
-            res.render("users/registro",  {title : "registro", mensajeDeError : errors.mapped(), old : req.body})
+            res.render("users/registro",  {title : "registro", mensajeDeError : errors.array(), old : req.body})
         }
         
 

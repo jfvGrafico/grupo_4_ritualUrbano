@@ -15,7 +15,10 @@ app.use(express.static(path.resolve(__dirname, "../public")));  //sirviendo cont
 app.use(express.urlencoded({ extended: false })); // captura objetos en el body del res.
 app.use(express.json()) // permite manipular json
 app.use(methodOverride("_method")) //netodo para put y delete
-app.use(session ({secret : "Ritual Urbano, el mejor cafe!"}))
+app.use(session ({secret : "Ritual Urbano, el mejor cafe!",
+                  resave : false, 
+                  saveUninitialized : false}))
+                  
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))
 
