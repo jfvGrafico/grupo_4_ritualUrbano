@@ -9,7 +9,6 @@ validateRegistro = [
     body("apellido").notEmpty().withMessage("El apellido es un campo obligatorio"),
     body("email").isEmail().withMessage("Por favor ingrese un email valido"),
     body("password").notEmpty().withMessage("Recuerde introducir la contraseña"),
-    body("rpassword").notEmpty().withMessage("Recuerde repetir la contraseña")
 ]
 
 //rutas de usuario.
