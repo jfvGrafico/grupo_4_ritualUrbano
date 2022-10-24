@@ -16,6 +16,7 @@ const userController = {
                     if(req.body.recuerdame != undefined){
                         res.cookie("userLogged" , user.email, {maxAge : (60000 * 60)})
                         res.cookie("userType" , user.category, {maxAge : (60000 * 60)})
+                        
                     }
                 res.redirect("/")
             } else {

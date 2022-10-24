@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage })
 
-
 //rutas de producto
 
 router.get ("/", productoController.lista )
