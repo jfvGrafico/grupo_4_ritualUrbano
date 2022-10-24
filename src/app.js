@@ -7,6 +7,7 @@ const userRoute = require("./routes/userRoute")
 const productoRoute = require ("./routes/productoRoute")      
 const methodOverride = require("method-override");
 const session = require("express-session")
+const cookieParser = require("cookie-parser")
 const app = express();
 
 //middlewares
@@ -18,6 +19,7 @@ app.use(methodOverride("_method")) //netodo para put y delete
 app.use(session ({secret : "Ritual Urbano, el mejor cafe!",
                   resave : false, 
                   saveUninitialized : false}))
+app.use(cookieParser())
                   
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))

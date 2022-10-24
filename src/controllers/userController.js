@@ -11,13 +11,17 @@ const userController = {
     loginPost : (req, res) =>{
         users.forEach(user => {
             if(req.body.email == user.email && req.body.password == user.password){
-                req.session.usuarioLogeado = req.body.email
-                res.redirect("/")
+                let usuarioLogeado = user;
+                req.session.usuarioLogeado = usuarioLogeado;
+                    if(req.body.recuerdame != undefined){
+                        res.cookie("userLogged" , user.email, {maxAge : (60000 * 60)})
+                        res.cookie("userType" , user.category, {maxAge : (60000 * 60)})
+                    }
+                res.redirect("/" , {usuarioLogeado})
             } else {
                 res.redirect("/user/login")
             }    
         })
-
     },
 
     registro: (req, res) =>{
