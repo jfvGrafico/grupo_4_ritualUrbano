@@ -8,6 +8,7 @@ const productoRoute = require ("./routes/productoRoute")
 const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser")
+const userAuthMiddleware = require("./middleware/userAuthMiddleware")
 const app = express();
 
 //middlewares
@@ -20,6 +21,7 @@ app.use(session ({secret : "Ritual Urbano, el mejor cafe!",
                   resave : false, 
                   saveUninitialized : false}))
 app.use(cookieParser())
+app.use(userAuthMiddleware)
                   
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))
