@@ -70,9 +70,9 @@
                         <picture class="position-relative overflow-hidden d-block bg-light">
                             <img class="w-100 img-fluid position-relative z-index-10" title="" src=<%=item.imagen%> alt="">
                         </picture>
-                            <picture class="position-absolute z-index-20 start-0 top-0 hover-show bg-light">
-                                <img class="w-100 img-fluid" title="" src=<%=item.imagen%> alt="">
-                            </picture>
+                            <!-- <picture class="position-absolute z-index-20 start-0 top-0 hover-show bg-light"> // ESTA LINEA PRUCEN ERROR EN INDEX
+                                <img class="w-100 img-fluid" title="" src=<%=item.imagen%> alt=""> // ESTA LINEA PRUCEN ERROR EN INDEX
+                            </picture> -->  
                         <div class="card-actions">
                             <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">Carrito</span>
                             <div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
@@ -102,8 +102,8 @@
                             </div>
                         </div> <span class="small fw-bolder ms-2 text-muted"> 4.7 (100)</span>
                         </div>
-                        <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center"
-                        href="/producto/<%=item.id%>"><%=item.nombre%></a>
+                        <!-- <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center" /// ESTA LINEA PRUCEN ERROR EN INDEX
+                        href="/producto/<%=item.id%>"><%=item.nombre%></a> --> 
                             <p><%=item.descripcion%></p>
                             <p class="fw-bolder m-0 mt-2"><%=item.precio%></p>
                             <% } %> 
