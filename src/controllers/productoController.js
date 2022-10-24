@@ -34,7 +34,6 @@ const productoController = {
       title: "Detalle de Producto",
       prodObj,
     });
-    console.log(prodObj);
   },
 
   crear: (req, res) => {

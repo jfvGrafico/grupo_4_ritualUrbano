@@ -17,7 +17,7 @@ const userController = {
                         res.cookie("userLogged" , user.email, {maxAge : (60000 * 60)})
                         res.cookie("userType" , user.category, {maxAge : (60000 * 60)})
                     }
-                res.redirect("/" , {usuarioLogeado})
+                res.redirect("/")
             } else {
                 res.redirect("/user/login")
             }    
