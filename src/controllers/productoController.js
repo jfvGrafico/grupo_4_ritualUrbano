@@ -60,7 +60,7 @@ const productoController = {
     }
 
     let nuevoProd = {
-      id: req.body.idProd,
+      id: (productos.length +1),
       nombre: req.body.nombreProducto,
       descripcion: req.body.descipcionProducto,
       categoria: req.body.categoriaProducto,

@@ -1,15 +1,6 @@
 [
  {
-  "id": "2",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe3.png",
-  "precio": "1.123"
- },
- {
-  "id": "0",
+  "id": "1",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
@@ -18,7 +9,7 @@
   "precio": "5.123"
  },
  {
-  "id": "4",
+  "id": "2",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
@@ -27,7 +18,7 @@
   "precio": "2467.123"
  },
  {
-  "id": "7",
+  "id": "3",
   "nombre": "Gorra",
   "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
   "categoria": "merchandising",
@@ -36,7 +27,7 @@
   "precio": "1350"
  },
  {
-  "id": "8",
+  "id": "4",
   "nombre": "Latte Macchiatto",
   "descripcion": "Te acompañamos en tu desayuno",
   "categoria": "otrosProductos",
@@ -45,7 +36,7 @@
   "precio": "470"
  },
  {
-  "id": "6",
+  "id": "5",
   "nombre": "Cafe Ecuatoriano",
   "descripcion": "el mejor cafe tostado proveniente de ecuador.",
   "categoria": "cafe",
@@ -54,7 +45,7 @@
   "precio": "2500"
  },
  {
-  "id": "5",
+  "id": "6",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
@@ -63,7 +54,7 @@
   "precio": "1.123"
  },
  {
-  "id": "1",
+  "id": "7",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
   "categoria": "cafe",
@@ -72,7 +63,7 @@
   "precio": "1.123"
  },
  {
-  "id": "10",
+  "id": "8",
   "nombre": "Cafe en grano",
   "descripcion": "Cafe virgen en grano para tostar",
   "categoria": "cafe",
@@ -81,7 +72,7 @@
   "precio": "3000"
  },
  {
-  "id": "10",
+  "id": "9",
   "nombre": "Molinillo Reliquia",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -90,7 +81,7 @@
   "precio": "4000"
  },
  {
-  "id": "11",
+  "id": "10",
   "nombre": "Cafetera Automatica",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -99,7 +90,7 @@
   "precio": "4000"
  },
  {
-  "id": "12",
+  "id": "11",
   "nombre": "Cafetera Acero Bombeada",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -108,7 +99,7 @@
   "precio": "5000"
  },
  {
-  "id": "13",
+  "id": "12",
   "nombre": "Cafetera Prensa Francesa",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -117,7 +108,7 @@
   "precio": "4000"
  },
  {
-  "id": "14",
+  "id": "13",
   "nombre": "Cafetera Napolitana",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -126,7 +117,7 @@
   "precio": "4000"
  },
  {
-  "id": "16",
+  "id": "14",
   "nombre": "Cafetera Automatica Longhi",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -135,7 +126,7 @@
   "precio": "4000"
  },
  {
-  "id": "17",
+  "id": "15",
   "nombre": "Cafetera Breville Mini",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -144,7 +135,7 @@
   "precio": "4000"
  },
  {
-  "id": "19",
+  "id": "16",
   "nombre": "Cafetera Italiana de Aluminio",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -153,7 +144,7 @@
   "precio": "4000"
  },
  {
-  "id": "20",
+  "id": "17",
   "nombre": "Cafetera Italiana Bialetti",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -162,7 +153,7 @@
   "precio": "4000"
  },
  {
-  "id": "21",
+  "id": "18",
   "nombre": "Cafetera Kubo Expresso",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -171,7 +162,7 @@
   "precio": "4000"
  },
  {
-  "id": "22",
+  "id": "19",
   "nombre": "Cafetera Automatica Philips",
   "descripcion": "Una forma unica de moler los mejores granos.",
   "categoria": "cafetera",
@@ -180,7 +171,7 @@
   "precio": "4000"
  },
  {
-  "id": "23",
+  "id": "20",
   "nombre": "Tasa Ritual Urbano",
   "descripcion": "Tasa de la marca.",
   "categoria": "merchandising",
@@ -189,12 +180,21 @@
   "precio": "2000"
  },
  {
-  "id": "24",
+  "id": "21",
   "nombre": "Vaso termico",
   "descripcion": "Vaso para cafe.",
   "categoria": "merchandising",
   "peso": "150",
   "imagen": "/img/Grid-home-item-show-img.jpg",
   "precio": "1500"
+ },
+ {
+  "id": "22",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe3.png",
+  "precio": "1713.123"
  }
 ]
