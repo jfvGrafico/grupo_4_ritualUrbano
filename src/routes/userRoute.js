@@ -13,8 +13,8 @@ validateRegistro = [
 
 //rutas de usuario.
 router.get("/login", userController.login )
-router.get("/registro", userController.registro)
 router.post("/login", userController.loginPost )
+router.get("/registro", userController.registro)
 router.post("/registro",validateRegistro, userController.registroPost)
 
 module.exports = router;

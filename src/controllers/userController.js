@@ -9,7 +9,15 @@ const userController = {
         res.render("users/login", {title: "Login"})
     },
     loginPost : (req, res) =>{
-        res.send(req.body)
+        users.forEach(user => {
+            if(req.body.email == user.email && req.body.password == user.password){
+                req.session.usuarioLogeado = req.body.email
+                res.redirect("/")
+            } else {
+                res.redirect("/user/login")
+            }    
+        })
+
     },
 
     registro: (req, res) =>{
