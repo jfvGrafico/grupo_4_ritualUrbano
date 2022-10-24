@@ -9,6 +9,7 @@ const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser")
 const userAuthMiddleware = require("./middleware/userAuthMiddleware")
+//const carritoPreviewMiddleware = require("./middleware/carritoPreviewMiddleware")
 const app = express();
 
 //middlewares
@@ -22,6 +23,7 @@ app.use(session ({secret : "Ritual Urbano, el mejor cafe!",
                   saveUninitialized : false}))
 app.use(cookieParser())
 app.use(userAuthMiddleware)
+//app.use(carritoPreviewMiddleware)
                   
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))
