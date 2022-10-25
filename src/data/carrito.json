@@ -1,11 +1,11 @@
 [
  {
-  "id": "2",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "1200",
-  "imagen": "/img/coffee_item2-300x300.jpg",
-  "precio": "2467.123"
+  "id": "4",
+  "nombre": "Latte Macchiatto",
+  "descripcion": "Te acompañamos en tu desayuno",
+  "categoria": "otrosProductos",
+  "peso": "300",
+  "imagen": "/img/coffee_item4-300x300.jpg",
+  "precio": "470"
  }
 ]

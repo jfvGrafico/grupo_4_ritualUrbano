@@ -193,7 +193,11 @@
             <div class="border-top pt-3">
               <div class="d-flex justify-content-between align-items-center">
                 <p class="m-0 fw-bolder">Subtotal</p>
-                <p class="m-0 fw-bolder"><%= "$" + locals.subtotal%></p>
+                <% if (locals.subtotal != undefined) { %>
+                  <p class="m-0 fw-bolder"><%= "$" + locals.subtotal%></p>
+                <% } else { %>
+                  <p class="m-0 fw-bolder">0</p>
+                 <% } %> 
               </div>
               <a href="/producto/carrito/checkout"
                 class="btn btn-orange btn-orange-chunky mt-5 mb-2 d-block text-center">Ir a pagar</a>

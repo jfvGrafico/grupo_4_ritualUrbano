@@ -5,7 +5,7 @@ const carritoPreviewMiddleware = (req, res, next) => {
         let subtotal = 0;
         
        for( let i =0 ; i < carrito.length ; i++) {
-            subtotal += carrito[i].precio
+            subtotal += carrito[i].precio * 1
        }
         res.locals.subtotal = subtotal
         res.locals.carrito = carrito
