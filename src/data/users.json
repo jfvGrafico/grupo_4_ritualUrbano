@@ -1,6 +1,15 @@
 [
  {
   "id": 1,
+  "first_name": "administrador",
+  "last_name": "administrador",
+  "password": "123",
+  "email": "admin@admin.com",
+  "category": "admin",
+  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
+ },
+ {
+  "id": 2,
   "first_name": "Juan Martin",
   "last_name": "Della Vecchia",
   "password": "123",
