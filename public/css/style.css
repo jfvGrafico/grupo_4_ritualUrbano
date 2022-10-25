@@ -92,7 +92,7 @@ h6 {
 } */
 
 /* formularios */
-]
+
 
 .producto {
   display: flex;
@@ -172,6 +172,11 @@ article p {
 
 .eliminar-carrito button{
   border-style: none;
+}
+
+.table button{
+  border-style: none;
+  background: #fff;
 }
 
 .boton-enviar-carrito {

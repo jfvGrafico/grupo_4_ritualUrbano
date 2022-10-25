@@ -2,11 +2,13 @@ const path = require ("path")
 const fs = require("fs")
 const e = require("express")
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+
 
 const productoController = {
     lista :  (req, res) =>{
         const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
-        res.render("products/lista", { title: "Listado de Productos" , productos});
+        res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
     },
     categoria: (req, res) =>{
       let catUnique = []
@@ -14,16 +16,29 @@ const productoController = {
       productos.forEach(producto => arrayCat.push(producto.categoria))
       catUnique = [... new Set (arrayCat)]  //hace un unique de arrayCat 
       if(req.params.catID == undefined) {
-        res.render  ("products/categoria", { title: "Categoria" , productos, catUnique});
+        res.render  ("products/categoria", { title: "Categoria" , productos, catUnique, carrito});
     } else {  
             let cat = req.params.catID      
-            res.render  ("products/categoriaProducto", { title: "Prueba" , productos, cat});
+            res.render  ("products/categoriaProducto", { title: "Prueba" , productos, cat, carrito});
             }
    },
 
     carrito: (req, res)=>{
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-        res.render("products/carrito", { title: "Carrito" , carrito });
+      console.log(carrito.precio)
+      if(carrito.precio == undefined){
+        res.render("products/carrito", { title: "Carrito", carrito });
+      }else{
+        let sumaCarrito = carrito.reduce((acum, num) => {
+          return acum.precio + num.precio;
+        });
+        console.log("El total es" + sumaCarrito);
+      }
+      
+        
+        
+        
+        
     },
 
   productoDetalle: (req, res) => {
@@ -32,7 +47,7 @@ const productoController = {
     );
     res.render("products/productoDetalle", {
       title: "Detalle de Producto",
-      prodObj,
+      prodObj, carrito
     });
   },
 
@@ -142,6 +157,7 @@ const productoController = {
     fs.writeFileSync(pathToFile, arrayAGuardar);
     req.session.carritoSession = carrito
     res.redirect("/producto/carrito")
+    
 
   },
   carritoDelete : (req, res) => {
