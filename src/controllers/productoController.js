@@ -23,23 +23,7 @@ const productoController = {
             }
    },
 
-    carrito: (req, res)=>{
-      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-      console.log(carrito.precio)
-      if(carrito.precio == undefined){
-        res.render("products/carrito", { title: "Carrito", carrito });
-      }else{
-        let sumaCarrito = carrito.reduce((acum, num) => {
-          return acum.precio + num.precio;
-        });
-        console.log("El total es" + sumaCarrito);
-      }
-      
-        
-        
-        
-        
-    },
+    
 
   productoDetalle: (req, res) => {
     let prodObj = productos.find(
@@ -146,27 +130,6 @@ const productoController = {
       title: "Lista de edicion",
       productos,
     });
-  },
-
-  guardarCarrito: (req, res) => {
-    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-    let productSelect = productos.find((producto) => req.params.id == producto.id);
-    carrito.push(productSelect)
-    let arrayAGuardar = JSON.stringify(carrito, null, " ");
-    let pathToFile = path.join(__dirname, "../data/carrito.json");
-    fs.writeFileSync(pathToFile, arrayAGuardar);
-    req.session.carritoSession = carrito
-    res.redirect("/producto/carrito")
-    
-
-  },
-  carritoDelete : (req, res) => {
-    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-    let aBorrar = carrito.filter(item => item.id != req.params.carritoID)
-    let aGuardar = JSON.stringify(aBorrar, null, " ");
-    let pathToFile = path.join(__dirname, "../data/carrito.json");
-    fs.writeFileSync(pathToFile, aGuardar);
-    res.redirect("/producto/carrito")
   }
 }
 
