@@ -25,15 +25,15 @@ const productoController = {
 
     carrito: (req, res)=>{
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-      console.log(carrito.precio)
-      if(carrito.precio == undefined){
+      /* console.log(carrito.precio)
+      if(carrito.precio == undefined){ */
         res.render("products/carrito", { title: "Carrito", carrito });
-      }else{
+      /* }else{
         let sumaCarrito = carrito.reduce((acum, num) => {
           return acum.precio + num.precio;
         });
-        console.log("El total es" + sumaCarrito);
-      }
+        console.log("El total es" + sumaCarrito); */
+      /* } */
       
         
         
