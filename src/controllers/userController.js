@@ -9,20 +9,20 @@ const userController = {
         res.render("users/login", {title: "Login"})
     },
     loginPost : (req, res) =>{
-        users.forEach(user => {
-            if(req.body.email == user.email && req.body.password == user.password){
-                let usuarioLogeado = user;
-                req.session.usuarioLogeado = usuarioLogeado;
-                    if(req.body.recuerdame != undefined){
-                        res.cookie("userLogged" , user.email, {maxAge : (60000 * 60)})
-                        res.cookie("userType" , user.category, {maxAge : (60000 * 60)})
-                        
-                    }
-                res.redirect("/")
-            } else {
-                res.redirect("/user/login")
-            }    
-        })
+        let usuarioLogeado = users.find(user => req.body.email == user.email && req.body.password == user.password)
+        if (usuarioLogeado != undefined){
+            req.session.usuarioLogeado = usuarioLogeado;
+            if(req.body.recuerdame != undefined){
+                res.cookie("userLogged" , usuarioLogeado.email, {maxAge : (60000 * 60)})
+                res.cookie("userType" , usuarioLogeado.category, {maxAge : (60000 * 60)}) 
+        }
+        res.redirect("/")
+
+
+    } else {
+        res.redirect("/user/login")
+
+    }
     },
 
     registro: (req, res) =>{
