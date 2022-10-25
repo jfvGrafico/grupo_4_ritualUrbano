@@ -140,7 +140,7 @@ const productoController = {
     let arrayAGuardar = JSON.stringify(carrito, null, " ");
     let pathToFile = path.join(__dirname, "../data/carrito.json");
     fs.writeFileSync(pathToFile, arrayAGuardar);
-    req.session.carritoSession = productSelect
+    req.session.carritoSession = carrito
     res.redirect("/producto/carrito")
 
   },
