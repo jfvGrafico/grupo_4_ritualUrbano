@@ -1,8 +1,6 @@
 const path = require("path")
 const fs = require("fs")
 const nodemailer = require("nodemailer");
-const { getMaxListeners } = require("process");
-const { request } = require("http");
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
 const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
 

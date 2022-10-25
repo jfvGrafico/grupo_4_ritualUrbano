@@ -4,7 +4,8 @@ const express = require("express");
 const path = require("path");    
 const mainRoute = require("./routes/mainRoute")  
 const userRoute = require("./routes/userRoute")  
-const productoRoute = require ("./routes/productoRoute")      
+const productoRoute = require ("./routes/productoRoute")   
+const carritoRoute = require("./routes/carritoRoute") 
 const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser")
@@ -39,7 +40,9 @@ app.listen(puerto, () => {
 
 app.use("/", mainRoute)
 app.use("/user", userRoute)
+app.use("/producto/carrito", carritoRoute)
 app.use("/producto", productoRoute)
+
 
 
 
