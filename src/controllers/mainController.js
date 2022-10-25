@@ -9,7 +9,7 @@ const mainController = {
         res.render("index", {title: "Home" , productos , carrito});
     },
     contacto:  (req, res) =>{
-        res.render("contacto", {title: "Contacto"});
+        res.render("contacto", { title: "Contacto", carrito });
     },
 
     contactoPost : (req, res) =>{

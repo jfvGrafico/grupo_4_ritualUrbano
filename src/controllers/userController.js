@@ -3,10 +3,13 @@ const fs = require("fs")
 const {validationResult} = require ("express-validator")
 const { traceDeprecation } = require("process")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
+const carrito = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
+);
 
 const userController = {
     login: (req, res) =>{
-        res.render("users/login", {title: "Login"})
+        res.render("users/login", { title: "Login", carrito });
     },
     loginPost : (req, res) =>{
         let usuarioLogeado = users.find(user => req.body.email == user.email && req.body.password == user.password)
@@ -26,7 +29,7 @@ const userController = {
     },
 
     registro: (req, res) =>{
-        res.render("users/registro", {title: "Registro"})
+        res.render("users/registro", { title: "Registro", carrito });
     },
 
     registroPost: (req, res) =>{
