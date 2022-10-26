@@ -23,23 +23,6 @@ const productoController = {
             }
    },
 
-    carrito: (req, res)=>{
-      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
-      /* console.log(carrito.precio)
-      if(carrito.precio == undefined){ */
-        res.render("products/carrito", { title: "Carrito", carrito });
-      /* }else{
-        let sumaCarrito = carrito.reduce((acum, num) => {
-          return acum.precio + num.precio;
-        });
-        console.log("El total es" + sumaCarrito); */
-      /* } */
-      
-        
-        
-        
-        
-    },
 
   productoDetalle: (req, res) => {
     let prodObj = productos.find(
