@@ -29,7 +29,7 @@
                     <div class="header_icon d-flex nav-item dropdown">
 
                        <nav class="navbar navbar-light bg-none">
-                            <form class="form-inline" action="/producto/resultado" method="GET">
+                            <form class="form-inline" action="/producto/resultado" method="POST">
                               <input class="form-control mr-sm-2" type="search" name="busqueda" placeholder="Buscar" aria-label="Search" >
                               <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 
@@ -144,10 +144,10 @@
                             <ul class="dropdown-menu">
                                 <% if (locals.logueo == true && locals.userType == "admin") { %>
                                     <li><a class="dropdown-item" href="/admin"> Acceso administrador </a></li>
-                                    <form action="/user/logout" method=" post "><li><a class="dropdown-item" href="/user/logout"> Logout </a></li></form>
+                                    <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
                                 
                                 <% } else if(locals.userType == "user") {%> 
-                                    <form action="/user/logout" method =" post "><li><a class="dropdown-item" href="/user/logout"> Logout </a></li></form>
+                                    <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
                                     <% } else {%> 
                                 <li><a class="dropdown-item" href="/user/login"> Login </a></li>
                                 <li><a class="dropdown-item" href="/user/registro"> Registro </a></li>

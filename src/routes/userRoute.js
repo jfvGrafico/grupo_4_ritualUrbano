@@ -17,7 +17,7 @@ router.get("/login", userController.login )
 router.post("/login", userController.loginPost )
 router.get("/registro", userController.registro)
 router.post("/registro",validateRegistro, userController.registroPost)
-router.post("/logout" , userController.logout)
+router.get("/logout" , userController.logout)
 
 module.exports = router;
 
