@@ -30,12 +30,17 @@ const productoController = {
     );
     res.render("products/productoDetalle", {
       title: "Detalle de Producto",
-      prodObj, carrito
+      prodObj,
+      carrito,
+      productos,
     });
   },
 
   crear: (req, res) => {
-    res.render("products/productoCrear", { title: "Crear Producto" });
+    res.render("products/productoCrear", {
+      title: "Crear Producto",
+      productos,
+    });
   },
 
   editar: (req, res) => {
@@ -45,7 +50,7 @@ const productoController = {
 
     res.render("products/productoEditar", {
       title: "Editar Producto",
-      prodObj,
+      prodObj, productos
     });
   },
 
@@ -80,7 +85,7 @@ const productoController = {
     let arrayAGuardar = JSON.stringify(newArray, null, " ");
     let pathToFile = path.join(__dirname, "../data/products.json");
     fs.writeFileSync(pathToFile, arrayAGuardar);
-    res.redirect("/producto");
+    res.redirect("/producto/editar/lista");
   },
   resultado: (req, res) => {
     let key = req.query.busqueda;
@@ -125,6 +130,9 @@ const productoController = {
   },
 
   listaEditar: (req, res) => {
+    const productos = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
+    );
     res.render("products/listaEditar", {
       title: "Lista de edicion",
       productos,
