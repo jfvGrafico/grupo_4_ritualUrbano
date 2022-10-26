@@ -144,22 +144,15 @@
                             <ul class="dropdown-menu">
                                 <% if (locals.logueo == true && locals.userType == "admin") { %>
                                     <li><a class="dropdown-item" href="/admin"> Acceso administrador </a></li>
-                                   
-                                   <form action="/user/logout" method=" post "><li><a class="dropdown-item" href="/user/logout"> Logout </a></li></form>
+                                    <form action="/user/logout" method=" post "><li><a class="dropdown-item" href="/user/logout"> Logout </a></li></form>
                                 
                                 <% } else if(locals.userType == "user") {%> 
                                     <form action="/user/logout" method =" post "><li><a class="dropdown-item" href="/user/logout"> Logout </a></li></form>
                                     <% } else {%> 
                                 <li><a class="dropdown-item" href="/user/login"> Login </a></li>
                                 <li><a class="dropdown-item" href="/user/registro"> Registro </a></li>
-                                
-                                    
-                                
-                                 <% } %>
-                                    
-                                 
-                                    
-                               
+
+                                 <% } %>  
                               </ul>
                         </li>
                         <li class="nav-item me-lg-4">

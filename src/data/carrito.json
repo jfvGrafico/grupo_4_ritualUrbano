@@ -1,11 +1,1 @@
-[
- {
-  "id": "7",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe2.png",
-  "precio": "1.123"
- }
-]
+[]
