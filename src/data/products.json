@@ -1,50 +1,5 @@
 [
  {
-  "id": "1",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe.png",
-  "precio": "5.123"
- },
- {
-  "id": "2",
-  "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
-  "categoria": "cafe",
-  "peso": "1200",
-  "imagen": "/img/coffee_item2-300x300.jpg",
-  "precio": "2467.123"
- },
- {
-  "id": "3",
-  "nombre": "Gorra",
-  "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
-  "categoria": "merchandising",
-  "peso": "150",
-  "imagen": "/img/coffee_item7-300x300.jpg",
-  "precio": "1350"
- },
- {
-  "id": "4",
-  "nombre": "Latte Macchiatto",
-  "descripcion": "Te acompañamos en tu desayuno",
-  "categoria": "otrosProductos",
-  "peso": "300",
-  "imagen": "/img/coffee_item4-300x300.jpg",
-  "precio": "470"
- },
- {
-  "id": "5",
-  "nombre": "Cafe Ecuatoriano",
-  "descripcion": "el mejor cafe tostado proveniente de ecuador.",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe.png",
-  "precio": "2500"
- },
- {
   "id": "6",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia.",
@@ -182,19 +137,46 @@
  {
   "id": "21",
   "nombre": "Vaso termico",
-  "descripcion": "Vaso para cafe.",
+  "descripcion": "Vaso para cafe marron.",
   "categoria": "merchandising",
   "peso": "150",
   "imagen": "/img/Grid-home-item-show-img.jpg",
   "precio": "1500"
  },
  {
-  "id": "22",
+  "id": "2",
   "nombre": "Cafe Tostado",
-  "descripcion": "Cafe tostado proveniente de Colombia.",
+  "descripcion": "Cafe tostado proveniente de Colombia. bolsa papel",
+  "categoria": "cafe",
+  "peso": "1200",
+  "imagen": "/img/coffee_item2-300x300.jpg",
+  "precio": "2467.123"
+ },
+ {
+  "id": "3",
+  "nombre": "Gorra",
+  "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
+  "categoria": "merchandising",
+  "peso": "150",
+  "imagen": "/img/coffee_item7-300x300.jpg",
+  "precio": "1352"
+ },
+ {
+  "id": "4",
+  "nombre": "Latte Macchiatto",
+  "descripcion": "Te acompañamos en tu desayuno",
+  "categoria": "otrosProductos",
+  "peso": "300",
+  "imagen": "/img/coffee_item4-300x300.jpg",
+  "precio": "471"
+ },
+ {
+  "id": "5",
+  "nombre": "Cafe Ecuatoriano",
+  "descripcion": "el mejor cafe tostado proveniente de ecuador. uffff",
   "categoria": "cafe",
   "peso": "900",
-  "imagen": "/img/cafe3.png",
-  "precio": "1713.123"
+  "imagen": "/img/cafe.png",
+  "precio": "2500"
  }
 ]
