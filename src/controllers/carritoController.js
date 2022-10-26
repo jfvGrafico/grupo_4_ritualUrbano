@@ -19,7 +19,7 @@ const carritoController = {
         let pathToFile = path.join(__dirname, "../data/carrito.json");
         fs.writeFileSync(pathToFile, arrayAGuardar);
         req.session.carritoSession = carrito
-        res.redirect("/producto/carrito")
+        res.redirect("/producto")
         
     
       },
