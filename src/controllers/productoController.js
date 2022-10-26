@@ -1,13 +1,13 @@
 const path = require ("path")
 const fs = require("fs")
 const e = require("express")
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
-const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+
 
 
 const productoController = {
     lista :  (req, res) =>{
-        const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+      const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
         res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
     },
     categoria: (req, res) =>{
@@ -24,37 +24,39 @@ const productoController = {
    },
 
 
+
   productoDetalle: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let prodObj = productos.find(
       (producto) => producto.id == req.params.prodID
     );
     res.render("products/productoDetalle", {
       title: "Detalle de Producto",
-      prodObj,
-      carrito,
-      productos,
+      prodObj, carrito
     });
   },
 
   crear: (req, res) => {
-    res.render("products/productoCrear", {
-      title: "Crear Producto",
-      productos,
-    });
+    res.render("products/productoCrear", { title: "Crear Producto" });
   },
 
   editar: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let prodObj = productos.find(
       (producto) => producto.id == req.params.prodID
     );
 
     res.render("products/productoEditar", {
       title: "Editar Producto",
-      prodObj, productos
+      prodObj,
     });
   },
 
   nuevoProd: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let imagenCargada;
     if (req.files[0] != undefined) {
       imagenCargada = "/img/" + req.files[0].originalname;
@@ -79,15 +81,19 @@ const productoController = {
   },
 
   eliminar: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+    const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let newArray = productos.filter(
       (producto) => producto.id != req.params.prodID
     );
     let arrayAGuardar = JSON.stringify(newArray, null, " ");
     let pathToFile = path.join(__dirname, "../data/products.json");
     fs.writeFileSync(pathToFile, arrayAGuardar);
-    res.redirect("/producto/editar/lista");
+    res.redirect("/producto");
   },
   resultado: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let key = req.query.busqueda;
     let encontrados = productos.filter(
       (producto) =>
@@ -101,6 +107,8 @@ const productoController = {
   },
 
   actualizar: (req, res) => {
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let imagenCargada;
     let newObj = {};
     let obj = productos.find((producto) => producto.id == req.body.idProd);
@@ -130,9 +138,8 @@ const productoController = {
   },
 
   listaEditar: (req, res) => {
-    const productos = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-    );
+    const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     res.render("products/listaEditar", {
       title: "Lista de edicion",
       productos,

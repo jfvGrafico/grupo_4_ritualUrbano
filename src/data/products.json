@@ -135,15 +135,6 @@
   "precio": "2000"
  },
  {
-  "id": "21",
-  "nombre": "Vaso termico",
-  "descripcion": "Vaso para cafe marron.",
-  "categoria": "merchandising",
-  "peso": "150",
-  "imagen": "/img/Grid-home-item-show-img.jpg",
-  "precio": "1500"
- },
- {
   "id": "2",
   "nombre": "Cafe Tostado",
   "descripcion": "Cafe tostado proveniente de Colombia. bolsa papel",
@@ -151,15 +142,6 @@
   "peso": "1200",
   "imagen": "/img/coffee_item2-300x300.jpg",
   "precio": "2467.123"
- },
- {
-  "id": "3",
-  "nombre": "Gorra",
-  "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
-  "categoria": "merchandising",
-  "peso": "150",
-  "imagen": "/img/coffee_item7-300x300.jpg",
-  "precio": "1352"
  },
  {
   "id": "4",
@@ -178,5 +160,23 @@
   "peso": "900",
   "imagen": "/img/cafe.png",
   "precio": "2500"
+ },
+ {
+  "id": "3",
+  "nombre": "Gorritaa copada",
+  "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
+  "categoria": "merchandising",
+  "peso": "150",
+  "imagen": "/img/coffee_item7-300x300.jpg",
+  "precio": "1352"
+ },
+ {
+  "id": "21",
+  "nombre": "Vaso termicooooooo",
+  "descripcion": "Vaso para cafe marron.",
+  "categoria": "merchandising",
+  "peso": "150",
+  "imagen": "/img/Grid-home-item-show-img.jpg",
+  "precio": "1500"
  }
 ]
