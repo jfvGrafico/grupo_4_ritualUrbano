@@ -153,15 +153,6 @@
   "precio": "471"
  },
  {
-  "id": "5",
-  "nombre": "Cafe Ecuatoriano",
-  "descripcion": "el mejor cafe tostado proveniente de ecuador. uffff",
-  "categoria": "cafe",
-  "peso": "900",
-  "imagen": "/img/cafe.png",
-  "precio": "2500"
- },
- {
   "id": "3",
   "nombre": "Gorritaa copada",
   "descripcion": "Llevanos siempre con vos con el mejor merchandising de la marca.",
@@ -178,5 +169,14 @@
   "peso": "150",
   "imagen": "/img/Grid-home-item-show-img.jpg",
   "precio": "1500"
+ },
+ {
+  "id": "5",
+  "nombre": "Cafe Ecuatoriano",
+  "descripcion": "el mejor cafe tostado proveniente de ecuador",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe.png",
+  "precio": "2500"
  }
 ]

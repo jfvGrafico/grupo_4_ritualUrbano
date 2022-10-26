@@ -11,6 +11,8 @@ const productoController = {
         res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
     },
     categoria: (req, res) =>{
+      const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
       let catUnique = []
       let arrayCat = []
       productos.forEach(producto => arrayCat.push(producto.categoria))
