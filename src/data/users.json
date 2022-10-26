@@ -16,5 +16,14 @@
   "email": "dellavec@gmail.com",
   "category": "admin",
   "image": "http://dummyimage.com/159x100.png/dddddd/000000"
+ },
+ {
+  "id": 3,
+  "first_name": "usuariocualquiera",
+  "last_name": "usuariocualquiera",
+  "password": "123",
+  "email": "user@user.com",
+  "category": "user",
+  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
  }
 ]

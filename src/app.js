@@ -38,17 +38,18 @@ app.listen(puerto, () => {
  
 //rutas
 
+app.use("/producto/carrito", carritoRoute)
 app.use("/", mainRoute)
 app.use("/user", userRoute)
-app.use("/producto/carrito", carritoRoute)
 app.use("/producto", productoRoute)
 
 
 
 
 //404 redirect
-
+/*
 app.use((req, res, next) => {
   res.status(404).render("not-found");            
   next()
 });
+*/
