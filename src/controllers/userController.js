@@ -3,6 +3,7 @@ const fs = require("fs")
 const {validationResult} = require ("express-validator")
 const { traceDeprecation } = require("process")
 const bcrypt = require ("bcryptjs")
+const crypto = require("crypto")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
 const carrito = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
@@ -15,11 +16,12 @@ const userController = {
     loginPost : (req, res) =>{
         let usuarioLogeado = users.find(user => req.body.email == user.email && (bcrypt.compareSync(req.body.password, user.password)))
         if (usuarioLogeado != undefined){
+            delete usuarioLogeado.password
             req.session.usuarioLogeado = usuarioLogeado;
             if(req.body.recuerdame != undefined){
-                res.cookie("userLogged" , usuarioLogeado.email, {maxAge : (60000)})
-                res.cookie("userType" , usuarioLogeado.category, {maxAge : (60000)}) 
-                delete usuarioLogeado.password
+                const token = crypto.randomBytes(64).toString("base64")
+                res.cookie("userLogged" ,token, {maxAge : (1000*60*60*24*90)})
+                usuarioLogeado.token = token
                 fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
         }
         res.redirect("/")
@@ -71,8 +73,7 @@ const userController = {
 
     logout : (req, res) => {
         req.session.destroy();
-        res.clearCookie("userLogged")
-        res.clearCookie("userType")
+        res.clearCookie("userLogged")  //dejamos que las coockies expiren solas.
         fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , "")
 
         res.redirect("/")
