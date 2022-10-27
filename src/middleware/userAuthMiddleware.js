@@ -2,11 +2,13 @@ const fs = require("fs")
 const path = require ("path")
 const userAuthMiddleware = (req, res, next) => {
         res.locals.logeo = false  
-    if(req.session.usuarioLogeado)
+    if(req.session.usuarioLogeado) //si existe el usuario en sesion
     {
         res.locals.logueo = true 
-        res.locals.usuarioFull = req.session.usuarioLogeado
+        res.locals.usuarioFull = req.session.usuarioLogeado                   //lo paso a la vista.
         res.locals.userType = req.session.usuarioLogeado.category
+        return next()
+
 
     } else if(req.cookies.userLogged){
         const cookieToken = req.cookies.userLogged //leo la cookie y saco el token.
