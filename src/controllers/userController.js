@@ -2,6 +2,7 @@ const path = require ("path")
 const fs = require("fs")
 const {validationResult} = require ("express-validator")
 const { traceDeprecation } = require("process")
+const bcrypt = require ("bcryptjs")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
 const carrito = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
@@ -12,7 +13,7 @@ const userController = {
         res.render("users/login", { title: "Login", carrito });
     },
     loginPost : (req, res) =>{
-        let usuarioLogeado = users.find(user => req.body.email == user.email && req.body.password == user.password)
+        let usuarioLogeado = users.find(user => req.body.email == user.email && (bcrypt.compareSync(req.body.password, user.password)))
         if (usuarioLogeado != undefined){
             req.session.usuarioLogeado = usuarioLogeado;
             if(req.body.recuerdame != undefined){
@@ -44,10 +45,10 @@ const userController = {
             });
 
             let usuarioAGuardar = {
-                id : (users.length) +1,
+                id: users[users.length - 1].id + 1,
                 first_name: req.body.nombre,
                 last_name: req.body.apellido,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10), 
                 email: req.body.email,
                 category: "user",
                 image: "http://dummyimage.com/159x100.png/dddddd/000000"
