@@ -29,7 +29,7 @@
                     <div class="header_icon d-flex nav-item dropdown">
 
                        <nav class="navbar navbar-light bg-none">
-                            <form class="form-inline" action="/producto/resultado" method="GET">
+                            <form class="form-inline" action="/producto/resultado" method="POST">
                               <input class="form-control mr-sm-2" type="search" name="busqueda" placeholder="Buscar" aria-label="Search" >
                               <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 
@@ -142,16 +142,17 @@
                                 Usuario
                             </a>
                             <ul class="dropdown-menu">
+                                <% if (locals.logueo == true && locals.userType == "admin") { %>
+                                    <li><a class="dropdown-item" href="/admin"> Acceso administrador </a></li>
+                                    <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
+                                
+                                <% } else if(locals.userType == "user") {%> 
+                                    <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
+                                    <% } else {%> 
                                 <li><a class="dropdown-item" href="/user/login"> Login </a></li>
                                 <li><a class="dropdown-item" href="/user/registro"> Registro </a></li>
-                                    
-                                    <% if (locals.logueo == true && locals.userType == "admin") { %>
-                                        <li><a class="dropdown-item" href="/admin"> Acceso administrador </a></li>
-                                    <% } %>
-                                    
-                                 
-                                    
-                               
+
+                                 <% } %>  
                               </ul>
                         </li>
                         <li class="nav-item me-lg-4">
@@ -176,6 +177,21 @@
                         </button>
                     </li>
                     <!-- /Navbar Toggle Icon-->
+
+                    <% if (locals.usuarioFull) { %>
+                     
+                    
+                    <!-- Navbar Login-->
+                       <li class="ms-1 d-none d-lg-inline-block">
+                        <a class="btn btn-link px-2 text-decoration-none d-flex align-items-center"
+                            href="/user/profile">
+                            <i class="ri-user-line ri-lg align-middle"></i>
+                        Bienvenido, <%=locals.usuarioFull.first_name %>!
+
+                        </a>
+                    </li>
+                    <% } %>   
+                    <!-- /Navbar Login-->
     
                     <!-- Navbar Search-->
                     <li class="ms-1 d-inline-block">
@@ -195,14 +211,7 @@
                     </li> -->
                     <!-- /Navbar Wishlist-->
     
-                    <!-- Navbar Login-->
-                    <!-- <li class="ms-1 d-none d-lg-inline-block">
-                        <a class="btn btn-link px-2 text-decoration-none d-flex align-items-center"
-                            href="#">
-                            <i class="ri-user-line ri-lg align-middle"></i>
-                        </a>
-                    </li> -->
-                    <!-- /Navbar Login-->
+                 
     
                     <!-- Navbar Cart-->
                     <li class="ms-1 d-inline-block position-relative">

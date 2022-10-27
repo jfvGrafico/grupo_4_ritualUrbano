@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head INICIO -->
+  <%- include("../partials/head.ejs") %>
+  <!-- head FIN -->
+
+  <body>
+    <!-- header INICIO -->
+    <%- include("../partials/header") %>
+    <!-- header FIN -->
+
+    <main>
+     <img style="width:150px ;" src="<%= locals.usuarioFull.image%>"> <br>
+      Hola <%= locals.usuarioFull.first_name %>  , esperamos que que te encuestres muy bien!
+
+    </main>
+  <!--footer start-->
+    <%- include("../partials/footer") %>
+    <!-- main-footer end -->
+</body>
+</html>
+
+
+</body>
+</html>

@@ -66,7 +66,7 @@ LINK - TABLERO DE TRABAJO
     * https://trello.com/invite/b/ToF7uKRA/cddaa50aedf668cc9f7067c1982d1865/grupo-4-digital-house
 
 
-RETROSPECTIVA spring #3
+RETROSPECTIVA sprint #3
 
 1. Comenzar a hacer.
 
@@ -75,10 +75,8 @@ RETROSPECTIVA spring #3
     IMplementar Controladores
     Creacion de rutas
 
-
-
     * 2 reuniones semanales, daily + revisión avance 
-        Aqui estamos fallando, nos e estan cumpliendo a cabalidad las reuniones
+      Aqui estamos fallando, nos e estan cumpliendo a cabalidad las reuniones
       (Martes 15 minutas antes de clase)
       (Domingos 8 noche )
 
@@ -104,3 +102,29 @@ RETROSPECTIVA spring #3
 
 5. Dejar de hacer.
     * no olvidar repartir las tareas en trello dentro del equipo de trabajo (Oscar sera el encargado de mantener trello actualizado)
+
+
+RETROSPECTIVA sprint #4
+
+1. Comenzar a hacer.
+
+    * Repartirse las tareas de manera equitativa.  
+    
+2. Hacer más.
+
+    * Actualmente tenemos una sola daily (martes) , aumentar la frecuencia .
+    * Mejorar la comunicacion.
+    * Continuar puliendo detalles del sitio.
+
+3. Continuar haciendo.
+
+    * Informar al equipo sobre avances. 
+    * Manener las ceremonias actuales. (daily de los martes y los domingos)
+    
+4. Hacer menos.
+
+    * -
+
+5. Dejar de hacer
+
+    *  -

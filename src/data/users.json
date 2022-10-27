@@ -1,10 +1,10 @@
 [
  {
   "id": 1,
-  "first_name": "administrador",
-  "last_name": "administrador",
-  "password": "123",
-  "email": "admin@admin.com",
+  "first_name": "administrador1",
+  "last_name": "administrador1",
+  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
+  "email": "admin1@admin1.com",
   "category": "admin",
   "image": "http://dummyimage.com/159x100.png/dddddd/000000"
  },
@@ -12,9 +12,18 @@
   "id": 2,
   "first_name": "Juan Martin",
   "last_name": "Della Vecchia",
-  "password": "123",
+  "password": "$2a$10$7Bmm1pcwunGufNxTqX22Le6zB7l06AcMQZ/yc3iH397ndMPhv1Kzu",
   "email": "dellavec@gmail.com",
   "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
+  "image": "/img/photo1654120658.jpeg"
+ },
+ {
+  "id": 3,
+  "first_name": "Administrador",
+  "last_name": "Administrador",
+  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
+  "email": "admin@admin.com",
+  "category": "user",
+  "image": "/img/noimage.jpeg"
  }
 ]
