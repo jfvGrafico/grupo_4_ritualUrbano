@@ -24,7 +24,7 @@ const userController = {
                 usuarioLogeado.token = token
                 fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
         }
-        res.redirect("/")
+        res.redirect("/user/profile")
 
 
     } else {
@@ -52,7 +52,7 @@ const userController = {
             if (req.files[0] != undefined) {
                 imagenCargada = "/img/" + req.files[0].originalname;
             } else {
-                imagenCargada = "/img/noimage.jpg";
+                imagenCargada = "/img/noimage.jpeg";
             }
 
             let usuarioAGuardar = {
