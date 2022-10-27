@@ -178,15 +178,15 @@
                     </li>
                     <!-- /Navbar Toggle Icon-->
 
-                    <% if (locals.userID) { %>
+                    <% if (locals.usuarioFull) { %>
                      
                     
                     <!-- Navbar Login-->
                        <li class="ms-1 d-none d-lg-inline-block">
                         <a class="btn btn-link px-2 text-decoration-none d-flex align-items-center"
-                            href="#">
+                            href="/user/profile">
                             <i class="ri-user-line ri-lg align-middle"></i>
-                        Bienvenido, <%=locals.userID %>!
+                        Bienvenido, <%=locals.usuarioFull.first_name %>!
 
                         </a>
                     </li>

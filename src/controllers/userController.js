@@ -71,6 +71,10 @@ const userController = {
         req.session.destroy();
         res.clearCookie()
         res.redirect("/")
+    },
+
+    profile : (req, res) => {
+        res.render("users/profile", {title : "Perfil de usuario"})
     }
 
 }

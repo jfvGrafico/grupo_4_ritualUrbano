@@ -1,10 +1,10 @@
 [
  {
   "id": 1,
-  "first_name": "administrador",
-  "last_name": "administrador",
-  "password": "123",
-  "email": "admin@admin.com",
+  "first_name": "administrador1",
+  "last_name": "administrador1",
+  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
+  "email": "admin1@admin1.com",
   "category": "admin",
   "image": "http://dummyimage.com/159x100.png/dddddd/000000"
  },
@@ -12,27 +12,9 @@
   "id": 2,
   "first_name": "Juan Martin",
   "last_name": "Della Vecchia",
-  "password": "123",
+  "password": "$2a$10$PFf0.mcoIDkg9KEGlun2Heb2UPyNXiCSkV7rwpXn1tz.HUn/T1Jjq",
   "email": "dellavec@gmail.com",
-  "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
-  "id": 3,
-  "first_name": "usuariocualquiera",
-  "last_name": "usuariocualquiera",
-  "password": "123",
-  "email": "user@user.com",
   "category": "user",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
-  "id": 4,
-  "first_name": "administrador1",
-  "last_name": "administrador1",
-  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
-  "email": "admin1@admin1.com",
-  "category": "admin",
   "image": "http://dummyimage.com/159x100.png/dddddd/000000"
  }
 ]

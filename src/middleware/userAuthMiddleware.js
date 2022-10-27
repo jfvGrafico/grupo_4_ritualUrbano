@@ -3,8 +3,9 @@ const userAuthMiddleware = (req, res, next) => {
     if(req.session.usuarioLogeado)
     {
         res.locals.logueo = true 
-        res.locals.userID = req.session.usuarioLogeado.first_name
+        res.locals.usuarioFull = req.session.usuarioLogeado
         res.locals.userType = req.session.usuarioLogeado.category
+
     }
     next()
 
