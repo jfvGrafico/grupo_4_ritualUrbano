@@ -17,8 +17,10 @@ const userController = {
         if (usuarioLogeado != undefined){
             req.session.usuarioLogeado = usuarioLogeado;
             if(req.body.recuerdame != undefined){
-                res.cookie("userLogged" , usuarioLogeado.email, {maxAge : (60000 * 60)})
-                res.cookie("userType" , usuarioLogeado.category, {maxAge : (60000 * 60)}) 
+                res.cookie("userLogged" , usuarioLogeado.email, {maxAge : (60000)})
+                res.cookie("userType" , usuarioLogeado.category, {maxAge : (60000)}) 
+                delete usuarioLogeado.password
+                fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
         }
         res.redirect("/")
 
@@ -69,7 +71,10 @@ const userController = {
 
     logout : (req, res) => {
         req.session.destroy();
-        res.clearCookie()
+        res.clearCookie("userLogged")
+        res.clearCookie("userType")
+        fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , "")
+
         res.redirect("/")
     },
 
