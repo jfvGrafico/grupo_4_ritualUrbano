@@ -33,7 +33,7 @@
                         <!-- fin de mensajes de valdiacion  -->
 
 
-                        <form class="form-registro" action="/user/registro" method="POST" id="form-registrar">
+                        <form class="form-registro" action="/user/registro" method="POST" id="form-registrar" enctype="multipart/form-data" >
                           <label for="nombre" class="form-label">Nombre</label>
                           <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="8">
                           <label for="apellido" class="form-label">Apellido</label>
@@ -42,7 +42,8 @@
                           <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
                           <label for="password" class="form-label">Contraseña</label>
                           <input type="password" class="form-control" name="password" id="password">
-                        
+                          <label for="imagen" class="form-label">Imagen</label>
+                          <input type="file" class="form-control" name="imagen" id="imagen">
 
                           <!-- Accept Terms Checkbox-->
                           <div class="form-group form-check my-4">

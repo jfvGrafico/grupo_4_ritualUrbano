@@ -48,6 +48,13 @@ const userController = {
                 
             });
 
+            let imagenCargada;
+            if (req.files[0] != undefined) {
+                imagenCargada = "/img/" + req.files[0].originalname;
+            } else {
+                imagenCargada = "/img/noimage.jpg";
+            }
+
             let usuarioAGuardar = {
                 id: users[users.length - 1].id + 1,
                 first_name: req.body.nombre,
@@ -55,7 +62,7 @@ const userController = {
                 password: bcrypt.hashSync(req.body.password, 10), 
                 email: req.body.email,
                 category: "user",
-                image: "http://dummyimage.com/159x100.png/dddddd/000000"
+                image: imagenCargada
             }
 
             users.push(usuarioAGuardar)
