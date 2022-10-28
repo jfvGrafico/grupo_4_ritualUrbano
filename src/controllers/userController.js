@@ -90,14 +90,19 @@ const userController = {
         res.render("users/profile", {title : "Perfil de usuario"})
     },
 
-    editProfile : (res, req) => {
-      let newObj = {
-        ...res.body,
-      }
-      console.log(newObj)
+    editProfile : (req, res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
+        let imagenCargada;
+        if (req.files[0] != undefined) {
+            imagenCargada = "/img/" + req.files[0].originalname;
+        } else {
+            imagenCargada = "/img/noimage.jpeg";
+        }
+        
+
+        
 
     }
-
 }
 
 module.exports = userController;
