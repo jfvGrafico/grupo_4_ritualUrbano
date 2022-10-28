@@ -35,6 +35,8 @@ router.get("/registro", userController.registro)
 router.post("/registro",upload.any(), validateRegistro , userController.registroPost)
 router.get("/logout" , userController.logout)
 router.get("/profile", userController.profile)
+router.put("/editProfile", upload.any(),userController.editProfile)
+
 
 module.exports = router;
 

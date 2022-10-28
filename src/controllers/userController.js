@@ -88,6 +88,14 @@ const userController = {
 
     profile : (req, res) => {
         res.render("users/profile", {title : "Perfil de usuario"})
+    },
+
+    editProfile : (res, req) => {
+      let newObj = {
+        ...res.body,
+      }
+      console.log(newObj)
+
     }
 
 }
