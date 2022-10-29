@@ -7,5 +7,14 @@
   "peso": "1500",
   "imagen": "/img/Products-12-450x450.jpg",
   "precio": "4000"
+ },
+ {
+  "id": "5",
+  "nombre": "Cafe Ecuatoriano",
+  "descripcion": "el mejor cafe tostado proveniente de ecuador",
+  "categoria": "cafe",
+  "peso": "900",
+  "imagen": "/img/cafe.png",
+  "precio": "2500"
  }
 ]
