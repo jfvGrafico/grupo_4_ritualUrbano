@@ -50,9 +50,9 @@ const userController = {
 
             let imagenCargada;
             if (req.files[0] != undefined) {
-                imagenCargada = "/img/" + req.files[0].originalname;
+                imagenCargada = "/img/users/" + req.files[0].originalname;
             } else {
-                imagenCargada = "/img/noimage.jpeg";
+                imagenCargada = "/img/users/noimage.jpeg";
             }
 
             let usuarioAGuardar = {
@@ -95,7 +95,7 @@ const userController = {
         let imagenCargada;
         let userObj = users.find(user => user.email == req.body.email)
         if (req.files[0] != undefined) {
-            imagenCargada = "/img/" + req.files[0].originalname;
+            imagenCargada = "/img/users/" + req.files[0].originalname;
         } else {
             imagenCargada = userObj.image;
         }
