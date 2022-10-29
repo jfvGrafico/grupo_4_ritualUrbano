@@ -1,6 +1,6 @@
 const path = require ("path")
 const fs = require("fs")
-const {validationResult} = require ("express-validator")
+const {validationResult, body} = require ("express-validator")
 const { traceDeprecation } = require("process")
 const bcrypt = require ("bcryptjs")
 const crypto = require("crypto")
@@ -88,8 +88,33 @@ const userController = {
 
     profile : (req, res) => {
         res.render("users/profile", {title : "Perfil de usuario"})
-    }
+    },
 
+    editProfile : (req, res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
+        let imagenCargada;
+        let userObj = users.find(user => user.email == req.body.email)
+        if (req.files[0] != undefined) {
+            imagenCargada = "/img/" + req.files[0].originalname;
+        } else {
+            imagenCargada = userObj.image;
+        }
+        
+        let newUserObj = {
+            id : userObj.id,
+             first_name: req.body.nombre,
+            last_name: req.body.apellido,
+            password: userObj.password,
+            email: req.body.email,
+            category: 'user',
+            image: imagenCargada
+        }
+        let arrayAGuardar = users.filter(user => user.id != newUserObj.id)
+        arrayAGuardar.push(newUserObj)
+        fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(arrayAGuardar, null, " "))
+
+        res.redirect("/user/profile")
+}
 }
 
 module.exports = userController;

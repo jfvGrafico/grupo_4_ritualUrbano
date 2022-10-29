@@ -15,7 +15,7 @@
 
       <p>Si queres modificar los datos de tu perfil hacelo desde aqui:</p>
 
-      <form action="/user/editProfile?_method=PUT" method="POST">
+      <form action="/user/editProfile?_method=PUT" method="POST" enctype="multipart/form-data">
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" name="nombre" id="nombre" value=<%= usuarioFull.first_name %>>
         <label for="apellido" class="form-label">Apellido</label>
@@ -23,9 +23,8 @@
         <label for="email" class="form-label">Direccion de email</label>
         <input type="email" class="form-control" name="email" id="email" value=<%= usuarioFull.email%>>
         <label for="imagen" class="form-label">Imagen</label>
-        <input type="file" class="form-control" name="image" id="imagen">
+        <input type="file" class="form-control" name="imagen" id="imagen">
         <button type="submit">Editar</button>
-
       </form>
 
     </main>
