@@ -8,5 +8,6 @@ const carritoController = require("../controllers/carritoController");
 router.get ("/", carritoController.carrito)
 router.delete ("/:carritoID", carritoController.carritoDelete)
 router.post("/:id", carritoController.guardarCarrito)
+router.get("/compraFin", carritoController.compraFin);
 
 module.exports = router;
