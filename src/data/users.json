@@ -1,14 +1,5 @@
 [
  {
-  "id": 1,
-  "first_name": "administrador1",
-  "last_name": "administrador1",
-  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
-  "email": "admin1@admin1.com",
-  "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
   "id": 3,
   "first_name": "Administrador",
   "last_name": "Administrador",
@@ -25,5 +16,14 @@
   "email": "dellavec@gmail.com",
   "category": "user",
   "image": "/img/photo1654120658.jpeg"
+ },
+ {
+  "id": 1,
+  "first_name": "administrador1",
+  "last_name": "administrador1",
+  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
+  "email": "admin1@admin1.com",
+  "category": "user",
+  "image": "/img/users/WhatsApp Image 2018-10-06 at 00.20.30.jpeg"
  }
 ]
