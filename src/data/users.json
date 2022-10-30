@@ -5,7 +5,7 @@
   "last_name": "Administrador",
   "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
   "email": "admin@admin.com",
-  "category": "user",
+  "category": "admin",
   "image": "/img/noimage.jpeg"
  },
  {
@@ -23,7 +23,7 @@
   "last_name": "administrador1",
   "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
   "email": "admin1@admin1.com",
-  "category": "user",
+  "category": "admin",
   "image": "/img/users/WhatsApp Image 2018-10-06 at 00.20.30.jpeg"
  }
 ]
