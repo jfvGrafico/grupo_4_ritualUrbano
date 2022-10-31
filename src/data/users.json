@@ -1,14 +1,5 @@
 [
  {
-  "id": 3,
-  "first_name": "Administrador",
-  "last_name": "Administrador",
-  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
-  "email": "admin@admin.com",
-  "category": "admin",
-  "image": "/img/noimage.jpeg"
- },
- {
   "id": 2,
   "first_name": "Juan Martin",
   "last_name": "Della Vecchia",
@@ -25,5 +16,14 @@
   "email": "admin1@admin1.com",
   "category": "admin",
   "image": "/img/users/WhatsApp Image 2018-10-06 at 00.20.30.jpeg"
+ },
+ {
+  "id": 3,
+  "first_name": "Administrador",
+  "last_name": "Administrador",
+  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
+  "email": "admin@admin.com",
+  "category": "admin",
+  "image": "/img/noimage.jpeg"
  }
 ]
