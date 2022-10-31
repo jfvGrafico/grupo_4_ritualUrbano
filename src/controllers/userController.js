@@ -106,12 +106,14 @@ const userController = {
             last_name: req.body.apellido,
             password: userObj.password,
             email: req.body.email,
-            category: 'user',
+            category: userObj.category,
             image: imagenCargada
         }
         let arrayAGuardar = users.filter(user => user.id != newUserObj.id)
         arrayAGuardar.push(newUserObj)
         fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(arrayAGuardar, null, " "))
+        fs.writeFileSync(path.join(__dirname, "../data/loggedUser.json"), JSON.stringify(newUserObj, null, " "))
+
 
         res.redirect("/user/profile")
 }

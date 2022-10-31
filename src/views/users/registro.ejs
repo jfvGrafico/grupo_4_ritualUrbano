@@ -35,9 +35,9 @@
 
                         <form class="form-registro" action="/user/registro" method="POST" id="form-registrar" enctype="multipart/form-data" >
                           <label for="nombre" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="8">
+                          <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="4">
                           <label for="apellido" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>" minlength="8">
+                          <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>" minlength="4">
                           <label for="email" class="form-label">Direccion de email</label>
                           <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
                           <label for="password" class="form-label">Contraseña</label>
