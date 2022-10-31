@@ -95,6 +95,7 @@ const userController = {
         let imagenCargada;
         let userObj = users.find(user => user.email == req.body.email)
         if (req.files[0] != undefined) {
+            /* fs.rmSync(path.join(__dirname, ".../public/img/users/")); */
             imagenCargada = "/img/users/" + req.files[0].originalname;
         } else {
             imagenCargada = userObj.image;
@@ -102,7 +103,7 @@ const userController = {
         
         let newUserObj = {
             id : userObj.id,
-             first_name: req.body.nombre,
+            first_name: req.body.nombre,
             last_name: req.body.apellido,
             password: userObj.password,
             email: req.body.email,

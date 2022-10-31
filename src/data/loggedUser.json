@@ -1,9 +1,9 @@
 {
- "id": 4,
- "first_name": "usuariodeprueba",
- "last_name": "usuariodeprueba",
- "email": "usuario@deprueba.com",
+ "id": 2,
+ "first_name": "pepitoelcrack",
+ "last_name": "sanchezito",
+ "password": "$2a$10$FyVF4tIAk/t/7zH75JDt8eF6FqEXoBXC886jGXuVQ7K7Z5tmVr/FC",
+ "email": "pepe@correo.com",
  "category": "user",
- "image": "/img/users/noimage.jpeg",
- "token": "x6VFjuzZ6rusJTiX7XkWTmQzPQIxJqLVWbMu+96qOZ1ejzUq3w5JW3JaCv4nxtydtkxJsqV3mQoLLN/IjHHiIg=="
+ "image": "/img/users/zeneraa-kbaD--620x349@abc.jpeg"
 }
