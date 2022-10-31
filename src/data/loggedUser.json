@@ -1,9 +1,9 @@
 {
- "id": 3,
- "first_name": "Administrador",
- "last_name": "Administrador",
- "email": "admin@admin.com",
- "category": "admin",
- "image": "/img/noimage.jpeg",
- "token": "4do8khmruQ/EcjkhR4PB3VKsOGgDa0yBsKMn+M/TMbQhHwnUVVgxA8pX7zxbSlVz4oQiYhP9lHVeIqmFAr0WwQ=="
+ "id": 4,
+ "first_name": "usuariodeprueba",
+ "last_name": "usuariodeprueba",
+ "email": "usuario@deprueba.com",
+ "category": "user",
+ "image": "/img/users/noimage.jpeg",
+ "token": "x6VFjuzZ6rusJTiX7XkWTmQzPQIxJqLVWbMu+96qOZ1ejzUq3w5JW3JaCv4nxtydtkxJsqV3mQoLLN/IjHHiIg=="
 }

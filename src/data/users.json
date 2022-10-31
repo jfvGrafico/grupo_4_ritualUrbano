@@ -15,7 +15,7 @@
   "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
   "email": "admin1@admin1.com",
   "category": "admin",
-  "image": "/img/users/WhatsApp Image 2018-10-06 at 00.20.30.jpeg"
+  "image": "/img/noimage.jpeg"
  },
  {
   "id": 3,
@@ -25,5 +25,14 @@
   "email": "admin@admin.com",
   "category": "admin",
   "image": "/img/noimage.jpeg"
+ },
+ {
+  "id": 4,
+  "first_name": "usuariodeprueba",
+  "last_name": "usuariodeprueba",
+  "password": "$2a$10$Ne8c7Hk9bqe7apDCGTYBquiHp7P.T05iINQdlkEpiEo/QX7SHjIQu",
+  "email": "usuario@deprueba.com",
+  "category": "user",
+  "image": "/img/users/noimage.jpeg"
  }
 ]
