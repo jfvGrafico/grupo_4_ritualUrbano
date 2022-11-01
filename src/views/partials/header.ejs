@@ -190,6 +190,21 @@
                         </button>
                     </li>
                     <!-- /Navbar Toggle Icon-->
+
+                    <% if (locals.usuarioFull) { %>
+                     
+                    
+                    <!-- Navbar Login-->
+                       <li class="ms-1 d-none d-lg-inline-block">
+                        <a class="btn btn-link px-2 text-decoration-none d-flex align-items-center"
+                            href="/user/profile">
+                            <i class="ri-user-line ri-lg align-middle"></i>
+                        Bienvenido, <%=locals.usuarioFull.first_name %>!
+
+                        </a>
+                    </li>
+                    <% } %>   
+                    <!-- /Navbar Login-->
     
                     <!-- Navbar Search-->
                     <li class="ms-1 d-inline-block">
@@ -209,14 +224,7 @@
                     </li> -->
                     <!-- /Navbar Wishlist-->
     
-                    <!-- Navbar Login-->
-                    <!-- <li class="ms-1 d-none d-lg-inline-block">
-                        <a class="btn btn-link px-2 text-decoration-none d-flex align-items-center"
-                            href="#">
-                            <i class="ri-user-line ri-lg align-middle"></i>
-                        </a>
-                    </li> -->
-                    <!-- /Navbar Login-->
+                 
     
                     <!-- Navbar Cart-->
                     <li class="ms-1 d-inline-block position-relative">

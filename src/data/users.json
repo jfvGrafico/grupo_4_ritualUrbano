@@ -1,38 +1,38 @@
 [
  {
   "id": 1,
-  "first_name": "administrador",
-  "last_name": "administrador",
-  "password": "123",
-  "email": "admin@admin.com",
-  "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
-  "id": 2,
-  "first_name": "Juan Martin",
-  "last_name": "Della Vecchia",
-  "password": "123",
-  "email": "dellavec@gmail.com",
-  "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
-  "id": 3,
-  "first_name": "usuariocualquiera",
-  "last_name": "usuariocualquiera",
-  "password": "123",
-  "email": "user@user.com",
-  "category": "user",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
- },
- {
-  "id": 4,
   "first_name": "administrador1",
   "last_name": "administrador1",
   "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
   "email": "admin1@admin1.com",
   "category": "admin",
-  "image": "http://dummyimage.com/159x100.png/dddddd/000000"
+  "image": "/img/noimage.jpeg"
+ },
+ {
+  "id": 3,
+  "first_name": "Administrador",
+  "last_name": "Administrador",
+  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
+  "email": "admin@admin.com",
+  "category": "admin",
+  "image": "/img/noimage.jpeg"
+ },
+ {
+  "id": 4,
+  "first_name": "usuariodeprueba",
+  "last_name": "usuariodeprueba",
+  "password": "$2a$10$Ne8c7Hk9bqe7apDCGTYBquiHp7P.T05iINQdlkEpiEo/QX7SHjIQu",
+  "email": "usuario@deprueba.com",
+  "category": "user",
+  "image": "/img/users/noimage.jpeg"
+ },
+ {
+  "id": 2,
+  "first_name": "pepitoelcrack",
+  "last_name": "sanchezito",
+  "password": "$2a$10$FyVF4tIAk/t/7zH75JDt8eF6FqEXoBXC886jGXuVQ7K7Z5tmVr/FC",
+  "email": "pepe@correo.com",
+  "category": "user",
+  "image": "/img/users/zeneraa-kbaD--620x349@abc.jpeg"
  }
 ]

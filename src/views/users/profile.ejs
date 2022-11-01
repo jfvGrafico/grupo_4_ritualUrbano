@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head INICIO -->
+  <%- include("../partials/head.ejs") %>
+  <!-- head FIN -->
+
+  <body>
+    <!-- header INICIO -->
+    <%- include("../partials/header") %>
+    <!-- header FIN -->
+
+    <main>
+     <img style="width:150px ;" src="<%= usuarioFull.image%>"> <br>
+      <p> Hola <%= locals.usuarioFull.first_name %>  , esperamos que que te encuestres muy bien!</p>
+
+      <p>Si queres modificar los datos de tu perfil hacelo desde aqui:</p>
+
+      <form action="/user/editProfile?_method=PUT" method="POST" enctype="multipart/form-data">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" value=<%= usuarioFull.first_name %>>
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" name="apellido" id="apellido" value=<%= usuarioFull.last_name %>>
+        <label for="email" class="form-label">Direccion de email</label>
+        <input type="email" class="form-control" name="email" id="email" value=<%= usuarioFull.email%>>
+        <label for="imagen" class="form-label">Imagen</label>
+        <input type="file" class="form-control" name="imagen" id="imagen">
+        <button type="submit">Editar</button>
+      </form>
+
+    </main>
+  <!--footer start-->
+    <%- include("../partials/footer") %>
+    <!-- main-footer end -->
+</body>
+</html>
+
+
+</body>
+</html>

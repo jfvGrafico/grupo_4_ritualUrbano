@@ -1,8 +1,9 @@
 const path = require ("path")
 const fs = require("fs")
-const {validationResult} = require ("express-validator")
+const {validationResult, body} = require ("express-validator")
 const { traceDeprecation } = require("process")
 const bcrypt = require ("bcryptjs")
+const crypto = require("crypto")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
 const carrito = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
@@ -15,12 +16,15 @@ const userController = {
     loginPost : (req, res) =>{
         let usuarioLogeado = users.find(user => req.body.email == user.email && (bcrypt.compareSync(req.body.password, user.password)))
         if (usuarioLogeado != undefined){
+            delete usuarioLogeado.password
             req.session.usuarioLogeado = usuarioLogeado;
             if(req.body.recuerdame != undefined){
-                res.cookie("userLogged" , usuarioLogeado.email, {maxAge : (60000 * 60)})
-                res.cookie("userType" , usuarioLogeado.category, {maxAge : (60000 * 60)}) 
+                const token = crypto.randomBytes(64).toString("base64")
+                res.cookie("userLogged" ,token, {maxAge : (1000*60*60*24*90)})
+                usuarioLogeado.token = token
+                fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
         }
-        res.redirect("/")
+        res.redirect("/user/profile")
 
 
     } else {
@@ -44,6 +48,13 @@ const userController = {
                 
             });
 
+            let imagenCargada;
+            if (req.files[0] != undefined) {
+                imagenCargada = "/img/users/" + req.files[0].originalname;
+            } else {
+                imagenCargada = "/img/users/noimage.jpeg";
+            }
+
             let usuarioAGuardar = {
                 id: users[users.length - 1].id + 1,
                 first_name: req.body.nombre,
@@ -51,7 +62,7 @@ const userController = {
                 password: bcrypt.hashSync(req.body.password, 10), 
                 email: req.body.email,
                 category: "user",
-                image: "http://dummyimage.com/159x100.png/dddddd/000000"
+                image: imagenCargada
             }
 
             users.push(usuarioAGuardar)
@@ -69,10 +80,44 @@ const userController = {
 
     logout : (req, res) => {
         req.session.destroy();
-        res.clearCookie()
-        res.redirect("/")
-    }
+        res.clearCookie("userLogged")  //dejamos que las coockies expiren solas.
+        fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , "")
 
+        res.redirect("/")
+    },
+
+    profile : (req, res) => {
+        res.render("users/profile", {title : "Perfil de usuario"})
+    },
+
+    editProfile : (req, res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
+        let imagenCargada;
+        let userObj = users.find(user => user.email == req.body.email)
+        if (req.files[0] != undefined) {
+            /* fs.rmSync(path.join(__dirname, ".../public/img/users/")); */
+            imagenCargada = "/img/users/" + req.files[0].originalname;
+        } else {
+            imagenCargada = userObj.image;
+        }
+        
+        let newUserObj = {
+            id : userObj.id,
+            first_name: req.body.nombre,
+            last_name: req.body.apellido,
+            password: userObj.password,
+            email: req.body.email,
+            category: userObj.category,
+            image: imagenCargada
+        }
+        let arrayAGuardar = users.filter(user => user.id != newUserObj.id)
+        arrayAGuardar.push(newUserObj)
+        fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(arrayAGuardar, null, " "))
+        fs.writeFileSync(path.join(__dirname, "../data/loggedUser.json"), JSON.stringify(newUserObj, null, " "))
+
+
+        res.redirect("/user/profile")
+}
 }
 
 module.exports = userController;
