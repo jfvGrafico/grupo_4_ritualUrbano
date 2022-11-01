@@ -10,7 +10,7 @@
 
     <main>
         <div class="contenedor-slider">
-        <section>
+        <!-- <section>
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -41,16 +41,36 @@
                   <span class="sr-only">Next</span>
                 </button>
               </div>
-        </section>
-    </div>
+        </section> -->
+        </div>
+
+        <!-- Banner de categorias y miga de pan -->
+        <div class="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
+            style="background-image: url(/img/header-banner-categoria.png);">
+            <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item breadcrumb-light"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Categorias</li>
+                    </ol>
+                </nav>                <h1 class="fw-bold display-6 mb-4 text-white">CATEGORIAS</h1>
+                <div class="col-12 col-md-6">
+                    <p class="lead text-white mb-0">
+                        Ritual Urbano ....
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Banner de categorias -->
+  
+  <section class="container mt-4 mb'4">
     <div class="categorias-box">
-     
       <%catUnique.forEach(elemento => { %>
       <div class="categoria-cafes">
-      
      <% if(elemento == "cafe") { %>
       <a href="/producto/categoria/<%=elemento%>"><img src="/img/02_coffee.jpg" alt="Cafes"></a>
       <h3><%=elemento%></h3>
+
           <%} else if(elemento == "cafetera"){%>
             <a href="/producto/categoria/<%=elemento%>"><img src="/img/cafetera_capsulas_philips.jpg" alt="Cafes"></a>
           <h3><%=elemento%></h3>
@@ -70,18 +90,6 @@
     </div>
     <% } ) %>
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
      <!-- <div class="categoria-cafeteras">
         <a href="/producto/categoria/cafeteras"><img src="/img/Products-17.jpg" alt="Cafeteras"></a>
         <p>Las mejores cafeteras para preparar tu cafe</p>
@@ -99,10 +107,9 @@
   -->
 
     </main>
-  <!--footer start-->
-  <%- include("../partials/footer")  %> 
-
-    <!-- main-footer end -->
+      <!--footer start-->
+        <%- include("../partials/footer")  %> 
+      <!-- main-footer end -->
 
 </body>
 </html>
