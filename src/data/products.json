@@ -81,15 +81,6 @@
   "precio": "4000"
  },
  {
-  "id": "17",
-  "nombre": "Cafetera Italiana Bialetti",
-  "descripcion": "Una forma unica de moler los mejores granos.",
-  "categoria": "cafetera",
-  "peso": "1500",
-  "imagen": "/img/cafetera_italiana_bialetti.jpg",
-  "precio": "4000"
- },
- {
   "id": "18",
   "nombre": "Cafetera Kubo Expresso",
   "descripcion": "Una forma unica de moler los mejores granos.",
