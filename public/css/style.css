@@ -35,6 +35,11 @@ h6 {
   max-width: 100px !important;
 }
 
+.centrar-vertical {
+  display: flex;
+  align-items: center;
+}
+
 /* --- Navegacion --- */
 /* .searchbar input {
   width: 70%;

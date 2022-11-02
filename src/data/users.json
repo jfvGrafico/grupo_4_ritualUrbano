@@ -1,14 +1,5 @@
 [
  {
-  "id": 1,
-  "first_name": "administrador1",
-  "last_name": "administrador1",
-  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
-  "email": "admin1@admin1.com",
-  "category": "admin",
-  "image": "/img/noimage.jpeg"
- },
- {
   "id": 3,
   "first_name": "Administrador",
   "last_name": "Administrador",
@@ -34,5 +25,14 @@
   "email": "pepe@correo.com",
   "category": "user",
   "image": "/img/users/zeneraa-kbaD--620x349@abc.jpeg"
+ },
+ {
+  "id": 1,
+  "first_name": "administrador1",
+  "last_name": "administrador1",
+  "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
+  "email": "admin1@admin1.com",
+  "category": "admin",
+  "image": "/img/noimage.jpeg"
  }
 ]
