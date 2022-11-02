@@ -9,15 +9,6 @@
   "image": "/img/noimage.jpeg"
  },
  {
-  "id": 3,
-  "first_name": "Administrador",
-  "last_name": "Administrador",
-  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
-  "email": "admin@admin.com",
-  "category": "admin",
-  "image": "/img/noimage.jpeg"
- },
- {
   "id": 4,
   "first_name": "usuariodeprueba",
   "last_name": "usuariodeprueba",
@@ -34,5 +25,14 @@
   "email": "pepe@correo.com",
   "category": "user",
   "image": "/img/users/zeneraa-kbaD--620x349@abc.jpeg"
+ },
+ {
+  "id": 3,
+  "first_name": "Administrador",
+  "last_name": "Administrador",
+  "password": "$2a$10$DJFisYbOjhYBt.5dxIKyhuHRTy6A9AE9LJVx541Ae6DIMj7SZ3Pwi",
+  "email": "admin@admin.com",
+  "category": "admin",
+  "image": "/img/users/about-img-2-1.png"
  }
 ]

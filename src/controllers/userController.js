@@ -18,12 +18,7 @@ const userController = {
         if (usuarioLogeado != undefined){
             delete usuarioLogeado.password
             req.session.usuarioLogeado = usuarioLogeado;
-            if(req.body.recuerdame != undefined){
-                const token = crypto.randomBytes(64).toString("base64")
-                res.cookie("userLogged" ,token, {maxAge : (1000*60*60*24*90)})
-                usuarioLogeado.token = token
-                fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
-        }
+            
         res.redirect("/user/profile")
 
 
@@ -81,7 +76,7 @@ const userController = {
     logout : (req, res) => {
         req.session.destroy();
         res.clearCookie("userLogged")  //dejamos que las coockies expiren solas.
-        fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , "")
+        fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , "[]")
 
         res.redirect("/")
     },
