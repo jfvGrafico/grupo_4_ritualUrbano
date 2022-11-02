@@ -20,17 +20,15 @@
             <div class="detalletxt ml-4"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
 
-            
-            <form action="/producto/<%=item.id%>?_method=DELETE" method="POST">
-              <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3 centrar-vertical" type="submit">Eliminar</button>
-              </form>
+            <form action="/producto/<%=item.id%>?_method=DELETE" method="POST" class="centrar-vertical">
+              <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Eliminar</button>
+            </form>
 
-
-              <a href="/producto/<%=item.id%>/editar">
-                <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3 centrar-vertical" type="submit">Editar</button>
-              </a> 
+            <a href="/producto/<%=item.id%>/editar" class="centrar-vertical">
+              <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Editar</button>
+            </a> 
               
-            </div>
+          </div>
           
           <% })  %> 
 
