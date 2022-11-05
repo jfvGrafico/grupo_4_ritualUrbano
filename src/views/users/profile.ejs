@@ -8,12 +8,33 @@
     <!-- header INICIO -->
     <%- include("../partials/header") %>
     <!-- header FIN -->
-
+    
     <main>
-     <img style="width:150px ;" src="<%= usuarioFull.image%>"> <br>
-      <p> Hola <%= locals.usuarioFull.first_name %>  , esperamos que que te encuestres muy bien!</p>
 
-      <p>Si queres modificar los datos de tu perfil hacelo desde aqui:</p>
+      <!-- Banner de categorias y miga de pan -->
+      <div class="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
+      style="background-image: url(/img/header-banner-registro.png);">
+          <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item breadcrumb-light"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Usuario</li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Profile</li>
+                  </ol>
+              </nav>                
+              <h1 class="fw-bold display-6 mb-4 text-white">Bienvenid@</h1>
+              <div class="col-12 col-md-6">
+                  <!-- <img style="width:150px ;" src="<%= usuarioFull.image%>"> <br> -->
+                  <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>  , esperamos que que te encuestres muy bien!</p>
+              </div>
+          </div>
+      </div>
+      <!-- Banner de categorias -->
+
+      <section class="container">
+        <h1 class="mb-4 display-5 fw-bold text-center">Este es tu perfíl</h1>
+          <p class="text-center mx-auto">Si queres modificar los datos personales, hacelo desde aquí:</p>
+            <div class="border-bottom pb-3"></div>
 
       <form action="/user/editProfile?_method=PUT" method="POST" enctype="multipart/form-data">
         <label for="nombre" class="form-label">Nombre</label>
@@ -24,10 +45,14 @@
         <input type="email" class="form-control" name="email" id="email" value=<%= usuarioFull.email%>>
         <label for="imagen" class="form-label">Imagen</label>
         <input type="file" class="form-control" name="imagen" id="imagen">
-        <button type="submit">Editar</button>
+        <button class="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Editar</button>
       </form>
+    </section>
 
     </main>
+
+     
+
   <!--footer start-->
     <%- include("../partials/footer") %>
     <!-- main-footer end -->
