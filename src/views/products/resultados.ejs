@@ -21,7 +21,7 @@
                   <li class="breadcrumb-item active breadcrumb-light" aria-current="page">lista</li>
                   </ol>
               </nav>                
-              <h1 class="fw-bold display-6 mb-4 text-white">Detalle de productos</h1>
+              <h1 class="fw-bold display-6 mb-4 text-white">Resultado de busqueda</h1>
               <div class="col-12 col-md-6">
                   <!-- <img style="width:150px ;" src="<%= usuarioFull.image%>"> <br> -->
                   <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>  , este es el catalogo creado!</p>
@@ -31,7 +31,7 @@
       <!-- Banner de categorias -->
 
 
-        <section class="detalle-productos">
+        <section class=" container detalle-productos">
           <% encontrados.forEach (item => { %>
            <div class="detalle-articulos">
            <div class="detalleimg"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
