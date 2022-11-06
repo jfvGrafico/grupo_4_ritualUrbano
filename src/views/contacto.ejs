@@ -32,9 +32,9 @@
 
         <h1 class="mb-4 display-5 fw-bold text-center">Contactenos</h1>
           <p class="text-center mx-auto">Envianos tu dudas o mentarios, en breve te responderemos</p>
-            <div class="border-bottom pb-3"></div>
+            <div class="container border-bottom pb-3"></div>
 
-        <Section class="container">
+        <!-- <Section class="container">
             <div class="contacto-box" >
                 <form class="form-contacto" action="/contacto" method="POST">
                 <label for="nombre">Ingrese su nombre</label>
@@ -46,10 +46,42 @@
                 <textarea name="consulta" cols="30" rows="10" placeholder="Ingrese aqui sus comentarios" required></textarea>
                 <button class="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Enviar</button>
                 </form>
-
             </div>
-        </Section>
+        </Section> -->
 
+        <!-- Formulario de login-->
+        <Section class="container">
+        <div class="container row d-flex mt-4">
+            <div class="p-4 sticky-md-top top-5">
+                  <div class="card flex-grow-1 mb-md-0">
+                    <div class="card__content">
+
+                      <form class="form-registro" action="/contacto" method="POST" id="form-contacto">
+                        <label for="nombre" class="form-label">Infrese su Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="4">
+                        <label for="apellido" class="form-label">Ingrese su Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>" minlength="4">
+                        <label for="email" class="form-label">Ingrese su Direccion de email</label>
+                        <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
+
+                        <textarea class="form-label mt-4 mb-4" name="consulta" style="min-width: 100%" rows="10" placeholder="Ingrese aqui sus comentarios" required></textarea>
+
+                        <!-- Accept Terms Checkbox-->
+                        <div class="form-group form-check my-4">
+                          <input type="checkbox" class="form-check-input" id="accept-terms" checked>
+                          <label class="form-check-label fw-bolder" for="accept-terms">Acepto los <a href="#">térmimos & condiciones</a></label>
+                        </div> 
+                        <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.</p>
+                        <button form="form-contacto" class="btn btn-dark mt-4 mb-2" type="submit">Enviar</button>
+                      </form>
+
+                    </div>
+                  </div>
+
+            </div>                
+          </div>
+        </Section>
+        <!-- /form -->
 
     </main>
   <!--footer start-->
