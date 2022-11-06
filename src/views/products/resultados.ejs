@@ -23,8 +23,12 @@
               </nav>                
               <h1 class="fw-bold display-6 mb-4 text-white">Resultado de busqueda</h1>
               <div class="col-12 col-md-6">
-                  <!-- <img style="width:150px ;" src="<%= usuarioFull.image%>"> <br> -->
-                  <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>  , este es el catalogo creado!</p>
+                
+                 <% if (locals.usuarioFull != undefined) { %>
+                  <p class="lead text-white mb-0"> Hola <%= usuarioFull.first_name %>  ,este es el resultado de tu busqueda!</p>
+                 <% } else { %>
+                 <p class="lead text-white mb-0"> Hola, este es el resultado de tu busqueda!</p>
+                  <% } %> 
               </div>
           </div>
       </div>

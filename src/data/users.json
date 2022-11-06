@@ -34,5 +34,14 @@
   "email": "admin@admin.com",
   "category": "admin",
   "image": "/img/users/about-img-2-1.png"
+ },
+ {
+  "id": 4,
+  "first_name": "sarlanga",
+  "last_name": "sarlanguita",
+  "password": "$2a$10$7t9.dflZKdfAiaZt3wF1V.rbOwpXktoqzasK8102I9P6DRy1rPqGy",
+  "email": "sar@langa.com",
+  "category": "user",
+  "image": "/img/users/aroma_photo_02.jpg"
  }
 ]
