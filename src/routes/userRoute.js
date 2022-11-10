@@ -3,6 +3,7 @@ const {body} = require("express-validator")
 const userController = require("../controllers/userController");
 const router = express.Router();
 const multer = require("multer")
+const checkUserMiddleware = require("../middleware/checkUserMiddleware")
 
 
 //configuracion de multer
@@ -29,7 +30,7 @@ validateRegistro = [
 
 //rutas de usuario.
 
-router.get("/login", userController.login )
+router.get("/login", checkUserMiddleware, userController.login )
 router.post("/login", userController.loginPost )
 router.get("/registro", userController.registro)
 router.post("/registro",upload.any(), validateRegistro , userController.registroPost)
