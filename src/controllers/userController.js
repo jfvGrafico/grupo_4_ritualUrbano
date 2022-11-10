@@ -18,7 +18,12 @@ const userController = {
         if (usuarioLogeado != undefined){
             delete usuarioLogeado.password
             req.session.usuarioLogeado = usuarioLogeado;
-            
+            if(req.body.recuerdame != undefined){
+                const token = crypto.randomBytes(64).toString("base64")
+                res.cookie("userLogged" ,token, {maxAge : (1000*60*60*24*90)})
+                usuarioLogeado.token = token
+                fs.writeFileSync(path.resolve(__dirname, "../data/loggedUser.json") , JSON.stringify(usuarioLogeado , null, " "))
+        }
         res.redirect("/user/profile")
 
 
