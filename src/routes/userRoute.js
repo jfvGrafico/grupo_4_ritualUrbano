@@ -4,6 +4,7 @@ const userController = require("../controllers/userController");
 const router = express.Router();
 const multer = require("multer")
 const checkUserMiddleware = require("../middleware/checkUserMiddleware")
+const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddleware");
 
 
 //configuracion de multer
@@ -32,10 +33,10 @@ validateRegistro = [
 
 router.get("/login", checkUserMiddleware, userController.login )
 router.post("/login", userController.loginPost )
-router.get("/registro", userController.registro)
-router.post("/registro",upload.any(), validateRegistro , userController.registroPost)
+router.get("/registro", checkUserMiddleware, userController.registro)
+router.post("/registro",upload.any(), validateRegistro, userController.registroPost)
 router.get("/logout" , userController.logout)
-router.get("/profile", userController.profile)
+router.get("/profile",checkCarritoUserMiddleware, userController.profile);
 router.put("/editProfile", upload.any(),userController.editProfile)
 
 
