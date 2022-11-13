@@ -34,7 +34,7 @@ validateRegistro = [
 router.get("/login", checkUserMiddleware, userController.login )
 router.post("/login", userController.loginPost )
 router.get("/registro", checkUserMiddleware, userController.registro)
-router.post("/registro",upload.any(), validateRegistro, userController.registroPost)
+router.post("/registro",upload.any(), userController.registroPost)
 router.get("/logout" , userController.logout)
 router.get("/profile",checkCarritoUserMiddleware, userController.profile);
 router.put("/editProfile", upload.any(),userController.editProfile)
