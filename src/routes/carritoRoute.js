@@ -7,7 +7,7 @@ const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddle
 
 router.get("/",checkCarritoUserMiddleware, carritoController.carrito);
 router.delete ("/:carritoID", carritoController.carritoDelete)
-router.post("/:id", carritoController.guardarCarrito)
+router.post("/:id",checkCarritoUserMiddleware, carritoController.guardarCarrito)
 router.get("/compraFin",checkCarritoUserMiddleware, carritoController.compraFin);
 
 module.exports = router;
