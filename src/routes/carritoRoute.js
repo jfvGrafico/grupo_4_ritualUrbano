@@ -5,7 +5,7 @@ const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddle
 
 //rutas de carrito
 
-router.get ("/", carritoController.carrito)
+router.get("/",checkCarritoUserMiddleware, carritoController.carrito);
 router.delete ("/:carritoID", carritoController.carritoDelete)
 router.post("/:id", carritoController.guardarCarrito)
 router.get("/compraFin",checkCarritoUserMiddleware, carritoController.compraFin);

@@ -3,7 +3,7 @@ const productoController = require("../controllers/productoController");
 const router = express.Router();
 const multer = require("multer");
 const checkAdminMiddleware = require("../middleware/checkAdminMiddleware");
-
+const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddleware")
 //config multer //
 
 const storage = multer.diskStorage({
