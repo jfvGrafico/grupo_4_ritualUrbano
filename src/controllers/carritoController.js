@@ -35,7 +35,7 @@ const carritoController = {
     let aGuardar = JSON.stringify(aBorrar, null, " ");
     let pathToFile = path.join(__dirname, "../data/carrito.json");
     fs.writeFileSync(pathToFile, aGuardar);
-    /* req.session.destroy(); */
+    req.session.destroy();
     res.redirect("/producto/carrito");
   },
     compraFin: (req,res) => {
