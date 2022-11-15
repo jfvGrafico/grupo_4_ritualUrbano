@@ -1,1 +1,9 @@
-[]
+{
+ "id": 3,
+ "first_name": "Administrador",
+ "last_name": "Administrador",
+ "email": "admin@admin.com",
+ "category": "admin",
+ "image": "/img/users/about-img-2-1.png",
+ "token": "DGebs2FHdWYIEumC+qNPJkNzqkhZRWJaPjamEZ8Jb2prMAV29VxyvAlLoMM4wBx9enBgK/VakuhpFvbd3eJvcg=="
+}

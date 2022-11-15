@@ -9,15 +9,6 @@
   "precio": "471"
  },
  {
-  "id": "10",
-  "nombre": "Cafetera Automatica",
-  "descripcion": "Una forma unica de moler los mejores granos.",
-  "categoria": "cafetera",
-  "peso": "1500",
-  "imagen": "/img/Products-12-450x450.jpg",
-  "precio": "4000"
- },
- {
   "id": "9",
   "nombre": "Molinillo Reliquia",
   "descripcion": "Una forma unica de moler los mejores granos.",
