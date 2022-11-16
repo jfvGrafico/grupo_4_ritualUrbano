@@ -128,3 +128,23 @@ RETROSPECTIVA sprint #4
 5. Dejar de hacer
 
     *  -
+
+
+###################   RETROSPECTIVA sprint #5 ########################
+1. Comenzar a hacer.
+   
+    
+2. Hacer más.
+   * Respetar las ceremonias.
+    
+3. Continuar haciendo.
+   * Mantener la comunicacion por whatsapp.
+   * Avisar al equipo cuando accidentalmente se rompe codigo.
+    
+4. Hacer menos.
+    
+
+5. Dejar de hacer.
+   
+
+
