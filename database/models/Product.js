@@ -12,6 +12,8 @@ module.exports = (sequelize, dataTypes) => {
         peso:  dataTypes.INTEGER,
         imagen:  dataTypes.STRING,
         precio:  dataTypes.INTEGER,
+        id_user : dataTypes.INTEGER,
+        id_carrito : dataTypes.INTEGER
     }
 
     const config = {
