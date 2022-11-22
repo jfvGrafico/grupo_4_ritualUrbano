@@ -43,5 +43,14 @@
   "email": "sar@langa.com",
   "category": "user",
   "image": "/img/users/aroma_photo_02.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "artur",
+  "last_name": "rios",
+  "password": "$2a$10$TBQltfQkYO56MhN8DA6xN.d7BLGRSnim7.ZJb287rbnW2uFSjjuP6",
+  "email": "artur@rios.com",
+  "category": "user",
+  "image": "/img/users/noimage.jpeg"
  }
 ]
