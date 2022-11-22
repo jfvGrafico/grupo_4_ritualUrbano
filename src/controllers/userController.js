@@ -5,13 +5,15 @@ const { traceDeprecation } = require("process")
 const bcrypt = require ("bcryptjs")
 const crypto = require("crypto")
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
-const carrito = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
-);
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8"));
+const db = require("../../database/models");
+const sequelize = db.sequelize;
 
 const userController = {
     login: (req, res) =>{
         res.render("users/login", { title: "Login", carrito });
+        
+        
     },
     loginPost : (req, res) =>{
         let usuarioLogeado = users.find(user => req.body.email == user.email && (bcrypt.compareSync(req.body.password, user.password)))
