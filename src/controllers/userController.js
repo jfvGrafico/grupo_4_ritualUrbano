@@ -10,9 +10,9 @@ const db = require("../../database/models");
 const sequelize = db.sequelize;
 
 const userController = {
-    login: (req, res) =>{
-        res.render("users/login", { title: "Login", carrito });
-        
+    login: async(req, res) =>{
+        //res.render("users/login", { title: "Login", carrito });
+        res.send(await db.Users.findAll())
         
     },
     loginPost : (req, res) =>{
