@@ -11,9 +11,8 @@ const sequelize = db.sequelize;
 
 const userController = {
     login: async(req, res) =>{
-        //res.render("users/login", { title: "Login", carrito });
-        res.send(await db.Users.findAll())
-        
+        res.render("users/login", { title: "Login", carrito });
+           
     },
     loginPost : (req, res) =>{
         let usuarioLogeado = users.find(user => req.body.email == user.email && (bcrypt.compareSync(req.body.password, user.password)))

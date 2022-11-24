@@ -8,12 +8,12 @@ module.exports = (sequelize, dataTypes) => {
         },
         nombre : dataTypes.STRING,
         descripcion : dataTypes.STRING,
-        categoria:  dataTypes.STRING,
+        categoryProducts:  dataTypes.INTEGER,
         peso:  dataTypes.INTEGER,
         imagen:  dataTypes.STRING,
         precio:  dataTypes.INTEGER,
         id_user : dataTypes.INTEGER,
-        id_carrito : dataTypes.INTEGER
+       
     }
 
     const config = {

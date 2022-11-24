@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
         last_name : dataTypes.STRING,
         password:  dataTypes.STRING,
         email:  dataTypes.STRING,
-        category:  dataTypes.STRING,
+        categoryUsers:  dataTypes.INTEGER,
         image:  dataTypes.STRING,
     }
 
@@ -25,6 +25,13 @@ module.exports = (sequelize, dataTypes) => {
             as : "products" , 
             foreingKey : "idUser"
         })
+
+        User.associate = (models) => {
+            User.belongTo(models.categoryUsers, {
+                as : "categoryProducts",
+                foreingKey : "idCategory"
+            })
+        }
     }
     return User
 }
