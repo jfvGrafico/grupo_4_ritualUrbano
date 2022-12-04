@@ -3,7 +3,6 @@ const fs = require("fs")
 const e = require("express")
 
 
-
 const productoController = {
     lista :  (req, res) =>{
       const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
