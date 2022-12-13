@@ -43,5 +43,14 @@
   "email": "sar@langa.com",
   "category": "user",
   "image": "/img/users/aroma_photo_02.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "Oscar Efren",
+  "last_name": "Pérez Gonzalez",
+  "password": "$2a$10$1ObT1mKWeoQtTYNk8QO3E.9seDT4vVkyAx97YXRb3V1VjW9v4t7/K",
+  "email": "epere18@hotmail.com",
+  "category": "user",
+  "image": "/img/users/noimage.jpeg"
  }
 ]
