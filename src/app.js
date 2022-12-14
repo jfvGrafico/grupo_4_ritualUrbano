@@ -3,6 +3,7 @@
 const express = require("express"); 
 const path = require("path");    
 const mainRoute = require("./routes/mainRoute")  
+const mainRoutes = require("./routess/mainRoutes") 
 const userRoute = require("./routes/userRoute")  
 const productoRoute = require ("./routes/productoRoute")   
 const carritoRoute = require("./routes/carritoRoute") 
@@ -42,6 +43,10 @@ app.use("/producto/carrito", carritoRoute)
 app.use("/", mainRoute)
 app.use("/user", userRoute)
 app.use("/producto", productoRoute)
+
+// rutas nuevas combinadas con la db
+
+app.use("/", mainRoutes)
 
 
 
