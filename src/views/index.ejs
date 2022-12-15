@@ -55,17 +55,21 @@
         </section>
 
         <!-- body section -->
-        <section class="mt-5 container ">
-            <h1>Nuestros Cafés</h1>
+        <section class="mt-5 container">
+            <div class="titulo-section">
+              <h1>Nuestros Cafés</h1>
+            </div>
 
             <!-- Card Product-->
             <section>
-              <div class="row g-4 mb-5" >
+              <div class="row g-4 mb-5">
+                <% productos.forEach(item => { %>
+                <% if(item.categoria == "cafe") { %>
+
                 <div class="col-12 col-sm-6 col-md-4">
                   <!-- Card Product-->
                   <div class="card position-relative h-100 card-listing hover-trigger">
-                    <% productos.forEach(item => { %>
-                      <% if(item.categoria == "cafe") { %>
+                      
                     <div class="card-header">
                         <picture class="position-relative overflow-hidden d-block bg-light">
                             <img class="w-100 img-fluid position-relative z-index-10" title="" src=<%=item.imagen%> alt="">
@@ -76,9 +80,9 @@
                         <div class="card-actions">
                             <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">Carrito</span>
                             <div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
-                                <button class="btn btn-outline-dark btn-sm mx-2">0.5 Klg</button>
-                                <button class="btn btn-outline-dark btn-sm mx-2">1 klg</button>
-                                <button class="btn btn-outline-dark btn-sm mx-2">2 klg</button>
+                                <button class="btn btn-outline-dark btn-sm mx-2">0.5 Kg</button>
+                                <button class="btn btn-outline-dark btn-sm mx-2">1 kg</button>
+                                <button class="btn btn-outline-dark btn-sm mx-2">2 kg</button>
                             </div>
                         </div>
                     </div>
@@ -106,13 +110,13 @@
                         href="/producto/<%=item.id%>"><%=item.nombre%></a> --> 
                             <p><%=item.descripcion%></p>
                             <p class="fw-bolder m-0 mt-2"><%=item.precio%></p>
-                            <% } %> 
-                            <% })%> 
+                             
                     </div>
                   </div>
-                  <!--/ Card Product-->
                 </div>
-            </div>      
+                      <% } %> 
+                      <% })%>
+              </div>      
           </section>
 
         </section> <!-- /body section -->

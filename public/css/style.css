@@ -40,6 +40,13 @@ h6 {
   align-items: center;
 }
 
+.titulo-section {
+  width: 100%;
+  padding: 10px;
+  margin: 30px;
+  
+}
+
 /* --- Navegacion --- */
 /* .searchbar input {
   width: 70%;

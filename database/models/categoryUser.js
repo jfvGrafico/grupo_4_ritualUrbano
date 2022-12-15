@@ -15,6 +15,14 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const loggedUser =  sequelize.define(alias, cols, config)
-    return loggedUser
+    const categoryUser =  sequelize.define(alias, cols, config)
+
+    // categoryUser.associate = (models) => {
+    //     categoryUser.belongsTo(models.User, {
+    //         as: "categoryUser",
+    //         foreignKey: "idCategory"
+    //     })
+    // }
+
+    return categoryUser
 }

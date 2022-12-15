@@ -46,6 +46,8 @@ app.use("/producto", productoRoute)
 
 
 
+
+
 //404 redirect
 
 app.use((req, res, next) => {

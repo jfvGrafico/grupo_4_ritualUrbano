@@ -21,13 +21,14 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Product =  sequelize.define(alias, cols, config);
+    const Product =  sequelize.define(alias, cols, config)
 
-            Product.associate = models => {
-        Product.belongsTo(models.categoryProduct, {as: 'category', foreignKey: 'category_id'});
-
-        Product.belongsTo(models.User, {as:'usuario', foreignKey: '' })
+    Product.associate = function(models){
+        Product.belongsTo(models.categoryProducts, {
+            as: "categoria_de_producto",
+            foreignKey: "idCategoria"
+        })
     }
-    
+
     return Product
 }
