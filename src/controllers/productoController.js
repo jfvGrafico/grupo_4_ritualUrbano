@@ -2,13 +2,31 @@ const path = require ("path")
 const fs = require("fs")
 const e = require("express")
 
+const { validationResult } = require("express-validator");
+
+const { Product, Category } = require("../../database/models");
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+/* const productsFilePath = path.join(__dirname, "../data/productsDataBase.json"); */
+/* const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")); */
 
 const productoController = {
-    lista :  (req, res) =>{
+    /* lista :  (req, res) =>{
       const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
         res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
-    },
+    }, */
+    lista: async(req, res)=>{
+      try{
+        const products = await Product.findAll({
+          include: [{ association: "categoryProduct" }],
+        });
+      res.render("products/lista", { products, carrito});
+      } catch (error) {
+      return res.send(error)
+      }
+},
+
+
     categoria: (req, res) =>{
       const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
