@@ -11,14 +11,14 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const config = {
-        tableName : "categoryProducts",
+        tableName : "categoryproducts",
         timestamps: false
     }
 
     const categoryProduct =  sequelize.define(alias, cols, config);
-    categoryProduct.associate = models => {
+    /* categoryProduct.associate = models => {
         categoryProduct.hasMany(models.Product, {as: 'products', foreignKey: 'category_id'});
-    }
+    } */
 
     return categoryProduct;
 }

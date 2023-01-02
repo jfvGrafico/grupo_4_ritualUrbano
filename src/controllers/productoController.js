@@ -4,7 +4,7 @@ const e = require("express")
 
 const { validationResult } = require("express-validator");
 
-const { Product, Category } = require("../../database/models");
+const db = require("../../database/models");
 const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
 /* const productsFilePath = path.join(__dirname, "../data/productsDataBase.json"); */
 /* const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")); */
@@ -15,7 +15,7 @@ const productoController = {
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
         res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
     }, */
-    lista: async(req, res)=>{
+    /* lista: async(req, res)=>{
       try{
         const products = await Product.findAll({
           include: [{ association: "categoryProduct" }],
@@ -24,7 +24,13 @@ const productoController = {
       } catch (error) {
       return res.send(error)
       }
-},
+    }, */
+    lista: function(req, res){
+      db.Products.findAll()
+        .then(function(productos){
+          res.render("products/lista", {title: "Listado de Productos" ,productos, carrito});
+        })
+    },
 
 
     categoria: (req, res) =>{
@@ -34,6 +40,7 @@ const productoController = {
       let arrayCat = []
       productos.forEach(producto => arrayCat.push(producto.categoria))
       catUnique = [... new Set (arrayCat)]  //hace un unique de arrayCat 
+      console.log(catUnique);
       if(req.params.catID == undefined) {
         res.render  ("products/categoria", { title: "Categoria" , productos, catUnique, carrito});
     } else {  
@@ -44,16 +51,19 @@ const productoController = {
 
 
 
-  productoDetalle: (req, res) => {
+  /* productoDetalle: (req, res) => {
     const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
     const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let prodObj = productos.find(
       (producto) => producto.id == req.params.prodID
     );
-    res.render("products/productoDetalle", {
-      title: "Detalle de Producto",
-      prodObj, carrito
-    });
+    res.render("products/productoDetalle", {title: "Detalle de Producto", prodObj, carrito});
+  }, */
+  productoDetalle: function(req, res) {
+    db.Products.findByPk(req.params.prodID)
+      .then(function(prodObj){
+        res.render("products/productoDetalle", {title: "Detalle de Producto", prodObj, carrito});
+      })
   },
 
   crear: (req, res) => {
