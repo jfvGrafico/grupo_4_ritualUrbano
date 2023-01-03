@@ -1,4 +1,5 @@
 const carritoPreviewMiddleware = (req, res, next) => {
+    console.log("carritoPreviewMiddleware");
     
         let subtotal = 0;
 

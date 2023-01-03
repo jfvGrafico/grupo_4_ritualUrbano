@@ -10,8 +10,9 @@ module.exports = (sequelize, dataTypes) => {
         last_name : dataTypes.STRING,
         password:  dataTypes.STRING,
         email:  dataTypes.STRING,
-        categoryUsers:  dataTypes.INTEGER,
+        idCategory:  dataTypes.INTEGER,
         image:  dataTypes.STRING,
+        token: dataTypes.STRING,
     }
 
     const config = {
@@ -20,18 +21,13 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const User =  sequelize.define(alias, cols, config)
-    User.associate = (models) => {
-        User.hasMany(models.Products , {
-            as : "products" , 
-            foreingKey : "idUser"
-        })
 
-        User.associate = (models) => {
-            User.belongsTo(models.categoryUser, {
-                as : "categoryUser",
-                foreingKey : "idCategory"
-            })
-        }
-    }
+    User.associate = (models) => {
+      User.belongsTo(models.CategoryUser, {
+        as: "CategoryUser",
+        foreignKey: "idCategory",
+      });
+    };
+
     return User
 }
