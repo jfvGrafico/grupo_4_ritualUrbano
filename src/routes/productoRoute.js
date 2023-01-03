@@ -25,7 +25,8 @@ router.get("/categoria/:catID?", productoController.categoria);
 router.get("/crear",checkAdminMiddleware, productoController.crear);
 router.post("/", upload.any(), productoController.nuevoProd);
 router.get("/:prodID/editar", productoController.editar);
-router.put("/", upload.any(), productoController.actualizar);
+/* router.put("/", upload.any(), productoController.actualizar); */
+router.post("/update/:id", upload.any(), productoController.actualizar);
 router.get("/resultado", productoController.resultado);
 router.delete("/:prodID", productoController.eliminar);
 router.get("/editar/lista",checkAdminMiddleware, productoController.listaEditar);

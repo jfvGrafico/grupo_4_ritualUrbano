@@ -46,10 +46,10 @@
  },
  {
   "id": 5,
-  "first_name": "Oscar Efren",
-  "last_name": "Pérez Gonzalez",
-  "password": "$2a$10$5DsaX79d900E1hPnaLFzgO9dN..QC0KgOccBgaEXbdYr38.gSxTma",
-  "email": "epere18@hotmail.com",
+  "first_name": "artur",
+  "last_name": "rios",
+  "password": "$2a$10$TBQltfQkYO56MhN8DA6xN.d7BLGRSnim7.ZJb287rbnW2uFSjjuP6",
+  "email": "artur@rios.com",
   "category": "user",
   "image": "/img/users/noimage.jpeg"
  }

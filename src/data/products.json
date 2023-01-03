@@ -1,14 +1,5 @@
 [
  {
-  "id": "8",
-  "nombre": "Cafe en grano",
-  "descripcion": "Cafe virgen en grano para tostar",
-  "categoria": "cafe",
-  "peso": "500",
-  "imagen": "/img/Products-20-450x450.jpg",
-  "precio": "3000"
- },
- {
   "id": "9",
   "nombre": "Molinillo Reliquia",
   "descripcion": "Una forma unica de moler los mejores granos.",
@@ -178,5 +169,23 @@
   "peso": "1500",
   "imagen": "/img/cafetera_kubo_expresso.jpg",
   "precio": "4000"
+ },
+ {
+  "id": "181",
+  "nombre": "cafe negro",
+  "descripcion": "cafe con sabor amargo",
+  "categoria": "cafe",
+  "peso": "",
+  "imagen": "/img/tg-4.png",
+  "precio": "3000"
+ },
+ {
+  "id": "8",
+  "nombre": "Cafe en grano",
+  "descripcion": "Cafe virgen en grano para tostar",
+  "categoria": "cafe",
+  "peso": "500",
+  "imagen": "/img/tg-2-1.jpeg",
+  "precio": "3000"
  }
 ]
