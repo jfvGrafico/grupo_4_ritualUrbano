@@ -2,7 +2,12 @@ const path = require ("path")
 const fs = require("fs")
 const e = require("express")
 
-const db = require("../database/models");
+const { validationResult } = require("express-validator");
+
+const { Product, Category } = require("../../database/models");
+const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+/* const productsFilePath = path.join(__dirname, "../data/productsDataBase.json"); */
+/* const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")); */
 
 const productoController = {
   /*     lista :  (req, res) =>{
@@ -10,19 +15,16 @@ const productoController = {
       const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
         res.render("products/lista", { title: "Listado de Productos" , productos, carrito});
     }, */
-
-  lista: function (req, res) {
-    const carrito = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
-    );
-    db.Product.findAll().then(function (productos) {
-      res.render("products/lista", {
-        title: "Listado de Productos",
-        productos,
-        carrito,
-      });
-    });
-  },
+    lista: async(req, res)=>{
+      try{
+        const products = await Product.findAll({
+          include: [{ association: "categoryProduct" }],
+        });
+      res.render("products/lista", { products, carrito});
+      } catch (error) {
+      return res.send(error)
+      }
+},
 
   /* categoria: (req, res) => {
     const productos = JSON.parse(
@@ -58,32 +60,24 @@ const productoController = {
       fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
     );
 
-    let promProdut = db.Product.findAll({
-      include: ["CategoryProduct"],
-    });
-    let promCategory = db.CategoryProduct.findAll();
-    Promise.all([promProdut, promCategory])
-      .then(([prodObj, categories]) => {
-        if (req.params.catID == undefined) {
-          res.render("products/categoria", {
-            title: "Categoria",
-            prodObj,
-            categories,
-            carrito,
-          });
-        } else {
-          let cat = req.params.catID;
-          res.render("products/categoriaProducto", {
-            title: "Prueba",
-            prodObj,
-            cat,
-            carrito,
-          });
-        }
-      })
-      .catch((error) => res.send(error));
-  },
-  /*   productoDetalle: (req, res) => {
+    categoria: (req, res) =>{
+      const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+      const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
+      let catUnique = []
+      let arrayCat = []
+      productos.forEach(producto => arrayCat.push(producto.categoria))
+      catUnique = [... new Set (arrayCat)]  //hace un unique de arrayCat 
+      if(req.params.catID == undefined) {
+        res.render  ("products/categoria", { title: "Categoria" , productos, catUnique, carrito});
+    } else {  
+            let cat = req.params.catID      
+            res.render  ("products/categoriaProducto", { title: "Prueba" , productos, cat, carrito});
+            }
+   },
+
+
+
+  productoDetalle: (req, res) => {
     const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
     const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
     let prodObj = productos.find(
@@ -92,19 +86,6 @@ const productoController = {
     res.render("products/productoDetalle", {
       title: "Detalle de Producto",
       prodObj, carrito
-    });
-  }, */
-
-  productoDetalle: function (req, res) {
-    const carrito = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
-    );
-    db.Product.findByPk(req.params.prodID).then(function (prodObj) {
-      res.render("products/productoDetalle", {
-        title: "Detalle de Producto",
-        prodObj,
-        carrito,
-      });
     });
   },
 
