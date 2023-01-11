@@ -1,12 +1,21 @@
 {
  "id": 3,
+<<<<<<< HEAD
  "first_name": "pepitoelcrackdb",
  "last_name": "sanchezitodb",
+=======
+ "first_name": "pepitoelcrack",
+ "last_name": "sanchezito",
+>>>>>>> 6c52eb67c2bad671f04fb0524e96729a777aeb67
  "password": "$2a$10$FyVF4tIAk/t/7zH75JDt8eF6FqEXoBXC886jGXuVQ7K7Z5tmVr/FC",
  "email": "pepe@correo.com",
  "idCategory": "user",
  "image": "/img/1s/zeneraa-kbaD--620x349@abc.jpeg",
+<<<<<<< HEAD
  "token": "x9S75A5AEOK+dzouLkqHJqWsD+qAtrQWAj8ALVRf/T1y6n45r9MV5g1X3u1VmTuRVY+WbiH/Zvef1MyWIQRSiw==",
+=======
+ "token": "mporyvfm+9MZ6cylyBydpmhDW31t8ZUj/DzcQvdgyzNt/i5Ta0JJGBX4v1ZhQQhRQUcnOW7+a7LEn2Q8wph6KQ==",
+>>>>>>> 6c52eb67c2bad671f04fb0524e96729a777aeb67
  "CategoryUser": {
   "id": 1,
   "nombre": "user"
