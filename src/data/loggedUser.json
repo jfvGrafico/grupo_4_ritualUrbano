@@ -1,9 +1,14 @@
 {
- "id": 5,
- "first_name": "Oscar Efren",
- "last_name": "Pérez Gonzalez",
- "email": "epere18@hotmail.com",
- "category": "user",
- "image": "/img/users/noimage.jpeg",
- "token": "0uvwur+QM483MpB1brqR5EfxMz9OrHoHlxv1I9LoXAa5J95+/18UBUaotUBRzttlx1mkI64AZ+ng/GRpJ9u5aw=="
+ "id": 3,
+ "first_name": "pepitoelcrackdb",
+ "last_name": "sanchezitodb",
+ "password": "$2a$10$FyVF4tIAk/t/7zH75JDt8eF6FqEXoBXC886jGXuVQ7K7Z5tmVr/FC",
+ "email": "pepe@correo.com",
+ "idCategory": "user",
+ "image": "/img/1s/zeneraa-kbaD--620x349@abc.jpeg",
+ "token": "x9S75A5AEOK+dzouLkqHJqWsD+qAtrQWAj8ALVRf/T1y6n45r9MV5g1X3u1VmTuRVY+WbiH/Zvef1MyWIQRSiw==",
+ "CategoryUser": {
+  "id": 1,
+  "nombre": "user"
+ }
 }

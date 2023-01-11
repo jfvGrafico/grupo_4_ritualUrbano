@@ -31,10 +31,10 @@
 
       <section class="container">
         <div class="cafe-box">       
-            <% productos.forEach(producto => { %>             
-                     <% if(producto.categoria == cat){%> 
+            <% prodObj.forEach(producto => { %>             
+                    <% if(producto.idCategoria==cat){%>
                     <div class="producto-cafe">
-                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt=<%=producto.categoria%>"> </a> 
+                     <a href=/producto/<%=producto.id %>> <img src=<%=producto.imagen %> alt=<%=producto.idCategoria%>"> </a> 
                      <p><%=producto.nombre %></p>
                      
                 </div>

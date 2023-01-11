@@ -1,13 +1,27 @@
 const path = require("path")
 const fs = require("fs")
 const nodemailer = require("nodemailer");
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8"))
+/* const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/products.json") , "utf-8")) */
+const db = require("../database/models");
 const carrito = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/carrito.json") , "utf-8"))
 
 const mainController = {
     index :  (req, res) => {
-        res.render("index", {title: "Home" , productos , carrito});
+        const carrito = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
+    );
+    let promProdut = db.Product.findAll({
+      include: [{association:"CategoryProduct"}],
+    });
+    let promCategory = db.CategoryProduct.findAll({
+      include: [{association: "products"}],
+    });
+    Promise.all([promProdut, promCategory])
+      .then(([productos, categories]) => {
+        res.render("index", { title: "Home", productos, categories, carrito });
+    })
     },
+
     contacto:  (req, res) =>{
         res.render("contacto", { title: "Contacto", carrito });
     },
