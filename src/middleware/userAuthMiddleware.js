@@ -30,17 +30,19 @@ const userAuthMiddleware = (req, res, next) => {
                 req.session.usuarioLogeado = userToLogIn  //pongo al usuario en session
             }) */
             console.log("LAS COKIES COINCIDEN" + " " + userCookie.token + " " + cookieToken  + " " + userCookie.id);
-            let promUser = db.User.findOne(
+            db.User.findOne({include:{all:true}},
               {
                 where: {
                   id: userCookie.id,
                 },
               },
-            );
-            let promCategory = db.CategoryUser.findAll()
+            )
+            /* let promCategory = db.CategoryUser.findAll()
             Promise.all([promUser, promCategory])
-            .then(([userToLogIn, allCategory]) => {
-              console.log(
+            .then(([userToLogIn, allCategory]) => { */
+            .then((user)=> { 
+              console.log("una solucion" + " " + user)
+              /* console.log(
                 "!!!!!!!!!!!!!!!!!!!!!!" +
                   " " +
                   userToLogIn.id +
@@ -48,17 +50,18 @@ const userAuthMiddleware = (req, res, next) => {
                   userToLogIn.first_name /* +
                   " " +
                   userToLogIn.allCategory.nombre */ /* CategoryUser.nombre */
-              );
-              console.log("IMPRIMIENDO LAS CATEGORIAS" + " " + allCategory);
+              /* ); */ 
+              /* console.log("IMPRIMIENDO LAS CATEGORIAS" + " " + allCategory); */
 
-                if (userToLogIn.idCategory == allCategory.id) {
-                  userToLogIn.idCategory = allCategory.name;
-                  console.log(
+                /* if (userToLogIn.idCategory == allCategory.id) {
+                  userToLogIn.idCategory = allCategory.name; */
+                  /* console.log(
                     "IMPRIMIENDO LA CATEGORIA SELECCIONADA" +
                       " " +
                       userToLogIn.idCategory
-                  );
-                  req.session.usuarioLogeado = userToLogIn;
+                  ); */
+                  /* req.session.usuarioLogeado = userToLogIn; */
+                  req.session.usuarioLogeado = "user";
                   res.locals.logueo = true;
                   res.locals.usuarioFull = req.session.usuarioLogeado;
                   res.locals.userType = req.session.usuarioLogeado.idCategory;
@@ -68,7 +71,7 @@ const userAuthMiddleware = (req, res, next) => {
                 /* userToLogIn.CategoryUser.nombre; */
                 /* userToLogIn.idCategory = "user";  */
               
-            });
+            );
 return next();
         }
 
