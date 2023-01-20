@@ -153,7 +153,7 @@ const userController = {
           last_name: req.body.apellido,
           password: bcrypt.hashSync(req.body.password, 10),
           email: req.body.email,
-          category: "user",
+          idCategory: 1,
           image: imagenCargada,
         })
         .then(() => {
