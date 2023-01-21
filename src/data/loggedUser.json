@@ -1,14 +1,1 @@
-{
- "id": 3,
- "first_name": "pepitoelcrackdb",
- "last_name": "sanchezitodb",
- "password": "$2a$10$FyVF4tIAk/t/7zH75JDt8eF6FqEXoBXC886jGXuVQ7K7Z5tmVr/FC",
- "email": "pepe@correo.com",
- "idCategory": "user",
- "image": "/img/1s/zeneraa-kbaD--620x349@abc.jpeg",
- "token": "4jcj4gDLgr7m/pylDiITMnjmMBOllj4uWHT6ZiRsHeKNHY+2hcRSLHFkrHQ7kmGpjxHGGRK/5mpqKHclJ2xROg==",
- "CategoryUser": {
-  "id": 1,
-  "nombre": "user"
- }
-}
+[]

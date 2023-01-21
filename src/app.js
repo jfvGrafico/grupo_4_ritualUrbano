@@ -11,6 +11,8 @@ const session = require("express-session")
 const cookieParser = require("cookie-parser")
 const userAuthMiddleware = require("./middleware/userAuthMiddleware")
 const carritoPreviewMiddleware = require("./middleware/carritoPreviewMiddleware")
+const apiProductoRoute = require ("./routes/api/productoRouter");
+const apiUsersRoute =require("./routes/api/usersApiRouter");
 const app = express();
 
 //middlewares
@@ -42,6 +44,11 @@ app.use("/producto/carrito", carritoRoute)
 app.use("/", mainRoute)
 app.use("/user", userRoute)
 app.use("/producto", productoRoute)
+
+
+//Aquí creo la colección de mis recursos de movies (APIs)
+app.use("/api/products",apiProductoRoute);
+app.use("/api/users", apiUsersRoute);
 
 
 
