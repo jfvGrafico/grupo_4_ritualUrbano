@@ -6,8 +6,8 @@ const router = express.Router();
 //Rutas
 //Listado de productos
 
-router.get("/", usersApiController.detalleUsuario);
-router.get("/:id", usersApiController.usuarioId);
+router.get("/", usersApiController.listUsuario);
+router.get("/:id", usersApiController.detalleUsuario);
 
 
 

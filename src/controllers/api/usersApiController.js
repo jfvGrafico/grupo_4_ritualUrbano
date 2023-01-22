@@ -6,46 +6,49 @@ const moment = require('moment');
 
 
 const usersApiController = {
-    detalleUsuario: (req, res) => {
+    listUsuario: (req, res) => {
         db.User.findAll({
-            
-            attributes: { exclude: ['password', "idCategory"] },
+            attributes: ['id', "first_name", "email"],
             
         })
-        .then(users => {
-            let respuesta = [{
-                meta: {
-                    status : 200,
-                    count: users.length,
-                    url: "api/users",                    
-                },
-                users: users
-            }]
-                res.json(respuesta);
-            })
-    },
+        .then((users) => {
+            for (let i = 0; i < users.length; i++) {
+              users[i].setDataValue(
+                "detail",
+                `http://localhost:3000/api/users/${users[i].id}`
+              );
+            }
+    
+            let response = {
+              count: users.length,
+              users: users,
+              status: 200,
+            };
+    
+            res.status(200).json(response);
+          })
+          .catch((error) => res.json(error));
+      },
 
-    usuarioId: (req, res) => {
+    detalleUsuario: (req, res) => {
         db.User.findByPk(req.params.id,
             {
                 attributes: { exclude: ['password', "idCategory"] }
             })
-                .then(usuario => {
+            .then(usuario => {
             let respuesta = {
-                meta: {
-                    status : 200,
-                    url: "api/products/:id",
-                    data: usuario,
-                   
-                },
-            }
-            
-                res.json(respuesta);
-            })
-
-
-    }
-}
+                status : 200,
+                id: usuario.id,
+                name: usuario.first_name,
+                email: usuario.email,
+                avatar: `http://localhost:3000/img/users${usuario.image}`,             
+                
+            };
+            res.json(respuesta);
+        })
+        .catch((error) => console.error(error));
+    },
+};
 
 
 module.exports = usersApiController;
