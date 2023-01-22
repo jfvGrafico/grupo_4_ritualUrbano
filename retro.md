@@ -167,5 +167,50 @@ RETROSPECTIVA sprint #4
 
 5. Dejar de hacer.
    
+###################   RETROSPECTIVA sprint #7 ########################
+1. Comenzar a hacer.
+   * David trabajar con el CRUD para conectar la db.ritualUrbano con el proyecto
+   * Oscar tarabajar con las validaciones de formularios
+   * Aprovechar las clases de aplicación practica para adelantar el trabajo
+   * Actualizar el tablero Trello
+   * Mantener el repositorio actualizado
+    
+2. Hacer más.
+   * Dar un poco mas de esfuerzo ya que quedamos solo dos compañeros en el grupo
+   * Despejar dudas con los profesores de la cursada, a fin de destrabar los procesos.
+   * Comunicarse mas para saber como van con las tareas. Preguntar como va y si hay alguna duda.
+    
+3. Continuar haciendo.
+   * Mantener la comunicacion por whatsapp.
+   * Avisar al equipo cuando accidentalmente se rompe codigo.
+   * Seguir con el ritmo y si se puede adelantar los visto en clases mejor
+    
+4. Hacer menos.
+    
 
+5. Dejar de hacer.
+
+###################   RETROSPECTIVA sprint #8 ########################
+1. Comenzar a hacer.
+   * David trabajar con el Dashboard en React
+   * Oscar tarabajar con las API de productos
+   * Aprovechar las clases de aplicación practica para adelantar el trabajo
+   * Actualizar el tablero Trello
+   * Mantener el repositorio actualizado
+   * Conectarnos en la semana de forma virtual para organizar la presentación
+    
+2. Hacer más.
+   * Dar un poco mas de esfuerzo ya que quedamos solo dos compañeros en el grupo
+   * Despejar dudas con los profesores de la cursada, a fin de destrabar los procesos.
+   * Comunicarse mas para saber como van con las tareas. Preguntar como va y si hay alguna duda.   
+    
+3. Continuar haciendo.
+   * Mantener la comunicacion por whatsapp.
+   * Avisar al equipo cuando accidentalmente se rompe codigo.
+   * Seguir con el ritmo y si se puede adelantar los visto en clases mejor
+    
+4. Hacer menos.
+    
+
+5. Dejar de hacer.
 
