@@ -1,6 +1,6 @@
 const path = require ("path")
 const fs = require("fs")
-const {validationResult, body} = require ("express-validator")
+const {validationResult} = require ("express-validator")
 const { traceDeprecation } = require("process")
 const bcrypt = require ("bcryptjs")
 const crypto = require("crypto")
@@ -129,6 +129,7 @@ const userController = {
 
   registroPost: (req, res) => {
     let errors = validationResult(req);
+    
 
     if (errors.isEmpty()) {
       db.User.findOne({

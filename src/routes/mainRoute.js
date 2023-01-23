@@ -1,6 +1,7 @@
 const express = require("express");
-const mainController = require("../controllers/mainController");
 const router = express.Router();
+
+const mainController = require("../controllers/mainController");
 const checkAdminMiddleware =require("../middleware/checkAdminMiddleware")
 
 //Rutas principales.
