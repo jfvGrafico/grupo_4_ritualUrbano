@@ -41,7 +41,7 @@ const usersApiController = {
                 id: usuario.id,
                 name: usuario.first_name,
                 email: usuario.email,
-                avatar: `http://localhost:3000/img/users${usuario.image}`,             
+                imagenPerfil: `http://localhost:3000${usuario.image}`,             
                 
             };
             res.json(respuesta);
