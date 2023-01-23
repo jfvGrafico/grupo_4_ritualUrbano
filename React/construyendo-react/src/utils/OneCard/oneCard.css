@@ -1,0 +1,163 @@
+.productCard {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #333333;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px    ;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+}
+
+.wineBotleIco {
+    width: 10px;
+    height: 10px;
+    padding: 7px;
+    background-color: #f53117;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    border-radius: 7px;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+}
+
+.productCard h2 {
+    position: absolute;
+    right: 7px;
+    top: 15px;
+    color: #fbf2e0;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+.productCard p {
+    position: absolute;
+    right: 7px;
+    top: 25px;
+    color: #fbf2e0;
+    font-size: 17px;
+}
+
+.productCard div {
+    position: absolute;
+    background-color: #f53117;
+    width: 80%;
+    height: 1px;
+    bottom: 10px;
+    margin: 0 10%;
+}
+
+@media screen and (min-width: 470px) {
+    .productCard {
+        height: 90px;
+        margin-top: 20px 
+    }
+
+    .wineBotleIco {
+        width: 25px;
+        height: 25px;
+        padding: 6px;
+        top: -15px;
+        left: 10px;
+        border-radius: 9px;
+    }
+
+    .productCard h2 {
+        right: 10px;
+        top: 25px;
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    .productCard p {
+        position: absolute;
+        right: 7px;
+        top: 40px;
+        font-size: 25px;
+    }
+
+    .productCard div {
+        position: absolute;
+        background-color: #f53117;
+        width: 80%;
+        height: 1px;
+        bottom: 10px;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .productCard {
+        height: 130px
+    }
+
+    .wineBotleIco {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        top: -20px;
+        left: 10px;
+        border-radius: 10px;
+    }
+
+    .productCard h2 {
+        right: 15px;
+        top: 35px;
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    .productCard p {
+        position: absolute;
+        right: 15px;
+        top: 60px;
+        font-size: 37px;
+    }
+
+    .productCard div {
+        position: absolute;
+        background-color: #f53117;
+        width: 80%;
+        height: 1px;
+        bottom: 15px;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .productCard {
+        height: 160px
+    }
+
+    .wineBotleIco {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        top: -25px;
+        left: 20px;
+        border-radius: 10px;
+    }
+
+    .productCard h2 {
+        right: 25px;
+        top: 35px;
+        font-weight: 400;
+        font-size: 22px;
+    }
+
+    .productCard p {
+        position: absolute;
+        right: 25px;
+        top: 65px;
+        font-size: 47px;
+    }
+
+    .productCard div {
+        position: absolute;
+        background-color: #f53117;
+        width: 80%;
+        height: 1px;
+        bottom: 20px;
+        margin: 0 10%;
+    }
+}

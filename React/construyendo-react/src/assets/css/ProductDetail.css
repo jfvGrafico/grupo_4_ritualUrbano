@@ -1,0 +1,14 @@
+.products-container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding:1% 5% 5%;
+}
+@media screen and (min-width: 768px) {
+    .products-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        padding:1% 5% 0% 10%;
+    }
+}
