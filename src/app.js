@@ -35,7 +35,7 @@ app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))
 
 //servidor web
-const puerto = "3000"; 
+const puerto = "3030"; 
 app.listen(puerto, () => {
     console.log(`Servidor Web corriendo en el puerto ${puerto}`);
 })

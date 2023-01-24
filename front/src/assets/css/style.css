@@ -1,0 +1,24 @@
+#content {
+    background: #d1d1d1;
+}
+
+.nav-dashboard {
+    background: #4A4A4A;
+}
+
+.sidebar-dashboard {
+    background: #4A4A4A;
+}
+
+.logo-pixel {
+    border-right: 1px solid rgba(255,255,255,.15);;
+    margin-right: -10px;
+}
+
+.detail-pixel{
+    background: #7EFF00 !important;
+}
+
+.card-container{
+    max-height: 120px;
+}
