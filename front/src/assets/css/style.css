@@ -1,24 +1,32 @@
 #content {
-    background: #d1d1d1;
+    background: rgba(255,255,255,1);
 }
 
 .nav-dashboard {
-    background: #4A4A4A;
+    background: #401201;
 }
 
 .sidebar-dashboard {
-    background: #4A4A4A;
+    background: rgba(170,107,10);
 }
 
 .logo-pixel {
-    border-right: 1px solid rgba(255,255,255,.15);;
+    border-right: 2px solid rgba(170,107,10);;
     margin-right: -10px;
 }
 
-.detail-pixel{
-    background: #7EFF00 !important;
+.border-left-success{border-left:.25rem solid #8c0303 !important}
+
+.text-success{color:#401201!important}a
+
+
+.text-dark {
+    color: #f2efe9 !important;
 }
 
 .card-container{
     max-height: 120px;
+}
+.detalle-r{
+    background: #8c0303 !important;
 }

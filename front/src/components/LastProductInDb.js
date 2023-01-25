@@ -33,7 +33,7 @@ function LastProductInDb(){
                     </div>
                     <h4>{lastProduct.titulo}</h4>
                     <p>{lastProduct.longDesc}</p>
-                    <a className="btn detail-pixel text-dark fw-bold" target="_blank" rel="nofollow" href={`http://localhost:3000/product/detail/${lastProduct.id}`}>Ver detalle de producto</a>
+                    <a className="btn detalle-r text-dark fw-bold" target="_blank" rel="nofollow" href={`http://localhost:3000/product/detail/${lastProduct.id}`}>Ver detalle de producto</a>
                 </div>
             </div>
         </div>
