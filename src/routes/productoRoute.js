@@ -18,14 +18,22 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+
+// Middlewares
+const uploadImgP = require("../middleware/multer/multerImg");
+const validationProduct = require("../middleware/validation/validatedProductsMiddleware");
+
+
 //rutas de producto
 
 router.get("/", productoController.lista);
 router.get("/categoria/:catID?", productoController.categoria);
 router.get("/crear",checkAdminMiddleware, productoController.crear);
-router.post("/", upload.any(), productoController.nuevoProd);
+router.post("/", uploadImgP.single("imagenProducto"), validationProduct, productoController.nuevoProd);
 router.get("/:prodID/editar", productoController.editar);
+
 /* router.put("/", upload.any(), productoController.actualizar); */
+
 router.post("/update/:id", upload.any(), productoController.actualizar);
 router.get("/resultado", productoController.resultado);
 router.delete("/:prodID", productoController.eliminar);

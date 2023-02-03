@@ -21,6 +21,7 @@
   "homepage": "https://github.com/jfvGrafico/grupo_4_ritualUrbano#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap-icons": "^1.10.3",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
     "ejs": "^3.1.8",

@@ -5,8 +5,9 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 
 // Middlewares
-const upload = require("../middleware/multer/multerImg");
+const uploadImgP = require("../middleware/multer/multerImg");
 const validationRegister = require("../middleware/validation/validateRegisterMiddleware");
+const validationLogin = require("../middleware/validation/validatedLogingMiddleware");
 const checkUserMiddleware = require("../middleware/checkUserMiddleware")
 const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddleware");
 
@@ -14,9 +15,9 @@ const checkCarritoUserMiddleware = require("../middleware/checkCarritoUserMiddle
 //rutas de usuario.
 
 router.get("/login", checkUserMiddleware, userController.login )
-router.post("/login", userController.loginPost )
+router.post("/login", validationLogin, userController.loginPost )
 router.get("/registro", checkUserMiddleware, userController.registro)
-router.post("/registro", validationRegister, userController.registroPost)
+router.post("/registro", uploadImgP.single("imagen"), validationRegister, userController.registroPost)
 router.get("/logout" , userController.logout)
 router.get("/profile",checkCarritoUserMiddleware, userController.profile);
 router.put("/editProfile",userController.editProfile)

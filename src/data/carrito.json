@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "id": "9",
+  "nombre": "Molinillo Reliquia",
+  "descripcion": "Una forma unica de moler los mejores granos.",
+  "categoria": "cafetera",
+  "peso": "1500",
+  "imagen": "/img/coffee_item9-300x300.jpg",
+  "precio": "4000"
+ },
+ {
+  "id": "4",
+  "nombre": "Latte Macchiatto",
+  "descripcion": "Te acompañamos en tu desayuno",
+  "categoria": "otrosProductos",
+  "peso": "300",
+  "imagen": "/img/coffee_item4-300x300.jpg",
+  "precio": "471"
+ },
+ {
+  "id": "11",
+  "nombre": "Cafetera Acero Bombeada",
+  "descripcion": "Una forma unica de moler los mejores granos.",
+  "categoria": "cafetera",
+  "peso": "1500",
+  "imagen": "/img/cafetera_acero_bombeada.jpg",
+  "precio": "5000"
+ },
+ {
+  "id": "2",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia. bolsa papel",
+  "categoria": "cafe",
+  "peso": "1200",
+  "imagen": "/img/coffee_item2-300x300.jpg",
+  "precio": "2467.123"
+ }
+]

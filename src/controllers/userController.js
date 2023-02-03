@@ -1,18 +1,19 @@
-const path = require ("path")
-const fs = require("fs")
-const {validationResult} = require ("express-validator")
-const { traceDeprecation } = require("process")
-const bcrypt = require ("bcryptjs")
-const crypto = require("crypto")
-let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"))
+const path = require ("path");
+const fs = require("fs");
+const {validationResult} = require ("express-validator");
+const { traceDeprecation } = require("process");
+const bcryptjs = require ("bcryptjs");
+const crypto = require("crypto");
+let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"));
 const carrito = JSON.parse(
   fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
 );
 const db = require("../database/models");
+const { locals } = require("../app")
 
 const userController = {
   login: (req, res) => {
-    res.render("users/login", { title: "Login", carrito });
+    res.render("users/login", { carrito });
   },
 
   /* loginPost: (req, res) => {
@@ -47,12 +48,22 @@ const userController = {
   }, */
 
   loginPost: (req, res) => {
+
+    const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body,
+			});
+		}
+
+
     db.User.findAll({ include: ["CategoryUser"] })
     .then((users) => {
       let usuarioLogeado = users.find(
         (user) =>
           req.body.email == user.email &&
-          bcrypt.compareSync(req.body.password, user.password)
+          bcryptjs.compareSync(req.body.password, user.password)
       );
 
       usuarioLogeado.idCategory = usuarioLogeado.CategoryUser.nombre;
@@ -72,9 +83,9 @@ const userController = {
             JSON.stringify(usuarioLogeado, null, " ")
           );
         }
-        res.redirect("/user/profile");
+        res.redirect("/");
       } else {
-        res.redirect("/user/login");
+        res.redirect("/users/login");
       }
     });
     /* .catch((error) => {
@@ -128,46 +139,103 @@ const userController = {
     }, */
 
   registroPost: (req, res) => {
-    let errors = validationResult(req);
+          const resultValidation = validationResult(req);
+          console.log(resultValidation.errors)
+          console.log("Body",req.body)
+         
+
+        if (resultValidation.errors.length > 0){
+              return res.render("users/registro", { 
+            //mapped convierte un array en objeto literal
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
+            
+          db.User.findOne({ where: { email: req.body.email } }).then((usario) => {
+              if (usario) {
+                return res.render("users/registro", {
+                    errors: {
+                    email: {
+                      msg: "Este email ya esta registrado",
+                    },
+                  },
+                  oldData: req.body,
+                });
+              } else {
+
+                    let imagenCargada;
+                    // if (req.files[0] != undefined) {
+                    //   imagenCargada = "/img/users/" + req.files[0].originalname;
+                    // } else {
+                    //   imagenCargada = "/img/users/noimage.jpeg";
+                    // }
+
+                    if (req.file) {
+                      imagenCargada = req.file.filename
+                  } else { 
+                    imagenCargada = "noimage.jpeg"
+                  }
+                
+                db.User.create({
+                  first_name: req.body.nombre,
+                  last_name: req.body.apellido,
+                  password: bcryptjs.hashSync(req.body.password, 10),
+                  email: req.body.email,          
+                  idCategory: 1,
+                  image: imagenCargada
+                })
+                  .then(() => {
+                    return res.redirect("/user/login");
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+              }
+            });
+          
+
     
+    // if (resultValidation.isEmpty()) {
+      
+    //   db.User.findOne({
+    //     where: {
+    //       email: req.body.email,
+    //     },
+    //   }).then((user) => {
+    //     if (user) {
+    //       return  res.redirect("users/registro");
+    //     }
 
-    if (errors.isEmpty()) {
-      db.User.findOne({
-        where: {
-          email: req.body.email,
-        },
-      }).then((user) => {
-        if (user) {
-          res.send("El usuario ya existe");
-          res.redirect("/");
-        }
+    //     let imagenCargada;
+    //     if (req.files[0] != undefined) {
+    //       imagenCargada = "/img/users/" + req.files[0].originalname;
+    //     } else {
+    //       imagenCargada = "/img/users/noimage.jpeg";
+    //     }
 
-        let imagenCargada;
-        if (req.files[0] != undefined) {
-          imagenCargada = "/img/users/" + req.files[0].originalname;
-        } else {
-          imagenCargada = "/img/users/noimage.jpeg";
-        }
-
-        db.User.create({
-          first_name: req.body.nombre,
-          last_name: req.body.apellido,
-          password: bcrypt.hashSync(req.body.password, 10),
-          email: req.body.email,
-          idCategory: 1,
-          image: imagenCargada,
-        })
-        .then(() => {
-          res.redirect("/");
-        })
-      });
-    } else {
-      res.render("users/registro", {
-        title: "registro",
-        mensajeDeError: errors.array(),
-        old: req.body,
-      });
-    }
+    //     db.User.create({
+    //       first_name: req.body.nombre,
+    //       last_name: req.body.apellido,
+    //       password: bcrypt.hashSync(req.body.password, 10),
+    //       email: req.body.email,
+    //       idCategory: 1,
+    //       image: imagenCargada,
+    //     })
+    //     .then(() => {
+    //       res.redirect("/login");
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    //   });
+    // } else {
+    //   res.render("users/registro", {
+        
+    //     errors: resultValidation.mapped(),
+    //     oldData: req.body,
+    //   });
+    // }
   },
 
   logout: (req, res) => {
@@ -179,12 +247,12 @@ const userController = {
   },
 
   profile: (req, res) => {
-    db.User.findAll()
-    .then(() => {
-      return res.render("users/profile", { title: "Perfil de usuario" });
-    })
+    // db.User.findAll()
+    // .then(() => {
+      return res.render("users/profile", { title: "Perfil de usuario",carrito });
+    },
     
-  },
+  
 
 /*   editProfile: (req, res) => {
     let users = JSON.parse(

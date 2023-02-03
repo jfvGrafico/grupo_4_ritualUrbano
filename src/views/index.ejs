@@ -23,9 +23,17 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="/img/Banner-1.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Un mundo de café</h5>
-                      <p>Los mejores cafes de nuestra tienda a tu puerta</p>
+                <div class="carousel-caption ">
+                  <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300 w-50">
+                               
+                    
+                    <div class="col-12 col-md-6">
+                      <h1 class="fw-bold display-6 mb-2text-white">Lista Productos</h1>
+                        <p class="lead text-white mb-10 w-auto">
+                            Todo lo que necesitas para que puedas degustar de un buen café.
+                        </p>
+                    </div>
+                </div>
                 </div>
               </div>
               <div class="carousel-item">
@@ -56,31 +64,52 @@
 
         <!-- body section -->
         <section class="mt-5 container ">
-            <h1>Nuestros Cafés</h1>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Column
+              </div>
+              <div class="col">
+                Column
+              </div>
+              <div class="col">
+                Column
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="row g-4 mb-5 mt-5" >
+            <h1>Nuestros Cafés</h1>            
+          </div>
 
             <!-- Card Product-->
             <section>
               <div class="row g-4 mb-5" >
-                <div class="col-12 col-sm-6 col-md-4">
-                  <!-- Card Product-->
-                  <div class="card position-relative h-100 card-listing hover-trigger">
-                    <% productos.forEach(item => { %>
-                      <!-- < % if(item.categoria == "cafe") { % > -->
-                        <% if(categories.nombre == 'cafe') { %>
+                <% productos.forEach(item => { %>
+                  <% if(item.idCategoria == 1) { %>
+                    <div class="col-12 col-sm-6 col-md-3">
+                      <!-- Card Product-->
+                      <div class="card position-relative h-100 card-listing hover-trigger">
+                                          
                     <div class="card-header">
                         <picture class="position-relative overflow-hidden d-block bg-light">
-                            <img class="w-100 img-fluid position-relative z-index-10" title="" src=<%=item.imagen%> alt="">
+                            <img class="w-100 img-fluid position-relative z-index-10" title="" src="<%=item.imagen%>" alt="imagen del producto">
                         </picture>
                             <!-- <picture class="position-absolute z-index-20 start-0 top-0 hover-show bg-light"> // ESTA LINEA PRUCEN ERROR EN INDEX
                                 <img class="w-100 img-fluid" title="" src=< %=item.imagen%> alt=""> // ESTA LINEA PRUCEN ERROR EN INDEX
                             </picture> -->  
                         <div class="card-actions">
-                            <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">Carrito</span>
-                            <div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
-                                <button class="btn btn-outline-dark btn-sm mx-2">0.5 Klg</button>
-                                <button class="btn btn-outline-dark btn-sm mx-2">1 klg</button>
-                                <button class="btn btn-outline-dark btn-sm mx-2">2 klg</button>
-                            </div>
+                            <span class="small text-uppercase tracking-wide fw-bolder text-center d-block"><i class="ri-shopping-basket-2-fill"> </i>Agregar al Carrito</span>
+                            <!-- <div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
+                                <button class="btn btn-outline-dark btn-sm mx-2"><%=item.peso%>Kg</button>
+                                <button class="btn btn-outline-dark btn-sm mx-2"><%=item.peso%>Kg</button>
+                                <button class="btn btn-outline-dark btn-sm mx-2"><%=item.peso%>Kg</button>
+                            </div> -->
                         </div>
                     </div>
                     <div class="card-body px-0 text-center">
@@ -103,16 +132,16 @@
                             </div>
                         </div> <span class="small fw-bolder ms-2 text-muted"> 4.7 (100)</span>
                         </div>
-                        <!-- <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center" /// ESTA LINEA PRUCEN ERROR EN INDEX
-                        href="/producto/< %=item.id%>">< %=item.nombre%></a> --> 
-                            <p><%=item.descripcion%></p>
+                        <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center"
+                        href="/producto/<%=item.id%>"></a> 
+                            <p><%=item.nombre%></p>
                             <p class="fw-bolder m-0 mt-2"><%=item.precio%></p>
-                            <% } %> 
-                            <% })%> 
-                    </div>
-                  </div>
-                  <!--/ Card Product-->
-                </div>
+                          </div>
+                        </div>
+                        <!--/ Card Product-->
+                      </div>
+                      <% } %> 
+                  <% })%> 
             </div>      
           </section>
 

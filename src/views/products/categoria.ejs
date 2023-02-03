@@ -12,14 +12,14 @@
 
         <!-- Banner de categorias y miga de pan -->
         <div class="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
-            style="background-image: url(/img/header-banner-categoria.png);">
+        style="background-image: url(/img/header-banner-categoria.png);">
             <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item breadcrumb-light"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item breadcrumb-light"><a href="/">Home</a></li>
                       <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Categorias</li>
                     </ol>
-                </nav>                <h1 class="fw-bold display-6 mb-4 text-white">CATEGORIAS</h1>
+                </nav>                <h1 class="fw-bold display-6 mb-4 text-white">Categorias</h1>
                 <div class="col-12 col-md-6">
                     <p class="lead text-white mb-0">
                         Ritual Urbano ....
@@ -30,27 +30,31 @@
         <!-- Banner de categorias -->
   
   <section class="container mt-4 mb'4">
-    <div class="categorias-box">
-      <%categories.forEach(elemento => { %>
-      <div class="categoria-cafes">
-     <% if(elemento.nombre == "cafe") { %>
-      <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/02_coffee.jpg" alt="Cafes"></a>
-      <h3><%=elemento.nombre%></h3>
+        <div class="row g-4 mb-5" >
+          <h1>Nuestras Categorias</h1>            
+        </div>
+
+          <div class="categorias-box">
+            <%categories.forEach(elemento => { %>
+            <div class="categoria-cafes">
+          <% if(elemento.nombre == "cafe") { %>
+            <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/coffee_item2-300x300.jpg" alt="Cafes"></a>
+            <h3 class="text-center"><%=elemento.nombre%></h3>
 
           <%} else if(elemento.nombre == "cafetera"){%>
             <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/cafetera_capsulas_philips.jpg" alt="Cafes"></a>
-          <h3><%=elemento.nombre%></h3>
+          <h3 class="text-center"><%=elemento.nombre%></h3>
           
           <%} else if ((elemento.nombre == "otrosProductos")) { %>
           <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/coffee_item6-300x300.jpg" alt="Cafes"></a>
-          <h3><%=elemento.nombre%></h3>
+          <h3 class="text-center"><%=elemento.nombre%></h3>
           <% } else if (elemento.nombre == "merchandising") { %>
             <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/coffee_item7-300x300.jpg" alt="Cafes"></a>
-            <h3><%=elemento.nombre%></h3>
+            <h3 class="text-center"><%=elemento.nombre%></h3>
 
          <% } else {%>
           <a href="/producto/categoria/<%=elemento.id%>"><img src="/img/02_coffee.jpg" alt="Cafes"></a>
-          <h3><%=elementonombre.nombre%></h3>
+          <h3 class="text-center"><%=elementonombre.nombre%></h3>
           <% } %>
 
     </div>

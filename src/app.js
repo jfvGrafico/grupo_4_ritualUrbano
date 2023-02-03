@@ -3,17 +3,17 @@
 const express = require("express"); 
 const path = require("path");    
 const methodOverride = require("method-override");
-const session = require("express-session")
-const cookieParser = require("cookie-parser")
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
-const mainRoute = require("./routes/mainRoute")  
-const userRoute = require("./routes/userRoute")  
-const productoRoute = require ("./routes/productoRoute")   
-const carritoRoute = require("./routes/carritoRoute") 
+const mainRoute = require("./routes/mainRoute");  
+const userRoute = require("./routes/userRoute");  
+const productoRoute = require ("./routes/productoRoute");   
+const carritoRoute = require("./routes/carritoRoute"); 
 
 
-const userAuthMiddleware = require("./middleware/userAuthMiddleware")
-const carritoPreviewMiddleware = require("./middleware/carritoPreviewMiddleware")
+const userAuthMiddleware = require("./middleware/userAuthMiddleware");
+const carritoPreviewMiddleware = require("./middleware/carritoPreviewMiddleware");
 const apiProductoRoute = require ("./routes/api/productoRouter");
 const apiUsersRoute =require("./routes/api/usersApiRouter");
 const app = express();

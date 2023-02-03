@@ -1,6 +1,7 @@
 const path = require ("path")
 const fs = require("fs")
 const e = require("express")
+const {validationResult} = require ("express-validator");
 
 const db = require("../database/models");
 
@@ -117,7 +118,8 @@ const productoController = {
       const categories = await db.CategoryProduct.findAll();
       return res.render("products/productoCrear", {
         title: "Crear Producto",
-        categories,
+        categories
+        
       });
     } catch (error) {
       res.send(error);
@@ -157,6 +159,7 @@ const productoController = {
           title: "Editar Producto",
           prodObj,
           categories,
+          carrito
         });
       })
       .catch((error) => res.send(error));
@@ -189,24 +192,45 @@ const productoController = {
   },
  */
 
-  nuevoProd: (req, res) => {
-    let imagenCargada;
-    if (req.files[0] != undefined) {
-      imagenCargada = "/img/" + req.files[0].originalname;
-    } else {
-      imagenCargada = "/img/tg-4.png";
-    }
+  nuevoProd: async (req, res) => {
+    try {
 
-    db.Product.create({
-      nombre: req.body.nombreProducto,
-      descripcion: req.body.descipcionProducto,
-      idCategoria: req.body.categoriaProducto,
-      peso: req.body.pesoProducto,
-      imagen: imagenCargada,
-      precio: req.body.precioProducto,
-    });
-    res.redirect("/producto");
-  },
+        const resultValidation = validationResult(req);
+        console.log(resultValidation.errors)
+        console.log("Body",req.body)
+
+        if (resultValidation.errors.length > 0) {
+          return res.render("products/productoCrear", {
+            //mapped convierte un array en objeto literal
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+        }
+
+      
+
+        let imagenCargada;
+        if (req.files[0] != undefined) {
+          imagenCargada = "/img/" + req.files[0].originalname;
+        } else {
+          imagenCargada = "/img/tg-4.png";
+        }
+
+        // if (req.file) {
+        await db.Product.create({
+          nombre: req.body.nombreProducto,
+          descripcion: req.body.descipcionProducto,
+          idCategoria: req.body.categoriaProducto,
+          peso: req.body.pesoProducto,
+          precio: req.body.precioProducto,
+          imagen: imagenCargada,
+          
+        })
+          res.redirect("/producto");
+        }catch (error) {
+          console.log(error)
+      }
+   },
 
   /*   eliminar: (req, res) => {
     const productos = JSON.parse(

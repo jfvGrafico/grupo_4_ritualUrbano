@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- head INICIO -->
-  <%- include("../partials/head.ejs") %>
+  <%- include("../partials/head.ejs", {title:"home"}) %>
   <!-- head FIN -->
 
   <body>
@@ -29,79 +29,95 @@
               </div>
           </div>
       </div>
-      <!-- Banner de categorias -->
+      
 
       <section class="mt-5 container ">
 
         <h1 class="mb-4 display-5 fw-bold text-center">Creación de producto</h1>
+          <p class="text-center mx-auto">Estas a un paso de crear un producto!</p>
           <p class="text-center mx-auto">Ingresa todos los campos</p>
             <div class="border-bottom pb-3"></div>
 
-        <div class="p-2"> 
-          <form class="formCrearProducto m-4" action="/producto" method="POST" enctype="multipart/form-data">
-           <!-- <input
-              type="number"
-              name="idProd"
-              id=""
-              placeholder="ID de producto"
-            />
-            <br />
-           --> <input
-              type="text"
-              name="nombreProducto"
-              id=""
-              placeholder="Nombre del producto"
-            />
-            <br />
-            <input
-              type="text"
-              name="descipcionProducto"
-              id=""
-              placeholder="Descripcion del producto"
-            />
-            <br />
-            <!-- <input
-              type="text"
-              name="categoriaProducto"
-              id=""
-              placeholder="Categoria del producto"
-            /> -->
-            
-            <select name="categoriaProducto" id="" required >
-              <option value="" disabled selected >-- Categoria del producto --</option>
-              <% categories.forEach(category=> { %>
-                <option value="<%= category.id %>">
-                  <%= category.nombre %>
-                </option>
-                <% }); %>
-            </select>
-            
-            <br />
-            <input
-              type="number"
-              name="pesoProducto"
-              id=""
-              placeholder="Peso del producto"
-            />
-            <br />
-            <input
-              type="number"
-              name="precioProducto"
-              id=""
-              placeholder="Precio del producto"
-            />
-            <br />
-            <input type="file" name="imagenProducto" id="" />
-            <br />
-            <button type="submit" class="btn btn-dark mt-4 mb-2">Enviar</button>
-            <br />
-          </form>
-        </div>
+            <!-- Formulario de login-->
+
+            <div class="row d-flex mt-auto p-1">
+              <div class="p-5 sticky-md-top top-10">
+                  
+                            
+
+                    <div class="card flex-grow-1 mb-md-0 w-60 mx-auto">
+                      <div class="card__content">
+                        
+                        
+                           
+                          <form class="form-registro" action="/producto" method="POST" enctype="multipart/form-data" id="">
+
+                          <label for="nombreProducto" class="form-label">Nombre del producto</label>
+                          <input type="text" class="form-control <%= locals.errors && errors.nombreProducto ? 'is-invalid' : null %>" name="nombreProducto" id="nombreProducto" value='<%= locals.oldData ? oldData.nombreProducto : null  %>'>
+                          <% if (locals.errors && errors.nombreProducto) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.nombreProducto.msg %> </p> 
+                          <% } %>
+
+                          <label for="descipcionProducto" class="form-label">Descripcion del producto</label>
+                          <input type="text" class="form-control <%= locals.errors && errors.descipcionProducto ? 'is-invalid' : null %>" name="descipcionProducto" id="descipcionProducto" value='<%= locals.oldData ? oldData.descipcionProducto : null  %>' minlength="4">
+                          <% if (locals.errors && errors.descipcionProducto) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.descipcionProducto.msg %> </p> 
+                          <% } %>
+
+                          <br>
+
+                          <div class="card flex-grow-1 mb-md-0 w-60">
+                            <select name="categoriaProducto" id="" required >
+                                <option value="" disabled selected >-- Categoria del producto --</option>
+                                <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>">
+                                <%= category.nombre %>
+                                </option>
+                                <% }); %>
+                            </select>
+                          </div>
+                          <br>
+
+                          <label for="pesoProducto" class="form-label">Peso del producto</label>
+                          <input type="number" class="form-control <%= locals.errors && errors.pesoProducto ? 'is-invalid' : null %>" name="pesoProducto" id="pesoProducto" value='<%= locals.oldData ? oldData.pesoProducto : null  %>'>
+                          <% if (locals.errors && errors.pesoProducto) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.pesoProducto.msg %></p> 
+                          <% } %>
+
+                          <label for="precioProducto" class="form-label">Precio del producto</label>
+                          <input type="number" class="form-control <%= locals.errors && errors.precioProducto ? 'is-invalid' : null %>" name="precioProducto" id="precioProducto" value='<%= locals.oldData ? oldData.precioProducto : null  %>'>
+                          <% if (locals.errors && errors.precioProducto) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.precioProducto.msg %></p> 
+                          <% } %>
+
+                          <label for="imagenProducto" class="form-label">Imagen</label>
+                          <input type="file" class="form-control" name="imagenProducto" id="imagenProducto">
+                          <% if (locals.errors && errors.imagenProducto) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.imagenProducto.msg %></p> 
+                          <% } %>
+
+                          <button class="btn btn-dark mt-4 mb-2" type="submit">Crear ahora</button>
+                        </form>
+
+                      </div>
+                    </div>
+
+              </div>                
+            </div>
+          <!-- /form -->
 
       </section>
 
+
+
+
     </main>
-    <!--footer start-->
+
+    <!--vinculación con archivo .js-->
+     
+    <script src="/js/ProductValidation.js"></script>
+
+    <!-- <!footer start-->
     <%- include("../partials/footer.ejs") %>
     <!-- main-footer end -->
   </body>

@@ -22,7 +22,7 @@
                   <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Edicion</li>
                   </ol>
               </nav>                
-              <h1 class="fw-bold display-6 mb-4 text-white">Edicion de producto</h1>
+              <h1 class="fw-bold display-6 mb-4 text-white">Edicion de producto</h1>              
               <div class="col-12 col-md-6">
                   <!-- <img style="width:150px ;" src="  < %= usuarioFull.image%>  "> <br> -->
                   <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>  , ya puedes editar este producto!</p>
@@ -33,13 +33,14 @@
 
 
       <h1 class="mb-4 display-5 fw-bold text-center"><%=prodObj.nombre%></h1>
+      <p class="text-center mx-auto">¡Manten actualizados tus productos!</p>
           <!-- <p class="text-center mx-auto">Ingresa todos los campos</p> -->
           <div class="border-bottom pb-3"></div>
 
       <section class="container">
-        <div class="mt-4">
+        <!-- <div class="mt-4"> -->
           <!-- <form class="formCrearProducto" action="/producto/?_method=PUT" method="POST" enctype="multipart/form-data"> -->
-            <form class="formCrearProducto" action="/producto/update/<%= prodObj.id %>" method="POST" enctype="multipart/form-data"> 
+            <!-- <form class="formCrearProducto" action="/producto/update/<%= prodObj.id %>" method="POST" enctype="multipart/form-data">  -->
               <!-- <input
               type="number"
               name="idProd"
@@ -48,7 +49,7 @@
               value="< %=prodObj.id%>"
               
             /> -->
-            <br />
+            <!-- <br />
          <input
               type="text"
               name="nombreProducto"
@@ -63,8 +64,8 @@
               id=""
               placeholder="Descripcion del producto"
               value="<%=prodObj.descripcion%>"
-            />
-            <br />
+            /> -->
+            <!-- <br /> -->
             <!-- <input
               type="text"
               name="categoriaProducto"
@@ -72,7 +73,7 @@
               placeholder="Categoria del producto"
               value="< %= prodObj.categoria %>"
             /> -->
-
+<!-- 
             <select name="categoriaProducto" id="" required>
               <option value="" disabled selected>-- Categoria del producto --</option>
               <% categories.forEach(category=> { %>
@@ -105,9 +106,84 @@
             <button type="submit">Enviar</button>
             <br />
           </form>
+        </div> -->
+        <!-- Formulario de login-->
+
+        <div class="row d-flex mt-auto p-1">
+          <div class="p-5 sticky-md-top top-10">
+              
+                        
+
+                <div class="card flex-grow-1 mb-md-0 w-60 mx-auto">
+                  <div class="card__content">
+                    
+                    
+                       
+                      <form class="form-registro" action="/producto/update/<%= prodObj.id %>" method="POST" enctype="multipart/form-data" id="">
+
+                      <label for="nombreProducto" class="form-label">Nombre del producto</label>
+                      <input type="text" class="form-control <%= locals.errors && errors.nombreProducto ? 'is-invalid' : null %>" name="nombreProducto" id="nombreProducto" value='<%=prodObj.nombre%>'>
+                      <% if (locals.errors && errors.nombreProducto) { %>                            
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.nombreProducto.msg %> </p> 
+                      <% } %>
+
+                      <label for="descipcionProducto" class="form-label">Descripcion del producto</label>
+                      <input type="text" class="form-control <%= locals.errors && errors.descipcionProducto ? 'is-invalid' : null %>" name="descipcionProducto" id="descipcionProducto" value='<%=prodObj.descripcion%>' minlength="4">
+                      <% if (locals.errors && errors.descipcionProducto) { %>                            
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.descipcionProducto.msg %> </p> 
+                      <% } %>
+
+                      <br>
+
+                      <div class="card flex-grow-1 mb-md-0 w-60">
+                        <select name="categoriaProducto" id="" required >
+                            <option value="" disabled selected >-- Categoria del producto --</option>
+                            <% categories.forEach(category=> { %>
+                            <option value="<%= category.id %>" <% if (prodObj.CategoryProduct.id==category.id) { %>
+                                <%= 'selected' %>
+                                  <% }; %>><%= category.nombre %>
+                            </option>
+                              <% }); %>
+                        </select>
+                      </div>
+                      <br>
+
+                      <label for="pesoProducto" class="form-label">Peso del producto</label>
+                      <input type="number" class="form-control <%= locals.errors && errors.pesoProducto ? 'is-invalid' : null %>" name="pesoProducto" id="pesoProducto" value='<%= prodObj.peso %>'>
+                      <% if (locals.errors && errors.pesoProducto) { %>                            
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.pesoProducto.msg %></p> 
+                      <% } %>
+
+                      <label for="precioProducto" class="form-label">Precio del producto</label>
+                      <input type="number" class="form-control <%= locals.errors && errors.precioProducto ? 'is-invalid' : null %>" name="precioProducto" id="precioProducto" value='<%=prodObj.precio%>'>
+                      <% if (locals.errors && errors.precioProducto) { %>                            
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.precioProducto.msg %></p> 
+                      <% } %>
+
+                      <label for="imagenProducto" class="form-label">Imagen</label>
+                      <input type="file" class="form-control" name="imagenProducto" id="imagenProducto">
+                      <% if (locals.errors && errors.imagenProducto) { %>                            
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.imagenProducto.msg %></p> 
+                      <% } %>
+
+                      <button class="btn btn-dark mt-4 mb-2" type="submit">Actualizar ahora</button>
+                    </form>
+
+                  </div>
+                </div>
+
+          </div>                
         </div>
+
+
+
       </section>
     </main>
+
+    <!--vinculación con archivo .js-->
+     
+    <script src="/js/EditProductValidation.js"></script>
+
     <!--footer start-->
     <%- include("../partials/footer.ejs") %>
     <!-- main-footer end -->

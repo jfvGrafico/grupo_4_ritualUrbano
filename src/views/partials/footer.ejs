@@ -173,7 +173,18 @@
                   <div>
                     <h6 class="justify-content-between d-flex align-items-start mb-2">
                       <%=item.descripcion%>
-                      <i class="ri-close-line"></i>
+                      <td class="f-h-0">
+                        <form action="/producto/carrito/<%=item.id%>?_method=DELETE"
+                            method="POST">
+                            <div class="d-flex justify-content-between flex-column align-items-end h-50 outline-light">
+                             
+                                  <button class="ri-close-circle-line ri-lg"></button>                           
+                                
+                            </div>
+                        </form>
+                    </td>
+                    <!-- /Actions -->
+
                     </h6>
                     <small class="d-block text-muted fw-bolder">Tamaño: Personal</small>
                     <small class="d-block text-muted fw-bolder">Cantidad: 1</small>

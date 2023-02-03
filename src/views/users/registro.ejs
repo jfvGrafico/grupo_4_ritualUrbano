@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- head INICIO -->
-  <%- include("../partials/head.ejs") %>
+  <%- include("../partials/head.ejs", {title: "Registro"}) %>
   <!-- head FIN -->
 
   <body>
@@ -35,36 +35,67 @@
 
         <h1 class="mb-4 display-5 fw-bold text-center">Nuevo Registro</h1>
           <p class="text-center mx-auto">Súmate ya a nuestro ritual</p>
-            <div class="border-bottom pb-3"></div>
+            <div class="border-bottom pb-1"></div>
+            
 
             <!-- Formulario de login-->
-            <div class="row d-flex mt-4">
-              <div class="p-4 sticky-md-top top-5">
-                  
-                            <!-- Muestra mensajes de validacion -->
+            <div class="row d-flex mt-auto p-1">
+              <div class="p-5 sticky-md-top top-10">                          
 
-                    <div class="card flex-grow-1 mb-md-0">
-                      <div class="card__content">
-                        <% if (locals && locals.mensajeDeError) { %>
-                          <% for(let error in mensajeDeError) { %>
-                            <p style="color: tomato; font-size: 12px;"> <%= mensajeDeError[error].msg %> </p> 
-                         <% } %>
-                        <% } %>
+                    <div class="card flex-grow-1 mb-md-0 w-60 mx-auto">
+                      <div class="card__content">                         
                            
-                        <!-- fin de mensajes de valdiacion  -->
-
-
-                        <form class="form-registro" action="/user/registro" method="POST" id="form-registrar" enctype="multipart/form-data" >
+                          <form class="form-registro" action="/user/registro" method="POST" enctype="multipart/form-data" id="form-registrar">
+                          
+                          <!--* Nombre -->
                           <label for="nombre" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="4">
+                          <input type="text" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" name="nombre" id="nombre" value='<%= locals.oldData ? oldData.nombre : null  %>'>
+                          <!--? Validación Backend-->
+                          <% if (locals.errors && errors.nombre) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.nombre.msg %> </p> 
+                          <% } %>
+                          <!--?Validación Frontend-->
+                          <p id="errorNombre" class="msg-error ocultar"></p>
+                          
+                          <!--* Apellido -->  
                           <label for="apellido" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>" minlength="4">
+                          <input type="text" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" name="apellido" id="apellido" value='<%= locals.oldData ? oldData.apellido : null  %>' minlength="4">
+                          <!--? Validación Backend-->
+                          <% if (locals.errors && errors.apellido) { %>                            
+                          <p style="color: tomato; font-size: 12px;"> <%= errors.apellido.msg %> </p> 
+                          <% } %>
+                          <!--?Validación Frontend-->
+                          <p id="errorApellido" class="msg-error ocultar"></p>
+                          
+                          <!--* Email -->
                           <label for="email" class="form-label">Direccion de email</label>
-                          <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
+                          <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" id="email" value='<%= locals.oldData ? oldData.email : null  %>'>
+                          <!--? Validación Backend-->
+                          <% if (locals.errors && errors.email) { %>                            
+                          <p style="color: tomato; font-size: 12px;"> <%= errors.email.msg %></p> 
+                          <% } %>
+                          <!--?Validación Frontend-->
+                          <p id="errorEmail"class="msg-error ocultar"></p>
+                          
+                          <!--* Password -->
                           <label for="password" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" name="password" id="password">
+                          <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" name="password" id="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null %> '>
+                          <!--? Validación Backend-->
+                          <% if (locals.errors && errors.password) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.password.msg %></p> 
+                          <% } %>
+                          <!--?Validación Frontend-->
+                          <p id="errorPassword" class="msg-error ocultar"></p>
+                          
+                          <!--* Imagen -->
                           <label for="imagen" class="form-label">Imagen</label>
                           <input type="file" class="form-control" name="imagen" id="imagen">
+                          <!--? Validación Backend -->
+                          <% if (locals.errors && errors.imagen) { %>                            
+                            <p style="color: tomato; font-size: 12px;"> <%= errors.imagen.msg %></p> 
+                          <% } %>
+                          <!-- Validación Frontend -->
+                          <p id="errorImagen" class="msg-error ocultar"></p>
 
                           <!-- Accept Terms Checkbox-->
                           <div class="form-group form-check my-4">
@@ -73,7 +104,7 @@
                           </div> 
                           <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.</p>
 
-                          <button form="form-registrar" class="btn btn-dark mt-4 mb-2" type="submit">Registrar</button>
+                          <button class="btn btn-dark mt-4 mb-2" type="submit">Registrar</button>
                         </form>
 
                       </div>
@@ -87,7 +118,10 @@
 
     </main>
 
-
+     <!--vinculación con archivo .js-->
+     
+     <script src="/js/RegisterValidation.js"></script>
+    
      <!--footer start-->
      <%- include("../partials/footer.ejs") %>
       <!-- main-footer end -->

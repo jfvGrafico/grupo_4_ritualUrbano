@@ -57,13 +57,13 @@ const mainController = {
     },
 
     template: (req, res) =>{
-        res.render("template", {title: "Template"});
+        res.render("template", {title: "Template", carrito});
     },
     gracias : (req, res) => {
-        res.render("gracias", {title: "Gracias"});
+        res.render("gracias", {title: "Gracias", carrito});
     },
     admin: (req, res) => {
-        res.render("admin", {title: "Administrador"})
+        res.render("admin", {title: "Administrador", carrito})
     },
 }
 

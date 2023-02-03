@@ -480,6 +480,24 @@ footer div img {
   width: 70%;
 }
 
+/*Errores Frontend*/
+
+.mostrar {
+  display: block;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.msg-error {
+  color: tomato;
+    font-size: 12px;
+   
+}
+
+.ocultar {
+  display: none;
+}
+
 /*Moible*/
 
 @media (min-width: 361px) {
