@@ -1,10 +1,10 @@
 window.addEventListener("load", function(){
 
-    let formularioLogin = document.querySelector("form.form-login");
+    let formularioLogin = document.getElementById("form-login");
 
         formularioLogin.addEventListener("submit", function(e){
             e.preventDefault();
-
+            
         let inputEmail = document.getElementById("email");
         let email = document.getElementById("email").value
         let errorEmail = document.getElementById("errorEmail");
@@ -14,14 +14,13 @@ window.addEventListener("load", function(){
                 inputEmail.classList.add("is-invalid")
                 errorEmail.classList.remove("ocultar")
                 errorEmail.innerHTML = "El campo email debe estar completo";
-                inputEmail.focus()
+                console.log(errorEmail)
                 return 
             } else if(!charEmail){
                 errorEmail.classList.add("mostrar")
                 inputEmail.classList.add("is-invalid")
                 errorEmail.classList.remove("ocultar")
                 errorEmail.innerHTML = "Debe ingresar un email valido"
-                inputEmail.focus()
                 return 
             } else{
                 errorEmail.classList.remove("mostrar")
@@ -39,14 +38,13 @@ window.addEventListener("load", function(){
                 inputPassword.classList.add("is-invalid")
                 errorPassword.classList.remove("ocultar")
                 errorPassword.innerHTML = "El campo contraseña debe ser obligatorio";
-                inputPassword.focus()
+                console.log(errorPassword)
                 return
             } else if(inputPassword.value.length < 8){
                 errorPassword.classList.add("mostrar")
                 inputPassword.classList.add("is-invalid")
                 errorPassword.classList.remove("ocultar")
                 errorPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-                inputPassword.focus()
                 return
             } else if(!charPass){
                 console.log(charPass)
@@ -54,7 +52,6 @@ window.addEventListener("load", function(){
                 inputPassword.classList.add("is-invalid")
                 errorPassword.classList.remove("ocultar")
                 errorPassword.innerHTML = "La contraseña debe tener letras mayúsculas, minúsculas, un número y un carácter especial";
-                inputPassword.focus()
                 return
             } else {
                 errorPassword.classList.remove("mostrar")
@@ -62,10 +59,10 @@ window.addEventListener("load", function(){
                 errorPassword.classList.add("ocultar")
             }
 
-            this.submit();
-
+            
+            this.submit()
+            
         })
-
 })
 
 
