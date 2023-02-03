@@ -1,0 +1,32 @@
+#content {
+    background: rgba(255,255,255,1);
+}
+
+.nav-dashboard {
+    background: #401201;
+}
+
+.sidebar-dashboard {
+    background: rgba(170,107,10);
+}
+
+.logo-pixel {
+    border-right: 2px solid rgba(170,107,10);;
+    margin-right: -10px;
+}
+
+.border-left-success{border-left:.25rem solid #8c0303 !important}
+
+.text-success{color:#401201!important}a
+
+
+.text-dark {
+    color: #f2efe9 !important;
+}
+
+.card-container{
+    max-height: 120px;
+}
+.detalle-r{
+    background: #8c0303 !important;
+}

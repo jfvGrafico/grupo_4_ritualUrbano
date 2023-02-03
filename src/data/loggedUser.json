@@ -1,1 +1,18 @@
+<<<<<<< HEAD
 []
+=======
+{
+ "id": 1,
+ "first_name": "administrador33",
+ "last_name": "administrador1",
+ "password": "$2a$10$iLjvAS.OKTGDanVZUSzTluT5tAG6xgrWGjBBkI3vcxLKCGIj/PEnG",
+ "email": "admin1@admin1.com",
+ "idCategory": "admin",
+ "image": "/img/noimage.jpeg",
+ "token": "MSBPa6J1NG48Xf1oBG7YtEoVQW2W8qI6S2/ML5Wuq0UZg/nrkLho8DIIgjMshwRuT8FwITVzL/EG8gw6UjPDVQ==",
+ "CategoryUser": {
+  "id": 2,
+  "nombre": "admin"
+ }
+}
+>>>>>>> 0d57677523342c2ac54e33303ff865c10c86223b
