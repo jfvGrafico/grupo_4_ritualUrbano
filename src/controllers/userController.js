@@ -247,10 +247,11 @@ const userController = {
   },
 
   profile: (req, res) => {
-    // db.User.findAll()
-    // .then(() => {
+    db.User.findAll()
+    .then(() => {
       return res.render("users/profile", { title: "Perfil de usuario",carrito });
-    },
+    })
+  },
     
   
 

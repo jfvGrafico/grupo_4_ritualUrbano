@@ -158,9 +158,11 @@
                                 <% if (locals.logueo == true && locals.userType == "admin") { %>
                                     <li><a class="dropdown-item" href="/admin"> Acceso administrador </a></li>
                                     <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
+                                    <li><a class="dropdown-item" href="/user/profile"> Perfil </a></li>
                                 
                                 <% } else if(locals.userType == "user") {%> 
                                     <li><a class="dropdown-item" href="/user/logout"> Logout </a></li>
+                                    <li><a class="dropdown-item" href="/user/profile"> Perfil </a></li>
                                     <% } else {%> 
                                 <li><a class="dropdown-item" href="/user/login"> Login </a></li>
                                 <li><a class="dropdown-item" href="/user/registro"> Registro </a></li>
