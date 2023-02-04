@@ -11,16 +11,38 @@
 
 
     <main>
-      <h2>Detalle de productos</h2>
-        <section class="container detalle-productos">
-          <% productos.forEach (item => { %>
-           <div class="detalle-articulos">
-           <div class="detalleimg m-4"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
+      
+      <!-- Banner de categorias y miga de pan -->
+      <div class="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
+      style="background-image: url(/img/Banner-5.png);">
+          <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item breadcrumb-light"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Administrador</li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Editar</li>
+                  </ol>
+              </nav>                
+              <h1 class="fw-bold display-6 mb-4 text-white">Listado de productos</h1>
+              <div class="col-12 col-md-6">
+                  <!-- <img style="width:150px ;" src=" < %= usuarioFull.image%> "> <br> -->
+                  <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>, aquí puedes editar y actualizar tus productos!</p>
+              </div>
+            </div>
+          </div>
+          
+      <div class="row g-4 mb-4 mt-2 mx-10">
+        <h2>Detalle de productos</h2>
+      </div>
+      <section class="container detalle-productos">
+        <% productos.forEach (item => { %>
+          <div class="detalle-articulos">
+            <div class="detalleimg m-4"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
             <!-- <div class="detallebtn"><button>+</button></div> -->
             <div class="detalletxt ml-4"><p><%= item.nombre %> </p>  </div>
             <div class="detalletxt ml-4"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
-
+          
             <form action="/producto/<%=item.id%>?_method=DELETE" method="POST" class="centrar-vertical">
               <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Eliminar</button>
             </form>
