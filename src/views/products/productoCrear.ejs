@@ -50,7 +50,7 @@
                         
                         
                            
-                          <form class="form-registro" action="/producto" method="POST" enctype="multipart/form-data" id="form-crearProducto">
+                          <form class="form-registro" action="/producto" method="POST" enctype="multipart/form-data" id="form-crearProducto" name>
 
                           <label for="nombreProducto" class="form-label">Nombre del producto</label>
                           <input type="text" class="form-control <%= locals.errors && errors.nombreProducto ? 'is-invalid' : null %>" name="nombreProducto" id="nombreProducto" value='<%= locals.oldData ? oldData.nombreProducto : null  %>'>
@@ -64,22 +64,25 @@
                           <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
                           <input type="text" class="form-control <%= locals.errors && errors.descripcionProducto ? 'is-invalid' : null %>" name="descripcionProducto" id="descripcionProducto" value='<%= locals.oldData ? oldData.descripcionProducto : null  %>'>
                           <!--? Validación Backend-->
-                          <% if (locals.errors && errors.descipcionProducto) { %>                            
+                          <% if (locals.errors && errors.descripcionProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.descripcionProducto.msg %> </p> 
                           <% } %>
                           <!--?Validación Frontend-->
                           <p id="errorDescripcion" class="msg-error ocultar"></p>
 
                           <br>
-
-                          <div class="card flex-grow-1 mb-md-0 w-60" id="categorias">
-                            <select name="categoriaProducto" id="" required>
-                                <option value="" disabled selected>-- Categoria del producto --</option>
-                                <% categories.forEach(category=> { %>
-                                <option value="<%= category.id %>">
-                                <%= category.nombre %>
-                                </option>
-                                <% }); %>
+                          
+                          <label for="categoriaProducto" class="form-label" id="categorias">Categoria del producto</label>
+                          <div class="card flex-grow-1 mb-md-0 w-60" >
+                            <select name="categoriaProducto"  class="form-control <%= locals.errors && errors.categoriaProducto ? 'is-invalid' : null %>" 
+                              value='' >
+                                <option value="" disabled selected <%= locals.oldData ? oldData.categoriaProducto : null  %>>-- Seleccione una categoria --</option>
+                                
+                                <option value="1">cafe</option>
+                                <option value="3">cafetera</option>
+                                <option value="4">merchandising</option>
+                                <option value="5">otrosProductos</option>                            
+                                
                             </select>
                             <!--? Validación Backend-->
                             <% if (locals.errors && errors.categoriaProducto) { %>                            

@@ -53,6 +53,7 @@ window.addEventListener("load", function(){
                     errorDescripcion.classList.add("ocultar")
                 }
                 
+         
             let inputCategorias = document.getElementById("categorias");
             let errorCategorias = document.getElementById("categorias") 
         
@@ -125,4 +126,3 @@ window.addEventListener("load", function(){
 
 
 
-console.log("Probando vinculación en crear");

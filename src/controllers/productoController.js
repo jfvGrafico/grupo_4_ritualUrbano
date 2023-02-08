@@ -192,17 +192,16 @@ const productoController = {
 
   nuevoProd: (req, res) => {    
 
-        const resultValidation = validationResult(req);
-        console.log(resultValidation.errors)
-        console.log("Body",req.body)
+      const resultValidation = validationResult(req);
+      console.log(resultValidation.errors)
+      console.log("Body",req.body)
 
       if (resultValidation.errors.length > 0) {
-        return res.render("products/productoCrear", {
-            //mapped convierte un array en objeto literal
+        return res.render("products/productoCrear", {          
           errors: resultValidation.mapped(),
           oldData: req.body            
         });
-      } else {     
+      }    
         
         let imagenCargada;
         if (req.file != undefined) {
@@ -221,9 +220,9 @@ const productoController = {
           imagen: imagenCargada,
           
         });
-      }
       
-        res.redirect("/producto");
+      
+        res.redirect("/producto/editar/lista");
       },
   //       catch (error) {
   //         console.log(error)

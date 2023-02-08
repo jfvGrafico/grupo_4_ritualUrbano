@@ -65,9 +65,9 @@
                       <% } %>
 
                       <br>
-
+                    <label for="categoriaProducto" class="form-label" id="categorias">Categoria del producto</label>
                       <div class="card flex-grow-1 mb-md-0 w-60">
-                        <select name="categoriaProducto" id="" required >
+                        <select name="categoriaProducto" class="form-control" id="" required >
                             <option value="" disabled selected >-- Categoria del producto --</option>
                             <% categories.forEach(category=> { %>
                             <option value="<%= category.id %>" <% if (prodObj.CategoryProduct.id==category.id) { %>
@@ -113,7 +113,7 @@
 
     <!--vinculación con archivo .js-->
      
-    <script src="/js/EditProductValidation.js"></script>
+    <!-- <script src="/js/EditProductValidation.js"></script> -->
 
     <!--footer start-->
     <%- include("../partials/footer.ejs") %>

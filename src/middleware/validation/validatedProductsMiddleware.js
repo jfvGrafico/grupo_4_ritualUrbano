@@ -13,12 +13,12 @@ module.exports = [
  
   body("descripcionProducto")
     .notEmpty()
-    .withMessage("Su producto debe ingresar la descripcion del producto")
+    .withMessage("Su producto debe ingresar la descripcion del producto").bail()
     .isLength({ min: 20 })
-    .withMessage("La descripción del producto debe tener un mínimo de 20 caracteres"),
-  body("categoriaProducto").notEmpty().withMessage("Debe seleccionar una categoria"),
-  body("pesoProducto").notEmpty().withMessage("Por favor debe ingresar el peso del producto"),
-  body("precioProducto").notEmpty().withMessage("Por favor debe ingresar el precio del producto"),
+    .withMessage("La descripción del producto debe tener un mínimo de 20 caracteres").bail(),
+  body("categoriaProducto").notEmpty().withMessage("Debe seleccionar una categoria").bail(),
+  body("pesoProducto").notEmpty().withMessage("Por favor debe ingresar el peso del producto").bail(),
+  body("precioProducto").notEmpty().withMessage("Por favor debe ingresar el precio del producto").bail(),
   body("imagenProducto").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
