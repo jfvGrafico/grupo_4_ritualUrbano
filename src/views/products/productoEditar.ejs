@@ -18,7 +18,7 @@
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                   <li class="breadcrumb-item breadcrumb-light"><a href="/">Home</a></li>
-                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Usuario</li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page"><a href="/admin">Administrador</a></li>
                   <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Edicion</li>
                   </ol>
               </nav>                
@@ -37,76 +37,7 @@
           <!-- <p class="text-center mx-auto">Ingresa todos los campos</p> -->
           <div class="border-bottom pb-3"></div>
 
-      <section class="container">
-        <!-- <div class="mt-4"> -->
-          <!-- <form class="formCrearProducto" action="/producto/?_method=PUT" method="POST" enctype="multipart/form-data"> -->
-            <!-- <form class="formCrearProducto" action="/producto/update/<%= prodObj.id %>" method="POST" enctype="multipart/form-data">  -->
-              <!-- <input
-              type="number"
-              name="idProd"
-              id=""
-              placeholder="ID de producto"
-              value="< %=prodObj.id%>"
-              
-            /> -->
-            <!-- <br />
-         <input
-              type="text"
-              name="nombreProducto"
-              id=""
-              placeholder="Nombre del producto"
-              value="<%=prodObj.nombre%>"
-            />
-            <br />
-            <input
-              type="text"
-              name="descipcionProducto"
-              id=""
-              placeholder="Descripcion del producto"
-              value="<%=prodObj.descripcion%>"
-            /> -->
-            <!-- <br /> -->
-            <!-- <input
-              type="text"
-              name="categoriaProducto"
-              id=""
-              placeholder="Categoria del producto"
-              value="< %= prodObj.categoria %>"
-            /> -->
-<!-- 
-            <select name="categoriaProducto" id="" required>
-              <option value="" disabled selected>-- Categoria del producto --</option>
-              <% categories.forEach(category=> { %>
-                <option value="<%= category.id %>"<% if (prodObj.CategoryProduct.id==category.id) { %>
-                  <%= 'selected' %>
-                    <% }; %>><%= category.nombre %>
-                        </option>
-                <% }); %>
-            </select>
-
-            <br />
-            <input
-              type="number"
-              name="pesoProducto"
-              id=""
-              placeholder="Peso del producto"
-              value="<%= prodObj.peso %>"
-            />
-            <br />
-            <input
-              type="number"
-              name="precioProducto"
-              id=""
-              placeholder="Precio del producto"
-              value="<%=prodObj.precio%>"
-            />
-            <br />
-            <input type="file" name="imagenProducto" id="" />
-            <br />
-            <button type="submit">Enviar</button>
-            <br />
-          </form>
-        </div> -->
+      <section class="container">        
         <!-- Formulario de login-->
 
         <div class="row d-flex mt-auto p-1">

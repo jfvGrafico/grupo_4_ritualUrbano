@@ -119,7 +119,6 @@ const productoController = {
       return res.render("products/productoCrear", {
         title: "Crear Producto",
         categories
-        
       });
     } catch (error) {
       res.send(error);
@@ -158,8 +157,7 @@ const productoController = {
         return res.render("products/productoEditar", {
           title: "Editar Producto",
           prodObj,
-          categories,
-          carrito
+          categories
         });
       })
       .catch((error) => res.send(error));
@@ -192,45 +190,45 @@ const productoController = {
   },
  */
 
-  nuevoProd: async (req, res) => {
-    try {
+  nuevoProd: (req, res) => {    
 
         const resultValidation = validationResult(req);
         console.log(resultValidation.errors)
         console.log("Body",req.body)
 
-        if (resultValidation.errors.length > 0) {
-          return res.render("products/productoCrear", {
+      if (resultValidation.errors.length > 0) {
+        return res.render("products/productoCrear", {
             //mapped convierte un array en objeto literal
-            errors: resultValidation.mapped(),
-            oldData: req.body,
-          });
-        }
-
-      
-
+          errors: resultValidation.mapped(),
+          oldData: req.body            
+        });
+      } else {     
+        
         let imagenCargada;
-        if (req.files[0] != undefined) {
-          imagenCargada = "/img/" + req.files[0].originalname;
+        if (req.file != undefined) {
+          imagenCargada = "/img/" + req.file.filename;
         } else {
           imagenCargada = "/img/tg-4.png";
-        }
+        }            
 
         // if (req.file) {
-        await db.Product.create({
+        db.Product.create({
           nombre: req.body.nombreProducto,
-          descripcion: req.body.descipcionProducto,
+          descripcion: req.body.descripcionProducto,
           idCategoria: req.body.categoriaProducto,
           peso: req.body.pesoProducto,
           precio: req.body.precioProducto,
           imagen: imagenCargada,
           
-        })
-          res.redirect("/producto");
-        }catch (error) {
-          console.log(error)
+        });
       }
-   },
+      
+        res.redirect("/producto");
+      },
+  //       catch (error) {
+  //         console.log(error)
+  //     }
+  //  },
 
   /*   eliminar: (req, res) => {
     const productos = JSON.parse(
@@ -254,7 +252,7 @@ const productoController = {
         id: req.params.prodID,
       },
     });
-    res.redirect("/producto");
+    res.redirect("/producto/editar/lista");
   },
 
   /* resultado: (req, res) => {

@@ -34,5 +34,23 @@
   "peso": "1200",
   "imagen": "/img/coffee_item2-300x300.jpg",
   "precio": "2467.123"
+ },
+ {
+  "id": "2",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia. bolsa papel",
+  "categoria": "cafe",
+  "peso": "1200",
+  "imagen": "/img/coffee_item2-300x300.jpg",
+  "precio": "2467.123"
+ },
+ {
+  "id": "2",
+  "nombre": "Cafe Tostado",
+  "descripcion": "Cafe tostado proveniente de Colombia. bolsa papel",
+  "categoria": "cafe",
+  "peso": "1200",
+  "imagen": "/img/coffee_item2-300x300.jpg",
+  "precio": "2467.123"
  }
 ]

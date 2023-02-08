@@ -222,14 +222,14 @@ article p {
 
 .detalle-articulos{
   display: flex;
-  box-shadow: 0 0 10px #f2efe9;
+  box-shadow: 0 0 10px #aeadab;
   margin: 10px;
-  transition: all 450ms;
+  transition: all 900ms;
 }
 
 .detalle-articulos:hover{
-  border: 1px solid  #f2efe9 ;
-  box-shadow: 10px 10px 10px #f2efe9;
+  border: 1px solid #f7bb96 ;
+  box-shadow: 0px 10px 10px #f7bb96;
 }
 
 .detalle-articulos img{

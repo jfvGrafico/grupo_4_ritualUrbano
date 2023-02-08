@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- head INICIO -->
+ <%- include("../partials/head.ejs") %>
+ <!-- head FIN -->
+
+  <body>
+     <!-- header INICIO -->
+    
+     <%- include("../partials/header")  %> 
+
+
+    <main>
+      
+      <!-- Banner de categorias y miga de pan -->
+      <div class="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
+      style="background-image: url(/img/Banner-5.png);">
+          <div class="container position-relative z-index-20" data-aos="fade-right" data-aos-delay="300">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item breadcrumb-light"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page"><a href="/admin">Administrador</a></li>
+                  <li class="breadcrumb-item active breadcrumb-light" aria-current="page">Editar</li>
+                  </ol>
+              </nav>                
+              <h1 class="fw-bold display-6 mb-4 text-white">Listado de Usuarios</h1>
+              <div class="col-12 col-md-6">
+                  <!-- <img style="width:150px ;" src=" < %= usuarioFull.image%> "> <br> -->
+                  <p class="lead text-white mb-0"> Hola <%= locals.usuarioFull.first_name %>, aquí puedes editar y actualizar usuarios!</p>
+              </div>
+            </div>
+          </div>
+          
+      <div class="row g-4 mb-4 mt-2 mx-10">
+        <h2>Detalle de usuarios</h2>
+      </div>
+      <section class="container detalle-productos">
+        <% usuarios.forEach (item => { %>
+          <div class="detalle-articulos">
+            <div class="detalleimg m-4"> <a href="/user/<%=item.id%>"><img src=<%=item.image %> alt="image"></a></div>
+            <!-- <div class="detallebtn"><button>+</button></div> -->
+            <div class="detalletxt ml-4"><p><%= item.first_name %> <%= item.last_name %> </p>  </div>
+            <div class="detalletxt ml-4"><p><%= item.email %> </p> <br>   </div>
+            <div class="detalletxt"><p>Perfil: <%= item.CategoryUser.nombre %> </p> <br>   </div>
+          
+            <form action="/user/<%=item.id%>?_method=DELETE" method="POST" class="centrar-vertical">
+              <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Eliminar</button>
+            </form>
+
+            <a href="/user/<%=item.id%>/editar" class="centrar-vertical">
+              <button class="btn btn-dark btn-light-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Editar</button>
+            </a> 
+              
+          </div>
+          
+          <% })  %> 
+
+        </div>
+        </section>
+    </main>
+    <!--footer start-->
+
+    <%- include("../partials/footer")  %> 
+
+    <!-- main-footer end -->
+
+</body>
+</html>

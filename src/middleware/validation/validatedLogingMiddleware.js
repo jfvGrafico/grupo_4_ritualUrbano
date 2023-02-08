@@ -14,8 +14,8 @@ module.exports = [
   .notEmpty()
   .withMessage("Recuerde introducir la contraseña").bail()
   .isLength({ min: 6  })  
-  .withMessage("Debe contener al menos un número, mayúsculas y minúsculas, mínimo 8 o más caracteres" )
+  .withMessage("Debe contener al menos un número, mayúsculas y minúsculas, mínimo 8 o más caracteres" ).bail()
   .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,)
-  .withMessage("Debe contener al menos un número, mayúsculas y minúsculas, mínimo 8 o más caracteres" ),
+  .withMessage("Debe contener al menos un número, mayúsculas y minúsculas, mínimo 8 o más caracteres" ).bail(),
 
 ];

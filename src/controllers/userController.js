@@ -83,10 +83,16 @@ const userController = {
             JSON.stringify(usuarioLogeado, null, " ")
           );
         }
-        res.redirect("/");
-      } else {
-        res.redirect("/users/login");
-      }
+        return res.redirect("/user/profile");
+      } 
+        return res.render("/users/login", {
+        errors: {
+          email: {
+            msg: "The provided credentials being incorrect",
+          },
+        },
+      });
+    
     });
     /* .catch((error) => {
         res.send(error);
@@ -152,8 +158,8 @@ const userController = {
             });
         }
             
-          db.User.findOne({ where: { email: req.body.email } }).then((usario) => {
-              if (usario) {
+          db.User.findOne({ where: { email: req.body.email } }).then((usuario) => {
+              if (usuario) {
                 return res.render("users/registro", {
                     errors: {
                     email: {
@@ -329,6 +335,75 @@ const userController = {
       });
     });
   },
+
+  listaUsuarios: (req, res) => {
+    
+    db.User.findAll({ include: ["CategoryUser"] }).then(function (usuarios) {
+      res.render("users/listaUsuarios", {
+        title: "Lista de Usuarios",
+        usuarios
+      });
+    });
+
+
+  },
+
+  eliminarUsuario:  (req, res) => {
+    db.User.destroy({
+      where: {
+        id: req.params.userID,
+      },
+    });
+    res.redirect("/user/editar/lista");
+  },
+
+  editarUsuario: (req, res) => {
+   
+    let userId = req.params.userID;
+    let promUser = db.User.findByPk(userId, {
+      include: ["CategoryUser"],
+    });
+    let promCategoryUser = db.CategoryUser.findAll();
+
+    Promise.all([promUser, promCategoryUser])
+      .then(([userObj, categoriesUser]) => {
+        return res.render("users/usuariosEditar", {
+          title: "Editar Usuarios",
+          userObj,
+          categoriesUser
+        });
+      })
+      .catch((error) => res.send(error));
+  },
+
+  actualizarUsuario: (req, res) => {
+    let imagenCargada;
+    let obj = db.User.findByPk(req.body.idUser);    
+    if (req.file != undefined) {
+      imagenCargada = "/img/users/" + req.file.filename;
+      console.log(imagenCargada);
+    } else {
+      imagenCargada = obj.image;
+    }  
+    
+    db.User.update(
+      {
+        first_name: req.body.nombreUsuario,
+        last_name: req.body.apellidoUsuario,
+        email: req.body.emailUsuario,
+        idCategory: req.body.categoriaUsuario,
+        image: imagenCargada        
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.redirect("/user/editar/lista");
+  },
+
+
 };
 
 
