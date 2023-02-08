@@ -27,13 +27,13 @@ const productoApiController = {
       /* Contador de productos por categoria */
 
       for (let i = 0; i < productos.length; i++) {
-        if (productos[i].CategoryProduct.nombre == "cafe") {
+        if (productos[i].CategoryProduct.nombre === "cafe") {
             countCafe += 1;
-        }else if(productos[i].CategoryProduct.nombre == "cafetera") {
+        }else if(productos[i].CategoryProduct.nombre === "cafetera") {
             countCafetera += 1;
-        }else if(productos[i].CategoryProduct.nombre == "merchandising") {
+        }else if(productos[i].CategoryProduct.nombre === "merchandising") {
             countMerchandising += 1;
-        }else if(productos[i].CategoryProduct.nombre == "otrosProductos") {
+        }else if(productos[i].CategoryProduct.nombre === "otrosProductos") {
             coutnOtrosProductos += 1;
         }
       }

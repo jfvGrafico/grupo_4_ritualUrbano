@@ -6,17 +6,16 @@ function LastProductInDb(){
     const [lastProduct, setLastProduct] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/product/api')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(product => {
-                //console.log(movies)
-                setLastProduct(product.data.products.pop())
-                /* console.log(product.data.products.pop()) */
-
-            })
-            .catch(error => console.log(error))
+        fetch("http://localhost:3000/api/products")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((product) => {
+            //console.log(movies)
+            setLastProduct(product.data.products.pop());
+            /* console.log(product.data.products.pop()) */
+          })
+          .catch((error) => console.log(error));
     }, [])
 
     console.log(lastProduct)

@@ -1,10 +1,8 @@
+import React from 'react';
 
-import React from 'react'
-
-const Footer = () => {
-  return (
-    <>
-    {/*<!-- Footer -->*/}
+function Footer(){
+    return (
+        <React.Fragment>
 			<footer className="sticky-footer bg-white">
 				<div className="container my-auto">
 					<div className="copyright text-center my-auto">
@@ -12,9 +10,8 @@ const Footer = () => {
 					</div>
 				</div>
 			</footer>
-			{/*<!-- End of Footer -->*/}
-    </>
-  )
-}
 
-export default Footer
+        </React.Fragment>
+    )
+}
+export default Footer;

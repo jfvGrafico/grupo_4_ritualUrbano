@@ -1,11 +1,10 @@
+import React from 'react';
+import foto from '../assets/images/jordan-walke.png';
 
-import React from 'react'
-import image from '../assets/images/jordan-walke.png'
-
-const TopBar = () => {
-  return (
-    <>
-    {/*<!-- Topbar -->*/}
+function TopBar(){
+    return(
+        <React.Fragment>
+				{/*<!-- Topbar -->*/}
 				<nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
 					{/*<!-- Sidebar Toggle (Topbar) -->*/}
@@ -40,7 +39,7 @@ const TopBar = () => {
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">Jordan Walke</span>
-								<img className="img-profile rounded-circle" src={image} alt="Jordan Walke - Creador de React" width="60"/>
+								<img className="img-profile rounded-circle" src={foto} alt="Jordan Walke - Creador de React" width="60"/>
 							</a>
 						</li>
 
@@ -48,8 +47,8 @@ const TopBar = () => {
 
 				</nav>
 				{/*<!-- End of Topbar -->*/}
-    </>
-  )
-}
 
-export default TopBar
+        </React.Fragment>
+    )
+}
+export default TopBar;

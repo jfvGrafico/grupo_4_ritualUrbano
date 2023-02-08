@@ -8,16 +8,15 @@ function CategoriesInDb () {
     const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/product/api')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(categorias => {
-                //console.log(movies)
-                setCategorias(categorias.meta.countByCategory)
-
-            })
-            .catch(error => console.log(error))
+        fetch("http://localhost:3000/api/products")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((categorias) => {
+            //console.log(movies)
+            setCategorias(categorias.countByCategory);
+          })
+          .catch((error) => console.log(error));
     }, [])
 
         return (

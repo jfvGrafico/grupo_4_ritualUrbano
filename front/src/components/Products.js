@@ -10,16 +10,15 @@ function Products () {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/product/api')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(products => {
-                //console.log(movies)
-                setProductos(products.data.products)
-
-            })
-            .catch(error => console.log(error))
+        fetch("http://localhost:3000/api/products")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((products) => {
+            console.log(products);
+            /* setProductos(products.data); */
+          })
+          .catch((error) => console.log(error));
     }, [])
 
 

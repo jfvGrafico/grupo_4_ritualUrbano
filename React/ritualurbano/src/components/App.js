@@ -1,16 +1,14 @@
-
 import React from 'react';
-import ContentWrapper from './ContentWrapper';
 import SideBar from './SideBar';
-
+import ContentWrapper from './ContentWrapper';
 function App() {
   return (
-    <>
-      <div id="wrapper">
-        <SideBar />
-        <ContentWrapper />
-      </div>
-    </>
+    <React.Fragment>
+      	<div id="wrapper">
+          <SideBar />
+          <ContentWrapper />
+        </div>
+    </React.Fragment>
   );
 }
 

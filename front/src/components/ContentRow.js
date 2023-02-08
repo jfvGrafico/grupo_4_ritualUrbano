@@ -8,26 +8,26 @@ function ContentRow() {
     const [usuarios, setUsuarios] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/product/api')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(products => {
-                setProductos(products)
-            })
-            .catch(error => console.log(error))
+        fetch("http://localhost:3000/api/products")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((products) => {
+            setProductos(products);
+          })
+          .catch((error) => console.log(error));
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:3000/user/api')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(users => {
-                //console.log(movies)
-                setUsuarios(users)
-            })
-            .catch(error => console.log(error))
+        fetch("http://localhost:3000/api/users/")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((users) => {
+            //console.log(movies)
+            setUsuarios(users);
+          })
+          .catch((error) => console.log(error));
     }, [])
 
     let productInDataBase = {
