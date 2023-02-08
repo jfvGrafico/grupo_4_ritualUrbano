@@ -54,18 +54,20 @@
 
                           <label for="nombreProducto" class="form-label">Nombre del producto</label>
                           <input type="text" class="form-control <%= locals.errors && errors.nombreProducto ? 'is-invalid' : null %>" name="nombreProducto" id="nombreProducto" value='<%= locals.oldData ? oldData.nombreProducto : null  %>'>
+                          <!--? Validación Backend-->
                           <% if (locals.errors && errors.nombreProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.nombreProducto.msg %> </p> 
                           <% } %>
-
+                          <!--?Validación Frontend-->
                           <p id="errorNombreProducto" class="msg-error ocultar"></p>
 
                           <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
                           <input type="text" class="form-control <%= locals.errors && errors.descripcionProducto ? 'is-invalid' : null %>" name="descripcionProducto" id="descripcionProducto" value='<%= locals.oldData ? oldData.descripcionProducto : null  %>'>
+                          <!--? Validación Backend-->
                           <% if (locals.errors && errors.descipcionProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.descripcionProducto.msg %> </p> 
                           <% } %>
-
+                          <!--?Validación Frontend-->
                           <p id="errorDescripcion" class="msg-error ocultar"></p>
 
                           <br>
@@ -79,35 +81,40 @@
                                 </option>
                                 <% }); %>
                             </select>
+                            <!--? Validación Backend-->
                             <% if (locals.errors && errors.categoriaProducto) { %>                            
                               <p style="color: tomato; font-size: 12px;"> <%= errors.categoriaProducto.msg %></p> 
                             <% } %>                            
                           </div>
+                          <!--?Validación Frontend-->
                           <p id="errorCategorias" class="msg-error ocultar"></p>
                           <br>
 
                           <label for="pesoProducto" class="form-label">Peso del producto</label>
                           <input type="number" class="form-control <%= locals.errors && errors.pesoProducto ? 'is-invalid' : null %>" name="pesoProducto" id="pesoProducto" value='<%= locals.oldData ? oldData.pesoProducto : null  %>'>
+                          <!--? Validación Backend-->
                           <% if (locals.errors && errors.pesoProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.pesoProducto.msg %></p> 
                           <% } %>
-
+                          <!--?Validación Frontend-->
                           <p id="errorPesoProducto" class="msg-error ocultar"></p>
 
                           <label for="precioProducto" class="form-label">Precio del producto</label>
                           <input type="number" class="form-control <%= locals.errors && errors.precioProducto ? 'is-invalid' : null %>" name="precioProducto" id="precioProducto" value='<%= locals.oldData ? oldData.precioProducto : null  %>'>
+                          <!--? Validación Backend-->
                           <% if (locals.errors && errors.precioProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.precioProducto.msg %></p> 
                           <% } %>
-
+                          <!--?Validación Frontend-->
                           <p id="errorPrecioProducto" class="msg-error ocultar"></p>
 
                           <label for="imagenProducto" class="form-label">Imagen</label>
                           <input type="file" class="form-control" name="imagenProducto" id="imagenProducto">
+                          <!--? Validación Backend-->
                           <% if (locals.errors && errors.imagenProducto) { %>                            
                             <p style="color: tomato; font-size: 12px;"> <%= errors.imagenProducto.msg %></p> 
                           <% } %>
-
+                          <!--?Validación Frontend-->
                           <p id="errorImagenProducto" class="msg-error ocultar"></p>
 
                           <button class="btn btn-dark mt-4 mb-2" type="submit">Crear ahora</button>

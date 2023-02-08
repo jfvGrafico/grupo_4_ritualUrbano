@@ -2,7 +2,7 @@ const path = require ("path");
 const fs = require("fs");
 const {validationResult} = require ("express-validator");
 const { traceDeprecation } = require("process");
-const bcryptjs = require ("bcryptjs");
+const bcrypt = require ("bcryptjs");
 const crypto = require("crypto");
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json") , "utf-8"));
 const carrito = JSON.parse(
@@ -57,13 +57,64 @@ const userController = {
 			});
 		}
 
+    // db.User.findOne({
+    //   where: {
+    //     email: req.body.email
+    //   }
+    // })
+    // .then((userLogin) => {
+    //   if (userLogin) {
+    //     let passwordOk = bcrypt.compareSync(
+    //       req.body.password,
+    //       userLogin.password
+    //     );
+    //     if (passwordOk) {
+    //       delete userLogin.password;
+    //       req.session.usuarioLogeado = userLogin;
+
+    //       if (req.body.recuerdame) {
+    //         res.cookie("userLogged",  token, {
+    //           maxAge: 1000 * 60 * 60 * 24 * 90,
+    //         });
+    //         usuarioLogeado.token = token;
+    //         console.log(usuarioLogeado);
+    //         fs.writeFileSync(
+    //           path.resolve(__dirname, "../data/loggedUser.json"),
+    //           JSON.stringify(usuarioLogeado, null, " ")
+    //         );
+    //       }
+
+    //       return res.redirect('/user/profile');
+    //     }
+
+    //     return res.render('/users/login', {
+    //       errors: {
+    //         email: {
+    //           msg: 'El email o la contraseña son inválidos',
+    //         },
+    //       },
+    //     });
+    //   }
+
+    //   return res.render('/users/login', {
+    //     errors: {
+    //       email: {
+    //         msg: 'El email o la contraseña son inválidos',
+    //       },
+    //     },
+    //   });
+    // })
+    // .catch((error) => {
+    //   res.send(error);
+    // });
+
 
     db.User.findAll({ include: ["CategoryUser"] })
     .then((users) => {
       let usuarioLogeado = users.find(
         (user) =>
           req.body.email == user.email &&
-          bcryptjs.compareSync(req.body.password, user.password)
+          bcrypt.compareSync(req.body.password, user.password)
       );
 
       usuarioLogeado.idCategory = usuarioLogeado.CategoryUser.nombre;
@@ -84,19 +135,19 @@ const userController = {
           );
         }
         return res.redirect("/user/profile");
-      } 
-        return res.render("/users/login", {
-        errors: {
-          email: {
-            msg: "The provided credentials being incorrect",
-          },
+      }
+      
+      return res.render("users/login", {
+      errors: {
+        email: {
+          msg: "The provided credentials being incorrect",
         },
-      });
-    
+      },
     });
-    /* .catch((error) => {
+    })
+    .catch((error) => {
         res.send(error);
-      }); */
+      });
   },
 
   registro: (req, res) => {
@@ -186,7 +237,7 @@ const userController = {
                 db.User.create({
                   first_name: req.body.nombre,
                   last_name: req.body.apellido,
-                  password: bcryptjs.hashSync(req.body.password, 10),
+                  password: bcrypt.hashSync(req.body.password, 10),
                   email: req.body.email,          
                   idCategory: 1,
                   image: imagenCargada

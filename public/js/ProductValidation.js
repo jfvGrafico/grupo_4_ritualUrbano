@@ -60,7 +60,7 @@ window.addEventListener("load", function(){
                     errorCategorias.classList.add("mostrar")
                     inputCategorias.classList.add("is-invalid")
                     errorCategorias.classList.remove("ocultar")
-                    errorCategorias.innerHTML = "Por favro seleccione una categoria"
+                    errorCategorias.innerHTML = "Por favor seleccione una categoria"
                     inputCategorias.focus()
                     return                 
                 } else{
