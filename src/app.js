@@ -17,6 +17,7 @@ const carritoPreviewMiddleware = require("./middleware/carritoPreviewMiddleware"
 const apiProductoRoute = require ("./routes/api/productoRouter");
 const apiUsersRoute =require("./routes/api/usersApiRouter");
 const app = express();
+const cors = require('cors');
 
 //middlewares
 
@@ -33,9 +34,10 @@ app.use(carritoPreviewMiddleware)
                   
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname , "/views"))
+app.use(cors());
 
 //servidor web
-const puerto = "3000"; 
+const puerto = "3001"; 
 app.listen(puerto, () => {
     console.log(`Servidor Web corriendo en el puerto ${puerto}`);
 })

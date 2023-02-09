@@ -8,16 +8,18 @@ function CategoriesInDb () {
     const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products/category")
           .then((respuesta) => {
             return respuesta.json();
           })
           .then((categorias) => {
             //console.log(movies)
-            setCategorias(categorias.countByCategory);
+            setCategorias(categorias.categorias);
           })
           .catch((error) => console.log(error));
     }, [])
+
+    console.log(categorias);
 
         return (
             <React.Fragment>

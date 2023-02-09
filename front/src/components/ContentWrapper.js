@@ -7,18 +7,18 @@ import '../assets/css/style.css'
 
 function ContentWrapper(){
     return (
-        <React.Fragment>
-            {/*<!-- Content Wrapper -->*/}
-            <div id="content-wrapper" className="d-flex flex-column">
-                {/*<!-- Main Content -->*/}
-                <TopBar/>
-                <div id="content">
-                    <ContentRowTop />
-                    
-                    <Footer />
-                </div>
-            </div>    
-        </React.Fragment>
-    )
+      <React.Fragment>
+        {/*<!-- Content Wrapper -->*/}
+        <div id="content-wrapper" className="d-flex flex-column">
+          {/*<!-- Main Content -->*/}
+          <TopBar />
+          <div id="content">
+            <ContentRowTop />
+            <Products />
+            <Footer />
+          </div>
+        </div>
+      </React.Fragment>
+    );
 }
 export default ContentWrapper;

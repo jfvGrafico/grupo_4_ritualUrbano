@@ -8,6 +8,8 @@ const productoApiController = {
   sqlSearch:
     'select categoryproducts.nombre, count(*) as "total" from products inner join categoryproducts on idCategoria = categoryproducts.id group by categoryproducts.id',
 
+  
+
   list: async (req, res) => {
     try {
     //   let categorias = await db.sequelize.query(
@@ -18,6 +20,7 @@ const productoApiController = {
         include: ["CategoryProduct"],
         attributes: { exclude: ["idCategoria"] }
       });
+      
 
       let countCafe = 0;
       let countCafetera = 0;
@@ -42,7 +45,7 @@ const productoApiController = {
       for (let i = 0; i < productos.length; i++) {
         productos[i].setDataValue(
           "detail",
-          `http://localhost:3000/api/products/${productos[i].id}`
+          `http://localhost:3001/api/products/${productos[i].id}`
         );
       }
 
@@ -51,24 +54,25 @@ const productoApiController = {
       for (let i = 0; i < productos.length; i++) {
         productos[i].setDataValue(
           "urlImgen",
-          `http://localhost:3000/${productos[i].imagen}`
+          `http://localhost:3001/${productos[i].imagen}`
         );
       }
 
-      let response = {        
-        status: 200,
-        url: "http://localhost:3000/api/products",
-        count: productos.length,
-        countByCategory: [
-          {
+      let response = {
+        meta: {
+          status: 200,
+          url: "http://localhost:3001/api/products",
+          count: productos.length,
+          countByCategory: {
             cafe: countCafe,
             cafetera: countCafetera,
             merchandising: countMerchandising,
             otrosProductos: coutnOtrosProductos,
           },
-        ],       
-        data: productos,
-
+        },
+        data: {
+          products: productos
+        }
       };
 
       res.status(200).json(response);
@@ -83,7 +87,7 @@ const productoApiController = {
       let respuesta = {
         meta: {
           status: 200,
-          listaProductos: "http://localhost:3000/api/products",
+          listaProductos: "http://localhost:3001/api/products",
           count: categorias.length,          
         },
         categorias: categorias,
@@ -104,13 +108,13 @@ const productoApiController = {
         let respuesta = {
           
             status: 200,
-            listaProductos: "http://localhost:3000/api/products",
+            listaProductos: "http://localhost:3001/api/products",
             detalleProducto: {
             id: productos.id,
             nombre: productos.nombre,
             descripcion: productos.descripcion,
             peso: productos.peso,
-            imagenProducto: `http://localhost:3000${productos.imagen}`,          
+            imagenProducto: `http://localhost:3001${productos.imagen}`,          
             precio: productos.precio,
             categoria: productos.CategoryProduct.nombre,            
           },

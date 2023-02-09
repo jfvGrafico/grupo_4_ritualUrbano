@@ -10,17 +10,18 @@ function Products () {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
           .then((respuesta) => {
             return respuesta.json();
           })
           .then((products) => {
-            console.log(products);
-            /* setProductos(products.data); */
+            //console.log(products);
+            setProductos(products.data.products);
           })
           .catch((error) => console.log(error));
     }, [])
 
+    //console.log(productos);
 
     return (
         <>
@@ -35,10 +36,9 @@ function Products () {
                             <thead className='table-success'>
                                 <tr className='text-dark'>
                                     <th>Id</th>
-                                    <th>Titulo</th>
+                                    <th>Nombre</th>
                                     <th>Descripción</th>
-                                    <th>Descuento</th>
-                                    <th>Detalle</th>
+                                    <th>Peso</th>
                                     <th>Precio</th>
                                     <th>Categoría</th>
                                 </tr>
@@ -46,10 +46,9 @@ function Products () {
                             <tfoot className='table-success'>
                             <tr>
                                     <th>Id</th>
-                                    <th>Titulo</th>
+                                    <th>Nombre</th>
                                     <th>Descripción</th>
-                                    <th>Descuento</th>
-                                    <th>Detalle</th>
+                                    <th>Peso</th>
                                     <th>Precio</th>
                                     <th>Categoría</th>
                                 </tr>

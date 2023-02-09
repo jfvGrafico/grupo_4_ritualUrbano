@@ -15,14 +15,18 @@ const usersApiController = {
             for (let i = 0; i < users.length; i++) {
               users[i].setDataValue(
                 "detail",
-                `http://localhost:3000/api/users/${users[i].id}`
+                `http://localhost:3001/api/users/${users[i].id}`
               );
             }
     
             let response = {
-              count: users.length,
-              users: users,
-              status: 200,
+              meta: {
+                count: users.length,
+                status: 200,
+              },
+              data: { 
+                users: users 
+              }
             };
     
             res.status(200).json(response);
@@ -41,7 +45,7 @@ const usersApiController = {
                 id: usuario.id,
                 name: usuario.first_name,
                 email: usuario.email,
-                imagenPerfil: `http://localhost:3000${usuario.image}`,             
+                imagenPerfil: `http://localhost:3001${usuario.image}`,             
                 
             };
             res.json(respuesta);

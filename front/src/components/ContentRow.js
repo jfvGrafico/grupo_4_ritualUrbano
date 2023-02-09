@@ -6,9 +6,10 @@ function ContentRow() {
 
     const [productos, setProductos] = useState([])
     const [usuarios, setUsuarios] = useState([])
+    const [categorias, setCategorias] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
           .then((respuesta) => {
             return respuesta.json();
           })
@@ -19,7 +20,18 @@ function ContentRow() {
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/users/")
+      fetch("http://localhost:3001/api/products/category")
+        .then((respuesta) => {
+          return respuesta.json();
+        })
+        .then((categorys) => {
+          setCategorias(categorys);
+        })
+        .catch((error) => console.log(error));
+    }, []);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/api/users/")
           .then((respuesta) => {
             return respuesta.json();
           })
@@ -47,7 +59,7 @@ function ContentRow() {
     let user = {
         color: "success",
         titulo: "Total de categorías",
-        valor: productos.meta?.countByCategory.length || "-",
+        valor: categorias.meta?.count || "-",
         icono: "fas fa-clipboard-list",
     }
 

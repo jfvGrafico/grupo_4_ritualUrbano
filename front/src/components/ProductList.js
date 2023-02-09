@@ -7,10 +7,9 @@ function ProductList(props){
                 <th>{props.id}</th>
                 <th>{props.nombre}</th>
                 <th>{props.descripcion}</th>
-                <th>{props.descuento}%</th>
-                <th><a target="_blank" href={`${props.detail}`}>{props.detail}</a></th>
+                <th>{props.peso}</th>
                 <th>${props.precio}</th>
-                <th>{props.categoryProduct.nombre}</th>
+                <th>{props.CategoryProduct?.nombre}</th>
             </tr>
         </React.Fragment>
     )
