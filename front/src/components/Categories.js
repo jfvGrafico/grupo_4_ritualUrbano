@@ -8,13 +8,13 @@ function CategoriesInDb () {
     const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/products/category")
+        fetch("http://localhost:3001/api/products/")
           .then((respuesta) => {
             return respuesta.json();
           })
           .then((categorias) => {
             //console.log(movies)
-            setCategorias(categorias.categorias);
+            setCategorias(categorias.meta.countByCategory);
           })
           .catch((error) => console.log(error));
     }, [])
