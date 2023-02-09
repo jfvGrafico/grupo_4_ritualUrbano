@@ -87,7 +87,7 @@ const userController = {
       );
 
       usuarioLogeado.idCategory = usuarioLogeado.CategoryUser.nombre;
-      if (usuarioLogeado != undefined) {
+      if (usuarioLogeado) {
         delete usuarioLogeado.password;
         req.session.usuarioLogeado = usuarioLogeado;
         
@@ -104,7 +104,7 @@ const userController = {
           );
         }
         return res.redirect("/user/profile");
-      }
+      } else {
       
       return res.render("users/login", {
       errors: {
@@ -113,6 +113,7 @@ const userController = {
         },
       },
     });
+  }
     })
     .catch((error) => {
         res.send(error);

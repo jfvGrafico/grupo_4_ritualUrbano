@@ -232,6 +232,19 @@ article p {
   box-shadow: 0px 10px 10px #f7bb96;
 }
 
+.btn-whatsapp {
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
+}
+
 .detalle-articulos img{
   width: 100%;
 }
