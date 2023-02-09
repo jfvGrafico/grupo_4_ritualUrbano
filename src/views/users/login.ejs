@@ -50,15 +50,17 @@
                           <div class="mb-3">
                             <label class="form-label" for="email">Dirección de Email</label>
                             <input type="email" placeholder="Ingrese su correo electrónico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" id="email" value='<%= locals.oldData ? oldData.email : null  %>'>
+                            <!--?Validación Backend-->
                             <% if (locals.errors && errors.email) { %>                            
                               <p style="color: tomato; font-size: 12px;"> <%= errors.email.msg %></p> 
                             <% } %>
-                              <!--?Validación Frontend-->
+                            <!--?Validación Frontend-->
                             <p id="errorEmail"class="msg-error ocultar"></p>
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="password">Contraseña</label>
                             <input type="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" name="password" id="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null %> '>
+                            <!--?Validación Backend-->
                             <% if (locals.errors && errors.password) { %>                            
                               <p style="color: tomato; font-size: 12px;"> <%= errors.password.msg %></p> 
                             <% } %>

@@ -34,33 +34,19 @@
           <p class="text-center mx-auto">Envianos tu dudas o mentarios, en breve te responderemos</p>
             <div class="container border-bottom pb-3"></div>
 
-        <!-- <Section class="container">
-            <div class="contacto-box" >
-                <form class="form-contacto" action="/contacto" method="POST">
-                <label for="nombre">Ingrese su nombre</label>
-                <input type="text" name="nombre" id="nombre">
-                <label for="apellido">Ingrese su pellido</label>
-                <input type="text" name="apellido" id="apellido">
-                <label for="email" >Ingrese su email</label>
-                <input type="email" name="email" id="email" required>
-                <textarea name="consulta" cols="30" rows="10" placeholder="Ingrese aqui sus comentarios" required></textarea>
-                <button class="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Enviar</button>
-                </form>
-            </div>
-        </Section> -->
-
+        
         <!-- Formulario de login-->
-        <Section class="container">
-        <div class="container row d-flex mt-4">
-            <div class="p-4 sticky-md-top top-5">
-                  <div class="card flex-grow-1 mb-md-0">
-                    <div class="card__content">
+        <Section class="mt-4 container">
+          <div class="row d-flex mt-auto p-1">
+            <div class="p-5 sticky-md-top top-10">
+              <div class="card flex-grow-1 mb-md-0 w-60 mx-auto">
+                <div class="card__content"> 
 
                       <form class="form-registro" action="/contacto" method="POST" id="form-contacto">
-                        <label for="nombre" class="form-label">Infrese su Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>" minlength="4">
+                        <label for="nombre" class="form-label">Ingrese su Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" value="<%= (locals.old && old.nombre) ? old.nombre : "" %>">
                         <label for="apellido" class="form-label">Ingrese su Apellido</label>
-                        <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>" minlength="4">
+                        <input type="text" class="form-control" name="apellido" id="apellido" value="<%= (locals.old && old.apellido) ? old.apellido : "" %>">
                         <label for="email" class="form-label">Ingrese su Direccion de email</label>
                         <input type="email" class="form-control" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
 

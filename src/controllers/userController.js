@@ -280,42 +280,30 @@ const userController = {
 
   editProfile: (req, res) => {
     let imagenCargada;
-    db.User.findOne({
-      where: {
-        email: req.body.email,
+    let obj = db.User.findByPk(req.body.idUser);    
+    if (req.file != undefined) {
+      imagenCargada = "/img/users/" + req.file.filename;
+      console.log(imagenCargada);
+    } else {
+      imagenCargada = obj.image;
+    }  
+    
+    db.User.update(
+      {
+        first_name: req.body.nombreUsuario,
+        last_name: req.body.apellidoUsuario,
+        email: req.body.emailUsuario,
+        image: imagenCargada        
       },
-    }).then((user) => {
-      console.log("DE USEROBJ"+" "+ user.first_name + " " + user.email);
-      if (req.files[0] != undefined) {
-        /* fs.rmSync(path.join(__dirname, ".../public/img/users/")); */
-        imagenCargada = "/img/users/" + req.files[0].originalname;
-      } else {
-        imagenCargada = user.image;
-      }
-
-      db.User.update({
-        id: user.id,
-        first_name: req.body.nombre,
-        last_name: req.body.apellido,
-        password: user.password,
-        email: req.body.email,
-        idCategory: user.category,
-        image: imagenCargada,
-      },{
+      {
         where: {
-          id: user.id
-        }
-      }).then((userUp) => {
-        console.log("DE USERUP" + " " + userUp);
-        fs.writeFileSync(
-          path.join(__dirname, "../data/loggedUser.json"),
-          JSON.stringify(userUp, null, " ")
-        );
-
-        res.redirect("/user/profile");
-      });
-    });
+          id: req.params.id,
+        },
+      }
+    );
+    res.redirect("/");
   },
+
 
   listaUsuarios: (req, res) => {
     

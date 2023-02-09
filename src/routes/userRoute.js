@@ -36,7 +36,7 @@ router.get("/registro", checkUserMiddleware, userController.registro)
 router.post("/registro", uploadImgPerfil.single("imagen"), validationRegister, userController.registroPost)
 router.get("/logout" , userController.logout)
 router.get("/profile",checkCarritoUserMiddleware, userController.profile);
-router.put("/editProfile",userController.editProfile)
+router.put("/editProfile/:id",  uploadImgPerfil.single("AvatarUsuario"), userController.editProfile)
 router.get("/:userID/editar", userController.editarUsuario);
 router.post("/update/:id",  uploadImgPerfil.single("AvatarUsuario"), userController.actualizarUsuario);
 router.delete("/:userID", userController.eliminarUsuario);

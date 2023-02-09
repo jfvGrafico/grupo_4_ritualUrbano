@@ -41,15 +41,15 @@
               <div class="card flex-grow-1 mb-md-0 w-60 mx-auto">
                 <div class="card__content">
 
-                <form action="/user/editProfile?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/user/editProfile/<%= usuarioFull.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" name="nombre" id="nombre" value=<%= usuarioFull.first_name %>>
+                  <input type="text" class="form-control" name="nombreUsuario" id="nombre" value=<%= usuarioFull.first_name %>>
                   <label for="apellido" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" name="apellido" id="apellido" value=<%= usuarioFull.last_name %>>
+                  <input type="text" class="form-control" name="apellidoUsuario" id="apellido" value=<%= usuarioFull.last_name %>>
                   <label for="email" class="form-label">Direccion de email</label>
-                  <input type="email" class="form-control" name="email" id="email" value=<%= usuarioFull.email%>>
+                  <input type="email" class="form-control" name="emailUsuario" id="email" value=<%= usuarioFull.email%>>
                   <label for="imagen" class="form-label">Imagen</label>
-                  <input type="file" class="form-control" name="imagen" id="imagen">
+                  <input type="file" class="form-control" name="AvatarUsuario" id="imagen">
                   <button class="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white mt-3" type="submit">Editar</button>
                 </form>
                 </div>

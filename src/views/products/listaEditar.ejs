@@ -37,8 +37,7 @@
       <section class="container detalle-productos">
         <% productos.forEach (item => { %>
           <div class="detalle-articulos">
-            <div class="detalleimg m-4"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>
-            <!-- <div class="detallebtn"><button>+</button></div> -->
+            <div class="detalleimg m-4"> <a href="/producto/<%=item.id%>"><img src=<%=item.imagen %> alt="cafe"></a></div>            
             <div class="detalletxt ml-4"><p><%= item.nombre %> </p>  </div>
             <div class="detalletxt ml-4"><p><%= item.descripcion %> </p> <br>   </div>
             <div class="detalletxt"><p> $<%= item.precio %> </p> <br>   </div>
