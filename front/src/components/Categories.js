@@ -1,6 +1,6 @@
 import React ,{ useState, useEffect } from 'react';
 import Category from './Category';
-
+import TopBar from './TopBar';
 
 
 function CategoriesInDb () {
