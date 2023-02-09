@@ -330,8 +330,10 @@ const productoController = {
   }, */
 
   actualizar: (req, res) => {
+    
     let imagenCargada;
-    let obj = db.Product.findByPk(req.body.idProd);
+    let obj = db.Product.findByPk(req.body.id);
+    console.log("ese es el" + obj)
     if (req.files[0] != undefined) {
       imagenCargada = `/img/${req.files[0].originalname}`;
     } else {
@@ -354,19 +356,6 @@ const productoController = {
     );
     res.redirect("/producto/editar/lista");
   },
-
-  /*   listaEditar: (req, res) => {
-    const productos = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8")
-    );
-    const carrito = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "../data/carrito.json"), "utf-8")
-    );
-    res.render("products/listaEditar", {
-      title: "Lista de edicion",
-      productos,
-    });
-  }, */
 
   listaEditar: function (req, res) {
     const carrito = JSON.parse(

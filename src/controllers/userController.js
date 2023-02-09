@@ -14,38 +14,7 @@ const { locals } = require("../app")
 const userController = {
   login: (req, res) => {
     res.render("users/login", { carrito });
-  },
-
-  /* loginPost: (req, res) => {
-    let usuarioLogeado = users.find(
-      (user) =>
-        req.body.email == user.email &&
-        bcrypt.compareSync(req.body.password, user.password)
-    );
-    console.log(
-      "entrega usuarioLogeado" +
-        usuarioLogeado.password +
-        " " +
-        usuarioLogeado.email
-    );
-    if (usuarioLogeado != undefined) {
-      delete usuarioLogeado.password;
-      req.session.usuarioLogeado = usuarioLogeado;
-      if (req.body.recuerdame != undefined) {
-        const token = crypto.randomBytes(64).toString("base64");
-        res.cookie("userLogged", token, { maxAge: 1000 * 60 * 60 * 24 * 90 });
-        usuarioLogeado.token = token;
-        console.log(usuarioLogeado);
-        fs.writeFileSync(
-          path.resolve(__dirname, "../data/loggedUser.json"),
-          JSON.stringify(usuarioLogeado, null, " ")
-        );
-      }
-      res.redirect("/user/profile");
-    } else {
-      res.redirect("/user/login");
-    }
-  }, */
+  }, 
 
   loginPost: (req, res) => {
 
@@ -154,46 +123,7 @@ const userController = {
     res.render("users/registro", { title: "Registro", carrito });
   },
 
-/*   registroPost: (req, res) =>{
-        let errors = validationResult(req)
-        if(errors.isEmpty()){
-            users.forEach(usuario => {
-                if(usuario.email == req.body.email){
-                    res.send("El usuario ya existe")
-                    res.redirect("/")
-                }
-                
-            });
 
-            let imagenCargada;
-            if (req.files[0] != undefined) {
-                imagenCargada = "/img/users/" + req.files[0].originalname;
-            } else {
-                imagenCargada = "/img/users/noimage.jpeg";
-            }
-
-            let usuarioAGuardar = {
-                id: users[users.length - 1].id + 1,
-                first_name: req.body.nombre,
-                last_name: req.body.apellido,
-                password: bcrypt.hashSync(req.body.password, 10), 
-                email: req.body.email,
-                category: "user",
-                image: imagenCargada
-            }
-
-            users.push(usuarioAGuardar)
-
-            fs.writeFileSync(path.resolve(__dirname, "../data/users.json") , JSON.stringify(users, null, " "))
-            res.redirect("/")
-
-            
-        } else {
-            res.render("users/registro",  {title : "registro", mensajeDeError : errors.array(), old : req.body})
-        }
-        
-
-    }, */
 
   registroPost: (req, res) => {
           const resultValidation = validationResult(req);

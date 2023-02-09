@@ -22,6 +22,7 @@ const upload = multer({ storage: storage });
 // Middlewares
 const uploadImgP = require("../middleware/multer/multerImg");
 const validationProduct = require("../middleware/validation/validatedProductsMiddleware");
+const validationEditProd = require("../middleware/validation/validatedEditProdMiddleware");
 
 
 //rutas de producto
@@ -34,7 +35,7 @@ router.get("/:prodID/editar", productoController.editar);
 
 /* router.put("/", upload.any(), productoController.actualizar); */
 
-router.post("/update/:id", upload.any(), productoController.actualizar);
+router.put("/update/:id", upload.any(), validationEditProd, productoController.actualizar);
 router.get("/resultado", productoController.resultado);
 router.delete("/:prodID", productoController.eliminar);
 router.get("/editar/lista",checkAdminMiddleware, productoController.listaEditar);

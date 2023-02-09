@@ -50,24 +50,28 @@
                     
                     
                        
-                      <form class="form-registro" action="/producto/update/<%= prodObj.id %>" method="POST" enctype="multipart/form-data" id="">
+                      <form class="form-registro" action="/producto/update/<%= prodObj.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form-editarProducto">
 
                       <label for="nombreProducto" class="form-label">Nombre del producto</label>
                       <input type="text" class="form-control <%= locals.errors && errors.nombreProducto ? 'is-invalid' : null %>" name="nombreProducto" id="nombreProducto" value='<%=prodObj.nombre%>'>
                       <% if (locals.errors && errors.nombreProducto) { %>                            
                         <p style="color: tomato; font-size: 12px;"> <%= errors.nombreProducto.msg %> </p> 
                       <% } %>
+                      <!--?Validación Frontend-->
+                      <p id="errorNombreProducto" class="msg-error ocultar"></p>
 
-                      <label for="descipcionProducto" class="form-label">Descripcion del producto</label>
-                      <input type="text" class="form-control <%= locals.errors && errors.descipcionProducto ? 'is-invalid' : null %>" name="descipcionProducto" id="descipcionProducto" value='<%=prodObj.descripcion%>' minlength="4">
+                      <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
+                      <input type="text" class="form-control <%= locals.errors && errors.descripcionProducto ? 'is-invalid' : null %>" name="descripcionProducto" id="descripcionProducto" value='<%=prodObj.descripcion%>'>
                       <% if (locals.errors && errors.descipcionProducto) { %>                            
-                        <p style="color: tomato; font-size: 12px;"> <%= errors.descipcionProducto.msg %> </p> 
+                        <p style="color: tomato; font-size: 12px;"> <%= errors.descripcionProducto.msg %> </p> 
                       <% } %>
+                      <!--?Validación Frontend-->
+                      <p id="errorDescripcion" class="msg-error ocultar"></p>
 
                       <br>
                     <label for="categoriaProducto" class="form-label" id="categorias">Categoria del producto</label>
                       <div class="card flex-grow-1 mb-md-0 w-60">
-                        <select name="categoriaProducto" class="form-control" id="" required >
+                        <select name="categoriaProducto" class="form-control <%= locals.errors && errors.categoriaProducto ? 'is-invalid' : null %>" id="" required >
                             <option value="" disabled selected >-- Categoria del producto --</option>
                             <% categories.forEach(category=> { %>
                             <option value="<%= category.id %>" <% if (prodObj.CategoryProduct.id==category.id) { %>
@@ -77,6 +81,8 @@
                               <% }); %>
                         </select>
                       </div>
+                      <!--?Validación Frontend-->
+                      <p id="errorCategorias" class="msg-error ocultar"></p>
                       <br>
 
                       <label for="pesoProducto" class="form-label">Peso del producto</label>
@@ -84,18 +90,24 @@
                       <% if (locals.errors && errors.pesoProducto) { %>                            
                         <p style="color: tomato; font-size: 12px;"> <%= errors.pesoProducto.msg %></p> 
                       <% } %>
+                      <!--?Validación Frontend-->
+                      <p id="errorPesoProducto" class="msg-error ocultar"></p>
 
                       <label for="precioProducto" class="form-label">Precio del producto</label>
                       <input type="number" class="form-control <%= locals.errors && errors.precioProducto ? 'is-invalid' : null %>" name="precioProducto" id="precioProducto" value='<%=prodObj.precio%>'>
                       <% if (locals.errors && errors.precioProducto) { %>                            
                         <p style="color: tomato; font-size: 12px;"> <%= errors.precioProducto.msg %></p> 
                       <% } %>
+                      <!--?Validación Frontend-->
+                      <p id="errorPrecioProducto" class="msg-error ocultar"></p>
 
                       <label for="imagenProducto" class="form-label">Imagen</label>
                       <input type="file" class="form-control" name="imagenProducto" id="imagenProducto">
                       <% if (locals.errors && errors.imagenProducto) { %>                            
                         <p style="color: tomato; font-size: 12px;"> <%= errors.imagenProducto.msg %></p> 
                       <% } %>
+                      <!--?Validación Frontend-->
+                      <p id="errorImagenProducto" class="msg-error ocultar"></p>
 
                       <button class="btn btn-dark mt-4 mb-2" type="submit">Actualizar ahora</button>
                     </form>
@@ -113,7 +125,7 @@
 
     <!--vinculación con archivo .js-->
      
-    <!-- <script src="/js/EditProductValidation.js"></script> -->
+    <script src="/js/EditProductoValidation.js"></script>
 
     <!--footer start-->
     <%- include("../partials/footer.ejs") %>

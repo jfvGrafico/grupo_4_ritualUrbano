@@ -11,14 +11,14 @@ module.exports = [
     .isLength({ min: 5 })
     .withMessage("El nombre del producto debe tener un mínimo de 5 caracteres"),
  
-  body("descipcionProducto")
+  body("descripcionProducto")
     .notEmpty()
-    .withMessage("Su producto debe ingresar la descripcion del producto")
+    .withMessage("Su producto debe ingresar la descripcion del producto").bail()
     .isLength({ min: 20 })
-    .withMessage("La descripción del producto debe tener un mínimo de 20 caracteres"),
-  body("categoriaProducto").notEmpty().withMessage("Seleccione una categoria"),
-  body("pesoProducto").notEmpty().withMessage("Por favor debe ingresar el peso del producto"),
-  body("precioProducto").notEmpty().withMessage("Por favor debe ingresar el precio del producto"),
+    .withMessage("La descripción del producto debe tener un mínimo de 20 caracteres").bail(),
+  body("categoriaProducto").notEmpty().withMessage("Debe seleccionar una categoria").bail(),
+  body("pesoProducto").notEmpty().withMessage("Por favor debe ingresar el peso del producto").bail(),
+  body("precioProducto").notEmpty().withMessage("Por favor debe ingresar el precio del producto").bail(),
   body("imagenProducto").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
