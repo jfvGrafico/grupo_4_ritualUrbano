@@ -63,12 +63,12 @@ const productoApiController = {
           status: 200,
           url: "http://localhost:3001/api/products",
           count: productos.length,
-          countByCategory: {
-            cafe: countCafe,
-            cafetera: countCafetera,
-            merchandising: countMerchandising,
-            otrosProductos: coutnOtrosProductos,
-          },
+          countByCategory: [
+            {nombre: "cafe", total: countCafe},
+            {nombre: "cafetera", total: countCafetera},
+            {nombre: "merchandising", total: countMerchandising},
+            {nombre: "otrosProductos", total: coutnOtrosProductos},
+            ],
         },
         data: {
           products: productos
