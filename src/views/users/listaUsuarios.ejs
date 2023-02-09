@@ -37,7 +37,7 @@
       <section class="container detalle-productos">
         <% usuarios.forEach (item => { %>
           <div class="detalle-articulos">
-            <div class="detalleimg m-4"> <a href="/user/<%=item.id%>"><img src=<%=item.image %> alt="image"></a></div>            
+            <div class="detalleimg m-4"> <a href="#"><img src=<%=item.image %> alt="image"></a></div>            
             <div class="detalletxt ml-4"><p><%= item.first_name %> <%= item.last_name %> </p>  </div>
             <div class="detalletxt ml-4"><p><%= item.email %> </p> <br>   </div>
             <div class="detalletxt"><p>Perfil: <%= item.CategoryUser.nombre %> </p> <br>   </div>
